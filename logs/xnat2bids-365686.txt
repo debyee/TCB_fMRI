@@ -1,0 +1,10 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 365686
+##  Job Name : xnat2bids
+##  Nodelist : node1303
+##      CPUs : 
+##  Mem/Node : 16384 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Tue Feb  9 17:13:11 EST 2021
+###############################################################################
+/var/spool/slurmd/job365686/slurm_script: line 68: sessions[${SLURM_ARRAY_TASK_ID}]: unbound variable
