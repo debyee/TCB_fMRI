@@ -1,0 +1,589 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 531545
+##  Job Name : xnat2bids
+##  Nodelist : node1128
+##      CPUs : 
+##  Mem/Node : 32768 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Thu Feb 25 13:05:46 EST 2021
+###############################################################################
+Processing session:
+XNAT7_E00039
+Subject label:
+tcb2021
+Series to skip:
+-s 6
+2021-02-25 13:05:47 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making output xnat-export session directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:05:47 node1128.oscar.ccv.brown.edu xnat_tools.xnat_utils[130809] INFO ------------------------------------------------
+2021-02-25 13:05:47 node1128.oscar.ccv.brown.edu xnat_tools.xnat_utils[130809] INFO Get scans.
+2021-02-25 13:05:47 node1128.oscar.ccv.brown.edu xnat_tools.xnat_utils[130809] INFO ------------------------------------------------
+2021-02-25 13:05:47 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:05:47 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: anat-scout_acq-localizer
+2021-02-25 13:05:47 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/anat-scout_acq-localizer.
+2021-02-25 13:05:48 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:05:48 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:05:48 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:05:48 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:05:48 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: anat-scout_acq-aascout
+2021-02-25 13:05:48 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/anat-scout_acq-aascout.
+2021-02-25 13:05:49 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:06:11 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:06:11 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:06:11 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:06:11 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: anat-scout_acq-aascoutMPRsag
+2021-02-25 13:06:11 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/anat-scout_acq-aascoutMPRsag.
+2021-02-25 13:06:11 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:06:11 node1128.oscar.ccv.brown.edu py.warnings[130809] WARNING /usr/local/lib/python3.7/site-packages/xnat_tools/bids_utils.py:217: UserWarning: Changed DICOM HEADER[ProtocolName]:             anat-scout_acq-aascout -> anat-scout_acq-aascoutMPRsag
+  {protocol_header} -> {series_description}"
+
+2021-02-25 13:06:12 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:06:12 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:06:12 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:06:12 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: anat-scout_acq-aascoutMPRcor
+2021-02-25 13:06:12 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/anat-scout_acq-aascoutMPRcor.
+2021-02-25 13:06:12 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:06:12 node1128.oscar.ccv.brown.edu py.warnings[130809] WARNING /usr/local/lib/python3.7/site-packages/xnat_tools/bids_utils.py:217: UserWarning: Changed DICOM HEADER[ProtocolName]:             anat-scout_acq-aascout -> anat-scout_acq-aascoutMPRcor
+  {protocol_header} -> {series_description}"
+
+2021-02-25 13:06:13 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:06:13 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:06:13 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:06:13 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: anat-scout_acq-aascoutMPRtra
+2021-02-25 13:06:13 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/anat-scout_acq-aascoutMPRtra.
+2021-02-25 13:06:13 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:06:13 node1128.oscar.ccv.brown.edu py.warnings[130809] WARNING /usr/local/lib/python3.7/site-packages/xnat_tools/bids_utils.py:217: UserWarning: Changed DICOM HEADER[ProtocolName]:             anat-scout_acq-aascout -> anat-scout_acq-aascoutMPRtra
+  {protocol_header} -> {series_description}"
+
+2021-02-25 13:06:13 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:06:13 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:06:13 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:06:13 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: anat-T1w_acq-memprageRMS
+2021-02-25 13:06:13 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/anat-T1w_acq-memprageRMS.
+2021-02-25 13:06:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:06:15 node1128.oscar.ccv.brown.edu py.warnings[130809] WARNING /usr/local/lib/python3.7/site-packages/xnat_tools/bids_utils.py:217: UserWarning: Changed DICOM HEADER[ProtocolName]:             anat-t1w_acq-memprage -> anat-T1w_acq-memprageRMS
+  {protocol_header} -> {series_description}"
+
+2021-02-25 13:06:55 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:06:55 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:06:55 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:06:55 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: func-bold_task-TSSblock_run-01
+2021-02-25 13:06:55 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/func-bold_task-TSSblock_run-01.
+2021-02-25 13:06:59 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:06:59 node1128.oscar.ccv.brown.edu py.warnings[130809] WARNING /usr/local/lib/python3.7/site-packages/xnat_tools/bids_utils.py:217: UserWarning: Changed DICOM HEADER[ProtocolName]:             func-bold_task-TSSblock_acq-2dot4mmSMS4TR1200AP_run+ -> func-bold_task-TSSblock_run-01
+  {protocol_header} -> {series_description}"
+
+2021-02-25 13:08:25 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:08:25 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:08:25 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:08:25 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: func-bold_task-TSSblock_run-02
+2021-02-25 13:08:25 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/func-bold_task-TSSblock_run-02.
+2021-02-25 13:08:29 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:08:30 node1128.oscar.ccv.brown.edu py.warnings[130809] WARNING /usr/local/lib/python3.7/site-packages/xnat_tools/bids_utils.py:217: UserWarning: Changed DICOM HEADER[ProtocolName]:             func-bold_task-TSSblock_acq-2dot4mmSMS4TR1200AP_run+ -> func-bold_task-TSSblock_run-02
+  {protocol_header} -> {series_description}"
+
+2021-02-25 13:10:04 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:10:04 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:10:04 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:10:04 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: func-bold_task-TSSblock_run-03
+2021-02-25 13:10:04 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/func-bold_task-TSSblock_run-03.
+2021-02-25 13:10:10 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:10:10 node1128.oscar.ccv.brown.edu py.warnings[130809] WARNING /usr/local/lib/python3.7/site-packages/xnat_tools/bids_utils.py:217: UserWarning: Changed DICOM HEADER[ProtocolName]:             func-bold_task-TSSblock_acq-2dot4mmSMS4TR1200AP_run+ -> func-bold_task-TSSblock_run-03
+  {protocol_header} -> {series_description}"
+
+2021-02-25 13:11:35 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:11:35 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:11:35 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:11:35 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: func-bold_task-TSSblock_run-04
+2021-02-25 13:11:35 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/func-bold_task-TSSblock_run-04.
+2021-02-25 13:11:40 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:11:41 node1128.oscar.ccv.brown.edu py.warnings[130809] WARNING /usr/local/lib/python3.7/site-packages/xnat_tools/bids_utils.py:217: UserWarning: Changed DICOM HEADER[ProtocolName]:             func-bold_task-TSSblock_acq-2dot4mmSMS4TR1200AP_run+ -> func-bold_task-TSSblock_run-04
+  {protocol_header} -> {series_description}"
+
+2021-02-25 13:13:03 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:13:03 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:13:03 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:13:03 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: func-bold_task-TSSblock_run-05
+2021-02-25 13:13:03 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/func-bold_task-TSSblock_run-05.
+2021-02-25 13:13:07 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:13:08 node1128.oscar.ccv.brown.edu py.warnings[130809] WARNING /usr/local/lib/python3.7/site-packages/xnat_tools/bids_utils.py:217: UserWarning: Changed DICOM HEADER[ProtocolName]:             func-bold_task-TSSblock_acq-2dot4mmSMS4TR1200AP_run+ -> func-bold_task-TSSblock_run-05
+  {protocol_header} -> {series_description}"
+
+2021-02-25 13:14:29 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:14:29 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:14:29 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:14:29 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: func-bold_task-TSSblock_run-06
+2021-02-25 13:14:29 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/func-bold_task-TSSblock_run-06.
+2021-02-25 13:14:34 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:14:34 node1128.oscar.ccv.brown.edu py.warnings[130809] WARNING /usr/local/lib/python3.7/site-packages/xnat_tools/bids_utils.py:217: UserWarning: Changed DICOM HEADER[ProtocolName]:             func-bold_task-TSSblock_acq-2dot4mmSMS4TR1200AP_run+ -> func-bold_task-TSSblock_run-06
+  {protocol_header} -> {series_description}"
+
+2021-02-25 13:16:01 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:16:01 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:16:01 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:16:01 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: func-bold_task-TSSblock_run-07
+2021-02-25 13:16:01 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/func-bold_task-TSSblock_run-07.
+2021-02-25 13:16:05 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:16:05 node1128.oscar.ccv.brown.edu py.warnings[130809] WARNING /usr/local/lib/python3.7/site-packages/xnat_tools/bids_utils.py:217: UserWarning: Changed DICOM HEADER[ProtocolName]:             func-bold_task-TSSblock_acq-2dot4mmSMS4TR1200AP_run+ -> func-bold_task-TSSblock_run-07
+  {protocol_header} -> {series_description}"
+
+2021-02-25 13:17:33 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:17:33 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:17:33 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:17:33 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: func-bold_task-TSSblock_run-08
+2021-02-25 13:17:33 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/func-bold_task-TSSblock_run-08.
+2021-02-25 13:17:37 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:17:38 node1128.oscar.ccv.brown.edu py.warnings[130809] WARNING /usr/local/lib/python3.7/site-packages/xnat_tools/bids_utils.py:217: UserWarning: Changed DICOM HEADER[ProtocolName]:             func-bold_task-TSSblock_acq-2dot4mmSMS4TR1200AP_run+ -> func-bold_task-TSSblock_run-08
+  {protocol_header} -> {series_description}"
+
+2021-02-25 13:18:59 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:18:59 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:18:59 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:18:59 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: fmap_acq-greAP
+2021-02-25 13:18:59 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Making scan DICOM directory /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/fmap_acq-greAP.
+2021-02-25 13:19:00 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:19:24 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:19:24 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+2021-02-25 13:19:24 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO bids_session_dir: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01
+2021-02-25 13:19:24 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO BIDSNAME: fmap_acq-greAP
+2021-02-25 13:19:24 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] WARNING /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-tcb2021/ses-01/fmap_acq-greAP already exists.                 See documentation to understand behavior for repeated sequences.
+2021-02-25 13:19:25 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Downloading files
+2021-02-25 13:19:34 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO Done.
+2021-02-25 13:19:34 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[130809] INFO ---------------------------------
+------------------------------------------------
+Get project and subject information
+Project: SHENHAV_201226
+Subject ID: XNAT7_S00033
+Subject label: TCB2021
+------------------------------------------------
+************************
+Executing Heudiconv command: heudiconv -f reproin --bids     -o /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids     --dicom_dir_template /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/xnat-export/sub-{subject}/ses-{session}/*/*.dcm     --subjects tcb2021 --ses 01
+INFO: Running heudiconv version 0.5.4
+INFO: Need to process 1 study sessions
+INFO: PROCESSING STARTS: {'subject': 'tcb2021', 'outdir': '/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/', 'session': '01'}
+INFO: Processing 2994 dicoms
+INFO: Analyzing 2994 dicoms
+INFO: Filtering out 0 dicoms based on their filename
+/usr/local/lib/python3.7/site-packages/heudiconv/dicoms.py:58: UserWarning: The DICOM readers are highly experimental, unstable, and only work for Siemens time-series at the moment
+Please use with caution.  We would be grateful for your help in improving them
+  import nibabel.nicom.dicomwrappers as dw
+INFO: Generated sequence info with 16 entries
+INFO: Processing 16 seqinfo entries
+INFO: Doing conversion using dcm2niix
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/anat/sub-tcb2021_ses-01_acq-localizer_scout (3 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/anat . Converter: dcm2niix . Output types: ('dicom',)
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/anat/sub-tcb2021_ses-01_acq-aascout_scout (128 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/anat . Converter: dcm2niix . Output types: ('dicom',)
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/anat/sub-tcb2021_ses-01_acq-aascoutMPRsag_scout (5 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/anat . Converter: dcm2niix . Output types: ('dicom',)
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/anat/sub-tcb2021_ses-01_acq-aascoutMPRcor_scout (3 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/anat . Converter: dcm2niix . Output types: ('dicom',)
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/anat/sub-tcb2021_ses-01_acq-aascoutMPRtra_scout (3 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/anat . Converter: dcm2niix . Output types: ('dicom',)
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/anat/sub-tcb2021_ses-01_acq-memprageRMS_T1w (192 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/anat . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
+210225-13:20:08,123 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixjgjxcsoh/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixjgjxcsoh/convert".
+210225-13:20:08,184 nipype.workflow INFO:
+	 [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f anat -o . -s n -v n /tmp/dcm2niixjgjxcsoh/convert
+INFO: [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f anat -o . -s n -v n /tmp/dcm2niixjgjxcsoh/convert
+210225-13:20:08,385 nipype.interface INFO:
+	 stdout 2021-02-25T13:20:08.385109:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+INFO: stdout 2021-02-25T13:20:08.385109:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+210225-13:20:08,385 nipype.interface INFO:
+	 stdout 2021-02-25T13:20:08.385109:Found 192 DICOM file(s)
+INFO: stdout 2021-02-25T13:20:08.385109:Found 192 DICOM file(s)
+210225-13:20:08,385 nipype.interface INFO:
+	 stdout 2021-02-25T13:20:08.385109:Convert 192 DICOM as ./anat (256x256x192x1)
+INFO: stdout 2021-02-25T13:20:08.385109:Convert 192 DICOM as ./anat (256x256x192x1)
+210225-13:20:09,363 nipype.interface INFO:
+	 stdout 2021-02-25T13:20:09.363013:Conversion required 1.098663 seconds (1.098568 for core code).
+INFO: stdout 2021-02-25T13:20:09.363013:Conversion required 1.098663 seconds (1.098568 for core code).
+210225-13:20:09,391 nipype.workflow INFO:
+	 [Node] Finished "convert".
+INFO: [Node] Finished "convert".
+210225-13:20:14,385 nipype.workflow INFO:
+	 [Node] Setting-up "embedder" in "/tmp/embedmeta038cvpou/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta038cvpou/embedder".
+210225-13:20:14,403 nipype.workflow INFO:
+	 [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+INFO: [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+210225-13:20:19,10 nipype.workflow INFO:
+	 [Node] Finished "embedder".
+INFO: [Node] Finished "embedder".
+INFO: Post-treating /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/anat/sub-tcb2021_ses-01_acq-memprageRMS_T1w.json file
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-01_bold (310 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
+210225-13:20:19,47 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixk1xunwi3/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixk1xunwi3/convert".
+210225-13:20:19,142 nipype.workflow INFO:
+	 [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixk1xunwi3/convert
+INFO: [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixk1xunwi3/convert
+210225-13:20:20,552 nipype.interface INFO:
+	 stdout 2021-02-25T13:20:20.552244:Compression will be faster with 'pigz' installed
+INFO: stdout 2021-02-25T13:20:20.552244:Compression will be faster with 'pigz' installed
+210225-13:20:20,552 nipype.interface INFO:
+	 stdout 2021-02-25T13:20:20.552244:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+INFO: stdout 2021-02-25T13:20:20.552244:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+210225-13:20:20,552 nipype.interface INFO:
+	 stdout 2021-02-25T13:20:20.552244:Found 310 DICOM file(s)
+INFO: stdout 2021-02-25T13:20:20.552244:Found 310 DICOM file(s)
+210225-13:20:20,552 nipype.interface INFO:
+	 stdout 2021-02-25T13:20:20.552244:Convert 310 DICOM as ./func (88x88x60x310)
+INFO: stdout 2021-02-25T13:20:20.552244:Convert 310 DICOM as ./func (88x88x60x310)
+210225-13:20:31,41 nipype.interface INFO:
+	 stdout 2021-02-25T13:20:31.041049:Conversion required 11.874084 seconds (11.096476 for core code).
+INFO: stdout 2021-02-25T13:20:31.041049:Conversion required 11.874084 seconds (11.096476 for core code).
+210225-13:20:31,78 nipype.workflow INFO:
+	 [Node] Finished "convert".
+INFO: [Node] Finished "convert".
+210225-13:21:31,464 nipype.workflow INFO:
+	 [Node] Setting-up "embedder" in "/tmp/embedmeta5x71m8wo/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta5x71m8wo/embedder".
+210225-13:21:31,493 nipype.workflow INFO:
+	 [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+INFO: [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+210225-13:21:47,590 nipype.workflow INFO:
+	 [Node] Finished "embedder".
+INFO: [Node] Finished "embedder".
+INFO: Post-treating /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-01_bold.json file
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-02_bold (310 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
+210225-13:21:47,699 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixuyy5zrvx/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixuyy5zrvx/convert".
+210225-13:21:47,794 nipype.workflow INFO:
+	 [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixuyy5zrvx/convert
+INFO: [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixuyy5zrvx/convert
+210225-13:21:48,976 nipype.interface INFO:
+	 stdout 2021-02-25T13:21:48.976288:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+INFO: stdout 2021-02-25T13:21:48.976288:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+210225-13:21:48,976 nipype.interface INFO:
+	 stdout 2021-02-25T13:21:48.976288:Found 310 DICOM file(s)
+INFO: stdout 2021-02-25T13:21:48.976288:Found 310 DICOM file(s)
+210225-13:21:48,976 nipype.interface INFO:
+	 stdout 2021-02-25T13:21:48.976288:Convert 310 DICOM as ./func (88x88x60x310)
+INFO: stdout 2021-02-25T13:21:48.976288:Convert 310 DICOM as ./func (88x88x60x310)
+210225-13:21:59,450 nipype.interface INFO:
+	 stdout 2021-02-25T13:21:59.449993:Conversion required 11.571851 seconds (11.073746 for core code).
+INFO: stdout 2021-02-25T13:21:59.449993:Conversion required 11.571851 seconds (11.073746 for core code).
+210225-13:21:59,498 nipype.workflow INFO:
+	 [Node] Finished "convert".
+INFO: [Node] Finished "convert".
+210225-13:23:01,386 nipype.workflow INFO:
+	 [Node] Setting-up "embedder" in "/tmp/embedmeta6wlqoxil/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta6wlqoxil/embedder".
+210225-13:23:01,414 nipype.workflow INFO:
+	 [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+INFO: [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+210225-13:23:17,489 nipype.workflow INFO:
+	 [Node] Finished "embedder".
+INFO: [Node] Finished "embedder".
+INFO: Post-treating /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-02_bold.json file
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-03_bold (310 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
+210225-13:23:17,599 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixl83trfid/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixl83trfid/convert".
+210225-13:23:17,694 nipype.workflow INFO:
+	 [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixl83trfid/convert
+INFO: [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixl83trfid/convert
+210225-13:23:18,898 nipype.interface INFO:
+	 stdout 2021-02-25T13:23:18.898082:Compression will be faster with 'pigz' installed
+INFO: stdout 2021-02-25T13:23:18.898082:Compression will be faster with 'pigz' installed
+210225-13:23:18,898 nipype.interface INFO:
+	 stdout 2021-02-25T13:23:18.898082:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+INFO: stdout 2021-02-25T13:23:18.898082:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+210225-13:23:18,898 nipype.interface INFO:
+	 stdout 2021-02-25T13:23:18.898082:Found 310 DICOM file(s)
+INFO: stdout 2021-02-25T13:23:18.898082:Found 310 DICOM file(s)
+210225-13:23:18,898 nipype.interface INFO:
+	 stdout 2021-02-25T13:23:18.898082:Convert 310 DICOM as ./func (88x88x60x310)
+INFO: stdout 2021-02-25T13:23:18.898082:Convert 310 DICOM as ./func (88x88x60x310)
+210225-13:23:29,383 nipype.interface INFO:
+	 stdout 2021-02-25T13:23:29.383691:Conversion required 11.605776 seconds (11.086627 for core code).
+INFO: stdout 2021-02-25T13:23:29.383691:Conversion required 11.605776 seconds (11.086627 for core code).
+210225-13:23:29,435 nipype.workflow INFO:
+	 [Node] Finished "convert".
+INFO: [Node] Finished "convert".
+210225-13:24:29,758 nipype.workflow INFO:
+	 [Node] Setting-up "embedder" in "/tmp/embedmetam522rta9/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetam522rta9/embedder".
+210225-13:24:29,786 nipype.workflow INFO:
+	 [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+INFO: [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+210225-13:24:46,991 nipype.workflow INFO:
+	 [Node] Finished "embedder".
+INFO: [Node] Finished "embedder".
+INFO: Post-treating /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-03_bold.json file
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-04_bold (310 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
+210225-13:24:47,100 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixuf9icln4/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixuf9icln4/convert".
+210225-13:24:47,195 nipype.workflow INFO:
+	 [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixuf9icln4/convert
+INFO: [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixuf9icln4/convert
+210225-13:24:48,397 nipype.interface INFO:
+	 stdout 2021-02-25T13:24:48.396959:Compression will be faster with 'pigz' installed
+INFO: stdout 2021-02-25T13:24:48.396959:Compression will be faster with 'pigz' installed
+210225-13:24:48,397 nipype.interface INFO:
+	 stdout 2021-02-25T13:24:48.396959:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+INFO: stdout 2021-02-25T13:24:48.396959:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+210225-13:24:48,397 nipype.interface INFO:
+	 stdout 2021-02-25T13:24:48.396959:Found 310 DICOM file(s)
+INFO: stdout 2021-02-25T13:24:48.396959:Found 310 DICOM file(s)
+210225-13:24:48,397 nipype.interface INFO:
+	 stdout 2021-02-25T13:24:48.396959:Convert 310 DICOM as ./func (88x88x60x310)
+INFO: stdout 2021-02-25T13:24:48.396959:Convert 310 DICOM as ./func (88x88x60x310)
+210225-13:24:58,874 nipype.interface INFO:
+	 stdout 2021-02-25T13:24:58.874667:Conversion required 11.594775 seconds (11.069937 for core code).
+INFO: stdout 2021-02-25T13:24:58.874667:Conversion required 11.594775 seconds (11.069937 for core code).
+210225-13:24:58,920 nipype.workflow INFO:
+	 [Node] Finished "convert".
+INFO: [Node] Finished "convert".
+210225-13:25:58,620 nipype.workflow INFO:
+	 [Node] Setting-up "embedder" in "/tmp/embedmeta9ofsunlm/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmeta9ofsunlm/embedder".
+210225-13:25:58,649 nipype.workflow INFO:
+	 [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+INFO: [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+210225-13:26:14,754 nipype.workflow INFO:
+	 [Node] Finished "embedder".
+INFO: [Node] Finished "embedder".
+INFO: Post-treating /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-04_bold.json file
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-05_bold (310 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
+210225-13:26:14,873 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixrze48ns_/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixrze48ns_/convert".
+210225-13:26:14,970 nipype.workflow INFO:
+	 [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixrze48ns_/convert
+INFO: [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixrze48ns_/convert
+210225-13:26:16,169 nipype.interface INFO:
+	 stdout 2021-02-25T13:26:16.169623:Compression will be faster with 'pigz' installed
+INFO: stdout 2021-02-25T13:26:16.169623:Compression will be faster with 'pigz' installed
+210225-13:26:16,169 nipype.interface INFO:
+	 stdout 2021-02-25T13:26:16.169623:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+INFO: stdout 2021-02-25T13:26:16.169623:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+210225-13:26:16,169 nipype.interface INFO:
+	 stdout 2021-02-25T13:26:16.169623:Found 310 DICOM file(s)
+INFO: stdout 2021-02-25T13:26:16.169623:Found 310 DICOM file(s)
+210225-13:26:16,170 nipype.interface INFO:
+	 stdout 2021-02-25T13:26:16.169623:Convert 310 DICOM as ./func (88x88x60x310)
+INFO: stdout 2021-02-25T13:26:16.169623:Convert 310 DICOM as ./func (88x88x60x310)
+210225-13:26:26,622 nipype.interface INFO:
+	 stdout 2021-02-25T13:26:26.622718:Conversion required 11.564994 seconds (11.056972 for core code).
+INFO: stdout 2021-02-25T13:26:26.622718:Conversion required 11.564994 seconds (11.056972 for core code).
+210225-13:26:26,668 nipype.workflow INFO:
+	 [Node] Finished "convert".
+INFO: [Node] Finished "convert".
+210225-13:27:27,393 nipype.workflow INFO:
+	 [Node] Setting-up "embedder" in "/tmp/embedmetargwlp2dz/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetargwlp2dz/embedder".
+210225-13:27:27,421 nipype.workflow INFO:
+	 [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+INFO: [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+210225-13:27:43,586 nipype.workflow INFO:
+	 [Node] Finished "embedder".
+INFO: [Node] Finished "embedder".
+INFO: Post-treating /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-05_bold.json file
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-06_bold (310 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
+210225-13:27:43,696 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixmbegsrpk/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixmbegsrpk/convert".
+210225-13:27:43,791 nipype.workflow INFO:
+	 [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixmbegsrpk/convert
+INFO: [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixmbegsrpk/convert
+210225-13:27:44,559 nipype.interface INFO:
+	 stdout 2021-02-25T13:27:44.559160:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+INFO: stdout 2021-02-25T13:27:44.559160:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+210225-13:27:44,559 nipype.interface INFO:
+	 stdout 2021-02-25T13:27:44.559160:Found 310 DICOM file(s)
+INFO: stdout 2021-02-25T13:27:44.559160:Found 310 DICOM file(s)
+210225-13:27:44,559 nipype.interface INFO:
+	 stdout 2021-02-25T13:27:44.559160:Convert 310 DICOM as ./func (88x88x60x310)
+INFO: stdout 2021-02-25T13:27:44.559160:Convert 310 DICOM as ./func (88x88x60x310)
+210225-13:27:55,28 nipype.interface INFO:
+	 stdout 2021-02-25T13:27:55.028893:Conversion required 11.145305 seconds (11.050523 for core code).
+INFO: stdout 2021-02-25T13:27:55.028893:Conversion required 11.145305 seconds (11.050523 for core code).
+210225-13:27:55,74 nipype.workflow INFO:
+	 [Node] Finished "convert".
+INFO: [Node] Finished "convert".
+210225-13:28:55,714 nipype.workflow INFO:
+	 [Node] Setting-up "embedder" in "/tmp/embedmetabg5jld25/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetabg5jld25/embedder".
+210225-13:28:55,742 nipype.workflow INFO:
+	 [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+INFO: [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+210225-13:29:12,77 nipype.workflow INFO:
+	 [Node] Finished "embedder".
+INFO: [Node] Finished "embedder".
+INFO: Post-treating /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-06_bold.json file
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-07_bold (310 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
+210225-13:29:12,190 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixzxrhv2af/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixzxrhv2af/convert".
+210225-13:29:12,286 nipype.workflow INFO:
+	 [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixzxrhv2af/convert
+INFO: [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixzxrhv2af/convert
+210225-13:29:13,88 nipype.interface INFO:
+	 stdout 2021-02-25T13:29:13.088520:Compression will be faster with 'pigz' installed
+INFO: stdout 2021-02-25T13:29:13.088520:Compression will be faster with 'pigz' installed
+210225-13:29:13,88 nipype.interface INFO:
+	 stdout 2021-02-25T13:29:13.088520:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+INFO: stdout 2021-02-25T13:29:13.088520:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+210225-13:29:13,88 nipype.interface INFO:
+	 stdout 2021-02-25T13:29:13.088520:Found 310 DICOM file(s)
+INFO: stdout 2021-02-25T13:29:13.088520:Found 310 DICOM file(s)
+210225-13:29:13,88 nipype.interface INFO:
+	 stdout 2021-02-25T13:29:13.088520:Convert 310 DICOM as ./func (88x88x60x310)
+INFO: stdout 2021-02-25T13:29:13.088520:Convert 310 DICOM as ./func (88x88x60x310)
+210225-13:29:23,563 nipype.interface INFO:
+	 stdout 2021-02-25T13:29:23.563498:Conversion required 11.191388 seconds (11.076118 for core code).
+INFO: stdout 2021-02-25T13:29:23.563498:Conversion required 11.191388 seconds (11.076118 for core code).
+210225-13:29:23,608 nipype.workflow INFO:
+	 [Node] Finished "convert".
+INFO: [Node] Finished "convert".
+210225-13:30:22,923 nipype.workflow INFO:
+	 [Node] Setting-up "embedder" in "/tmp/embedmetayp1inldf/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetayp1inldf/embedder".
+210225-13:30:22,952 nipype.workflow INFO:
+	 [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+INFO: [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+210225-13:30:39,18 nipype.workflow INFO:
+	 [Node] Finished "embedder".
+INFO: [Node] Finished "embedder".
+INFO: Post-treating /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-07_bold.json file
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-08_bold (310 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
+210225-13:30:39,131 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixi5voazdk/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixi5voazdk/convert".
+210225-13:30:39,228 nipype.workflow INFO:
+	 [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixi5voazdk/convert
+INFO: [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f func -o . -s n -v n /tmp/dcm2niixi5voazdk/convert
+210225-13:30:40,840 nipype.interface INFO:
+	 stdout 2021-02-25T13:30:40.840514:Compression will be faster with 'pigz' installed
+INFO: stdout 2021-02-25T13:30:40.840514:Compression will be faster with 'pigz' installed
+210225-13:30:40,840 nipype.interface INFO:
+	 stdout 2021-02-25T13:30:40.840514:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+INFO: stdout 2021-02-25T13:30:40.840514:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+210225-13:30:40,840 nipype.interface INFO:
+	 stdout 2021-02-25T13:30:40.840514:Found 310 DICOM file(s)
+INFO: stdout 2021-02-25T13:30:40.840514:Found 310 DICOM file(s)
+210225-13:30:40,840 nipype.interface INFO:
+	 stdout 2021-02-25T13:30:40.840514:Convert 310 DICOM as ./func (88x88x60x310)
+INFO: stdout 2021-02-25T13:30:40.840514:Convert 310 DICOM as ./func (88x88x60x310)
+210225-13:30:51,320 nipype.interface INFO:
+	 stdout 2021-02-25T13:30:51.320100:Conversion required 12.004982 seconds (11.134367 for core code).
+INFO: stdout 2021-02-25T13:30:51.320100:Conversion required 12.004982 seconds (11.134367 for core code).
+210225-13:30:51,366 nipype.workflow INFO:
+	 [Node] Finished "convert".
+INFO: [Node] Finished "convert".
+210225-13:31:52,463 nipype.workflow INFO:
+	 [Node] Setting-up "embedder" in "/tmp/embedmetahuv_pc4p/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetahuv_pc4p/embedder".
+210225-13:31:52,491 nipype.workflow INFO:
+	 [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+INFO: [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+210225-13:32:08,486 nipype.workflow INFO:
+	 [Node] Finished "embedder".
+INFO: [Node] Finished "embedder".
+INFO: Post-treating /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/func/sub-tcb2021_ses-01_task-TSSblock_run-08_bold.json file
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/fmap/sub-tcb2021_ses-01_acq-greAP_magnitude (120 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/fmap . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
+210225-13:32:08,590 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixh8szqzm5/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixh8szqzm5/convert".
+210225-13:32:08,628 nipype.workflow INFO:
+	 [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f fmap -o . -s n -v n /tmp/dcm2niixh8szqzm5/convert
+INFO: [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f fmap -o . -s n -v n /tmp/dcm2niixh8szqzm5/convert
+210225-13:32:08,886 nipype.interface INFO:
+	 stdout 2021-02-25T13:32:08.886274:Compression will be faster with 'pigz' installed
+INFO: stdout 2021-02-25T13:32:08.886274:Compression will be faster with 'pigz' installed
+210225-13:32:08,886 nipype.interface INFO:
+	 stdout 2021-02-25T13:32:08.886274:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+INFO: stdout 2021-02-25T13:32:08.886274:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+210225-13:32:08,886 nipype.interface INFO:
+	 stdout 2021-02-25T13:32:08.886274:Found 120 DICOM file(s)
+INFO: stdout 2021-02-25T13:32:08.886274:Found 120 DICOM file(s)
+210225-13:32:08,886 nipype.interface INFO:
+	 stdout 2021-02-25T13:32:08.886274:Slices not stacked: echo varies (TE 4.92, 7.38; echo 1, 2). Use 'merge 2D slices' option to force stacking
+INFO: stdout 2021-02-25T13:32:08.886274:Slices not stacked: echo varies (TE 4.92, 7.38; echo 1, 2). Use 'merge 2D slices' option to force stacking
+210225-13:32:08,886 nipype.interface INFO:
+	 stdout 2021-02-25T13:32:08.886274:Convert 60 DICOM as ./fmap_e1 (88x88x60x1)
+INFO: stdout 2021-02-25T13:32:08.886274:Convert 60 DICOM as ./fmap_e1 (88x88x60x1)
+210225-13:32:08,922 nipype.interface INFO:
+	 stdout 2021-02-25T13:32:08.922569:Convert 60 DICOM as ./fmap_e2 (88x88x60x1)
+INFO: stdout 2021-02-25T13:32:08.922569:Convert 60 DICOM as ./fmap_e2 (88x88x60x1)
+210225-13:32:08,954 nipype.interface INFO:
+	 stdout 2021-02-25T13:32:08.954558:Conversion required 0.237568 seconds (0.131236 for core code).
+INFO: stdout 2021-02-25T13:32:08.954558:Conversion required 0.237568 seconds (0.131236 for core code).
+210225-13:32:08,995 nipype.workflow INFO:
+	 [Node] Finished "convert".
+INFO: [Node] Finished "convert".
+WARNING: For now not embedding BIDS and info generated .nii.gz itself since sequence produced multiple files
+INFO: Converting /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/fmap/sub-tcb2021_ses-01_acq-greAP_phasediff (60 DICOMs) -> /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/fmap . Converter: dcm2niix . Output types: ('nii.gz', 'dicom')
+210225-13:32:10,405 nipype.workflow INFO:
+	 [Node] Setting-up "convert" in "/tmp/dcm2niixl_73os8o/convert".
+INFO: [Node] Setting-up "convert" in "/tmp/dcm2niixl_73os8o/convert".
+210225-13:32:10,425 nipype.workflow INFO:
+	 [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f fmap -o . -s n -v n /tmp/dcm2niixl_73os8o/convert
+INFO: [Node] Running "convert" ("nipype.interfaces.dcm2nii.Dcm2niix"), a CommandLine Interface with command:
+dcm2niix -b y -z y -x n -t n -m n -f fmap -o . -s n -v n /tmp/dcm2niixl_73os8o/convert
+210225-13:32:10,590 nipype.interface INFO:
+	 stdout 2021-02-25T13:32:10.590529:Compression will be faster with 'pigz' installed
+INFO: stdout 2021-02-25T13:32:10.590529:Compression will be faster with 'pigz' installed
+210225-13:32:10,590 nipype.interface INFO:
+	 stdout 2021-02-25T13:32:10.590529:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+INFO: stdout 2021-02-25T13:32:10.590529:Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) (JP-LS:CharLS) GCC5.5.0 (64-bit Linux)
+210225-13:32:10,590 nipype.interface INFO:
+	 stdout 2021-02-25T13:32:10.590529:Found 60 DICOM file(s)
+INFO: stdout 2021-02-25T13:32:10.590529:Found 60 DICOM file(s)
+210225-13:32:10,590 nipype.interface INFO:
+	 stdout 2021-02-25T13:32:10.590529:Convert 60 DICOM as ./fmap_e2_ph (88x88x60x1)
+INFO: stdout 2021-02-25T13:32:10.590529:Convert 60 DICOM as ./fmap_e2_ph (88x88x60x1)
+210225-13:32:10,612 nipype.interface INFO:
+	 stdout 2021-02-25T13:32:10.612730:Conversion required 0.109770 seconds (0.057225 for core code).
+INFO: stdout 2021-02-25T13:32:10.612730:Conversion required 0.109770 seconds (0.057225 for core code).
+210225-13:32:10,635 nipype.workflow INFO:
+	 [Node] Finished "convert".
+INFO: [Node] Finished "convert".
+210225-13:32:11,325 nipype.workflow INFO:
+	 [Node] Setting-up "embedder" in "/tmp/embedmetau4w5_ntq/embedder".
+INFO: [Node] Setting-up "embedder" in "/tmp/embedmetau4w5_ntq/embedder".
+210225-13:32:11,334 nipype.workflow INFO:
+	 [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+INFO: [Node] Running "embedder" ("nipype.interfaces.utility.wrappers.Function")
+210225-13:32:13,105 nipype.workflow INFO:
+	 [Node] Finished "embedder".
+INFO: [Node] Finished "embedder".
+INFO: Post-treating /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/sub-tcb2021/ses-01/fmap/sub-tcb2021_ses-01_acq-greAP_phasediff.json file
+INFO: Populating template files under /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/
+INFO: PROCESSING DONE: {'subject': 'tcb2021', 'outdir': '/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/', 'session': '01'}
+Done with Heudiconv BIDS Convesion.
+/var/spool/slurmd/job531545/slurm_script: line 111: -v: command not found
+EXPERIMENT DIRECTORY: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/
+2021-02-25 13:32:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_postprocess[133792] INFO ---------------------------------
+2021-02-25 13:32:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_postprocess[133792] INFO Processing Subjects ['tcb2021']: 
+2021-02-25 13:32:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_postprocess[133792] INFO ---------------------------------
+2021-02-25 13:32:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[133792] INFO Processing participant tcb2021 at path /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids//sub-tcb2021
+2021-02-25 13:32:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[133792] INFO List of sessions sub-directories ['ses-01']
+2021-02-25 13:32:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[133792] INFO List of JSON files to amend ['/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids//sub-tcb2021/ses-01/fmap/sub-tcb2021_ses-01_acq-greAP_magnitude1.json', '/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids//sub-tcb2021/ses-01/fmap/sub-tcb2021_ses-01_acq-greAP_magnitude2.json', '/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids//sub-tcb2021/ses-01/fmap/sub-tcb2021_ses-01_acq-greAP_phasediff.json']
+2021-02-25 13:32:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[133792] INFO List of NII files
+2021-02-25 13:32:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[133792] INFO Processing file <_io.TextIOWrapper name='/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids//sub-tcb2021/ses-01/fmap/sub-tcb2021_ses-01_acq-greAP_magnitude1.json' mode='r' encoding='UTF-8'>
+2021-02-25 13:32:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[133792] INFO Done with re-write
+2021-02-25 13:32:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[133792] INFO Processing file <_io.TextIOWrapper name='/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids//sub-tcb2021/ses-01/fmap/sub-tcb2021_ses-01_acq-greAP_magnitude2.json' mode='r' encoding='UTF-8'>
+2021-02-25 13:32:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[133792] INFO Done with re-write
+2021-02-25 13:32:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[133792] INFO Processing file <_io.TextIOWrapper name='/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids//sub-tcb2021/ses-01/fmap/sub-tcb2021_ses-01_acq-greAP_phasediff.json' mode='r' encoding='UTF-8'>
+2021-02-25 13:32:15 node1128.oscar.ccv.brown.edu xnat_tools.bids_utils[133792] INFO Done with re-write

@@ -1,0 +1,219 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 536202
+##  Job Name : fMRI_L2_group
+##  Nodelist : node1359
+##      CPUs : 16
+##  Mem/Node : 131072 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Fri Feb 26 09:55:19 EST 2021
+###############################################################################
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats exists. No changes required.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C1_Cue_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C1_Cue_TaskvsBaseline exists. No changes required.
+Moving contrast: Subject 2011 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2012 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2013 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2014 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2015 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2017 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2017 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2019 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2020 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2022 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C2_Int_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C2_Int_TaskvsBaseline exists. No changes required.
+Moving contrast: Subject 2011 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2012 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2013 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2014 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2015 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2017 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2017 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2019 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2020 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2022 Contrast 2 to Folder C2_Int_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C3_Cue_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C3_Cue_HighvsLowReward exists. No changes required.
+Moving contrast: Subject 2011 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2012 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2013 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2014 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2015 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2019 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2020 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2022 Contrast 3 to Folder C3_Cue_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C4_Cue_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C4_Cue_HighvsLowPenalty exists. No changes required.
+Moving contrast: Subject 2011 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2012 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2013 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2014 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2015 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2019 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2020 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2022 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C5_Int_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C5_Int_HighvsLowReward exists. No changes required.
+Moving contrast: Subject 2011 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2012 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2013 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2014 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2015 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2019 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2020 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2022 Contrast 5 to Folder C5_Int_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C6_Int_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C6_Int_HighvsLowPenalty exists. No changes required.
+Moving contrast: Subject 2011 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2012 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2013 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2014 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2015 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2019 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2020 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2022 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C7_Fb_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C7_Fb_HighvsLowReward exists. No changes required.
+Moving contrast: Subject 2011 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2012 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2013 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2014 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2015 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2019 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2020 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2022 Contrast 7 to Folder C7_Fb_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C8_Fb_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C8_Fb_HighvsLowPenalty exists. No changes required.
+Moving contrast: Subject 2011 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2012 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2013 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2014 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2015 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2019 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2020 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2022 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C1_Cue_TaskvsBaseline
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Item 'Scans', field 'val': Value must be either empty, a cellstr or a cfg_dep object.
+Contrast 1 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C2_Int_TaskvsBaseline
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Item 'Scans', field 'val': Value must be either empty, a cellstr or a cfg_dep object.
+Contrast 2 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C3_Cue_HighvsLowReward
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Item 'Scans', field 'val': Value must be either empty, a cellstr or a cfg_dep object.
+Contrast 3 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C4_Cue_HighvsLowPenalty
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Item 'Scans', field 'val': Value must be either empty, a cellstr or a cfg_dep object.
+Contrast 4 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C5_Int_HighvsLowReward
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Item 'Scans', field 'val': Value must be either empty, a cellstr or a cfg_dep object.
+Contrast 5 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C6_Int_HighvsLowPenalty
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Item 'Scans', field 'val': Value must be either empty, a cellstr or a cfg_dep object.
+Contrast 6 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C7_Fb_HighvsLowReward
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Item 'Scans', field 'val': Value must be either empty, a cellstr or a cfg_dep object.
+Contrast 7 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C8_Fb_HighvsLowPenalty
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Item 'Scans', field 'val': Value must be either empty, a cellstr or a cfg_dep object.
+Contrast 8 analyzed.

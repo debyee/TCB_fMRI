@@ -1,0 +1,57 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww16080\viewh11520\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Summary of scripts in this folder\
+Created by Debbie Yee, Last Updated 5/6/2020\
+\
+
+\f1\b Preprocessing Scripts (using fMRIPrep, in bash):
+\f0\b0 \
+\
+	Step 1: TCB_xnat2bids_bidspostprocess.sh \
+	(bash script that pulls data from XNAT and converts to BIDS format)\
+	(Note: xnat2bids_checkfunctions.sh can be called to look at the available functions)\
+\
+	Step 1a: TCB_bids-validator.sh \
+	(bash script that validates that your data is in BIDS format)\
+\
+	Step 2: TCB_fmriprep_fieldmap_ica.sh\
+	(bash script that runs fmriprep with field map correction and ica)\
+	\
+	Step 3: TCB_postfmriprep_dataformat.sh \
+	(bash script that will move anatomical, functional images and confounds to spm folder and prepare data for first level analysis) \
+\
+\
+
+\f1\b Extracting Stimulus Onset Times
+\f0\b0 \
+\
+	Step 4: TCB_makeSOTS.m \
+	(matlab script that creates stimulus onset files (SOTS) for each of the relevant conditions & contrasts)\
+\
+
+\f1\b 1st Level Subject Analysis GLM in SPM
+\f0\b0 \
+\
+	Step 5: TCB_runLevel1_fMRIModelSpec_Esimate.sh\
+	(bash script that will run several matlab scripts to make regressors, run the first level GLM)\
+	\
+	This script will run the following scripts:\
+\
+		TCB_makeRegressor.m\
+		(matlab script that creates intercept regressor for each subject\'92s SPM Design Matrix when SOTS are all concatenated) \
+\
+		TCB_runLevel1_fMRIModelSpec_Esimate.m\
+		(matlab script that sets up the GLM and calculates beta estimates for first level analyses)\
+\
+
+\f1\b 2nd Level Group Analysis GLM in SPM
+\f0\b0 \
+\
+	Step 6: TCB_\
+	\
+	}

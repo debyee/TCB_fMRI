@@ -1,0 +1,66 @@
+module: loading 'spm/spm12_7771'
+module: loading 'conn/18b_runtime'
+{Undefined function or variable 'spm_get_defaults'.
+
+Error in spm (line 398)
+spm_get_defaults('modality',Modality);
+
+Error in TCB_runLevel2_group (line 9)
+    spm('defaults', 'FMRI');
+} 
+{Undefined function or variable 'spm_get_defaults'.
+
+Error in spm (line 398)
+spm_get_defaults('modality',Modality);
+
+Error in TCB_runLevel2_group (line 9)
+    spm('defaults', 'FMRI');
+} 
+{Undefined function or variable 'spm_get_defaults'.
+
+Error in spm (line 398)
+spm_get_defaults('modality',Modality);
+
+Error in TCB_runLevel2_group (line 9)
+    spm('defaults', 'FMRI');
+} 
+{Undefined function or variable 'spm_get_defaults'.
+
+Error in spm (line 398)
+spm_get_defaults('modality',Modality);
+
+Error in TCB_runLevel2_group (line 9)
+    spm('defaults', 'FMRI');
+} 
+{Undefined function or variable 'spm_get_defaults'.
+
+Error in spm (line 398)
+spm_get_defaults('modality',Modality);
+
+Error in TCB_runLevel2_group (line 9)
+    spm('defaults', 'FMRI');
+} 
+{Undefined function or variable 'spm_get_defaults'.
+
+Error in spm (line 398)
+spm_get_defaults('modality',Modality);
+
+Error in TCB_runLevel2_group (line 9)
+    spm('defaults', 'FMRI');
+} 
+{Undefined function or variable 'spm_get_defaults'.
+
+Error in spm (line 398)
+spm_get_defaults('modality',Modality);
+
+Error in TCB_runLevel2_group (line 9)
+    spm('defaults', 'FMRI');
+} 
+{Undefined function or variable 'spm_get_defaults'.
+
+Error in spm (line 398)
+spm_get_defaults('modality',Modality);
+
+Error in TCB_runLevel2_group (line 9)
+    spm('defaults', 'FMRI');
+} 

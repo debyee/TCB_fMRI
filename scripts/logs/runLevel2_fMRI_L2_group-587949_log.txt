@@ -1,0 +1,429 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 587949
+##  Job Name : fMRI_L2_group
+##  Nodelist : node1634
+##      CPUs : 16
+##  Mem/Node : 131072 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Mon Mar  1 23:00:58 EST 2021
+###############################################################################
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats exists. No changes required.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C1_Cue_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C1_Cue_TaskvsBaseline exists. No changes required.
+Moving contrast: Subject 2011 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2012 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2013 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2014 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2015 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2017 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2017 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2019 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2020 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2021 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2022 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2024 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C2_Int_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C2_Int_TaskvsBaseline exists. No changes required.
+Moving contrast: Subject 2011 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2012 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2013 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2014 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2015 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2017 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2017 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2019 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2020 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2021 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2022 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2024 Contrast 2 to Folder C2_Int_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C3_Cue_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C3_Cue_HighvsLowReward exists. No changes required.
+Moving contrast: Subject 2011 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2012 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2013 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2014 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2015 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2019 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2020 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2021 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2022 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2024 Contrast 3 to Folder C3_Cue_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C4_Cue_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C4_Cue_HighvsLowPenalty exists. No changes required.
+Moving contrast: Subject 2011 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2012 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2013 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2014 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2015 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2019 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2020 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2021 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2022 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2024 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C5_Int_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C5_Int_HighvsLowReward exists. No changes required.
+Moving contrast: Subject 2011 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2012 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2013 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2014 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2015 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2019 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2020 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2021 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2022 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2024 Contrast 5 to Folder C5_Int_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C6_Int_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C6_Int_HighvsLowPenalty exists. No changes required.
+Moving contrast: Subject 2011 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2012 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2013 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2014 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2015 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2019 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2020 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2021 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2022 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2024 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C7_Fb_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C7_Fb_HighvsLowReward exists. No changes required.
+Moving contrast: Subject 2011 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2012 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2013 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2014 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2015 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2019 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2020 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2021 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2022 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2024 Contrast 7 to Folder C7_Fb_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C8_Fb_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C8_Fb_HighvsLowPenalty exists. No changes required.
+Moving contrast: Subject 2011 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2012 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2013 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2014 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2015 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2019 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2020 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2021 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2022 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2024 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C1_Cue_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C1_Cue_TaskvsBaseline/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C1_Cue_TaskvsBaseline/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+01-Mar-2021 23:01:12 - Running job #1
+------------------------------------------------------------------------
+01-Mar-2021 23:01:12 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          23:01:12 - 01/03/2021
+01-Mar-2021 23:01:12 - Done    'Factorial design specification'
+01-Mar-2021 23:01:12 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             23:01:12 - 01/03/2021
+========================================================================
+Chunk   1/1                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          23:01:14 - 01/03/2021
+Done
+01-Mar-2021 23:01:14 - Done    'Model estimation'
+01-Mar-2021 23:01:14 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             23:01:14 - 01/03/2021
+========================================================================
+Contrasts folder                        :        ./C1_Cue_TaskvsBaseline
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          23:01:14 - 01/03/2021
+01-Mar-2021 23:01:14 - Done    'Contrast Manager'
+01-Mar-2021 23:01:14 - Done
+
+Contrast 1 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C2_Int_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C2_Int_TaskvsBaseline/SPM.mat
+No SPM mat file found. Will create a new SPM.mat file.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+01-Mar-2021 23:01:28 - Running job #1
+------------------------------------------------------------------------
+01-Mar-2021 23:01:28 - Running 'Factorial design specification'
+
+= spm_run_factorial_design ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Current directory contains existing SPM file:
+	Continuing will overwrite existing file!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[s]top / [c]ontinue  (Default: stop)? 
+Abort...   (existing SPM file)          :          23:01:28 - 01/03/2021
+
+01-Mar-2021 23:01:28 - Failed  'Factorial design specification'
+Output argument "out" (and maybe others) not assigned during call to "spm_run_factorial_design".
+
+No executable modules, but still unresolved dependencies or incomplete module inputs.
+The following modules did not run:
+Failed: Factorial design specification
+Skipped: Model estimation
+Skipped: Contrast Manager
+
+Contrast 2 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C3_Cue_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C3_Cue_HighvsLowReward/SPM.mat
+No SPM mat file found. Will create a new SPM.mat file.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+01-Mar-2021 23:01:42 - Running job #1
+------------------------------------------------------------------------
+01-Mar-2021 23:01:42 - Running 'Factorial design specification'
+
+= spm_run_factorial_design ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Current directory contains existing SPM file:
+	Continuing will overwrite existing file!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[s]top / [c]ontinue  (Default: stop)? 
+Abort...   (existing SPM file)          :          23:01:42 - 01/03/2021
+
+01-Mar-2021 23:01:42 - Failed  'Factorial design specification'
+Output argument "out" (and maybe others) not assigned during call to "spm_run_factorial_design".
+
+No executable modules, but still unresolved dependencies or incomplete module inputs.
+The following modules did not run:
+Failed: Factorial design specification
+Skipped: Model estimation
+Skipped: Contrast Manager
+
+Contrast 3 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C4_Cue_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C4_Cue_HighvsLowPenalty/SPM.mat
+No SPM mat file found. Will create a new SPM.mat file.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+01-Mar-2021 23:01:56 - Running job #1
+------------------------------------------------------------------------
+01-Mar-2021 23:01:56 - Running 'Factorial design specification'
+
+= spm_run_factorial_design ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Current directory contains existing SPM file:
+	Continuing will overwrite existing file!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[s]top / [c]ontinue  (Default: stop)? 
+Abort...   (existing SPM file)          :          23:01:56 - 01/03/2021
+
+01-Mar-2021 23:01:56 - Failed  'Factorial design specification'
+Output argument "out" (and maybe others) not assigned during call to "spm_run_factorial_design".
+
+No executable modules, but still unresolved dependencies or incomplete module inputs.
+The following modules did not run:
+Failed: Factorial design specification
+Skipped: Model estimation
+Skipped: Contrast Manager
+
+Contrast 4 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C5_Int_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C5_Int_HighvsLowReward/SPM.mat
+No SPM mat file found. Will create a new SPM.mat file.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+01-Mar-2021 23:02:10 - Running job #1
+------------------------------------------------------------------------
+01-Mar-2021 23:02:10 - Running 'Factorial design specification'
+
+= spm_run_factorial_design ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Current directory contains existing SPM file:
+	Continuing will overwrite existing file!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[s]top / [c]ontinue  (Default: stop)? 
+Abort...   (existing SPM file)          :          23:02:10 - 01/03/2021
+
+01-Mar-2021 23:02:10 - Failed  'Factorial design specification'
+Output argument "out" (and maybe others) not assigned during call to "spm_run_factorial_design".
+
+No executable modules, but still unresolved dependencies or incomplete module inputs.
+The following modules did not run:
+Failed: Factorial design specification
+Skipped: Model estimation
+Skipped: Contrast Manager
+
+Contrast 5 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C6_Int_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C6_Int_HighvsLowPenalty/SPM.mat
+No SPM mat file found. Will create a new SPM.mat file.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+01-Mar-2021 23:02:24 - Running job #1
+------------------------------------------------------------------------
+01-Mar-2021 23:02:24 - Running 'Factorial design specification'
+
+= spm_run_factorial_design ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Current directory contains existing SPM file:
+	Continuing will overwrite existing file!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[s]top / [c]ontinue  (Default: stop)? 
+Abort...   (existing SPM file)          :          23:02:24 - 01/03/2021
+
+01-Mar-2021 23:02:24 - Failed  'Factorial design specification'
+Output argument "out" (and maybe others) not assigned during call to "spm_run_factorial_design".
+
+No executable modules, but still unresolved dependencies or incomplete module inputs.
+The following modules did not run:
+Failed: Factorial design specification
+Skipped: Model estimation
+Skipped: Contrast Manager
+
+Contrast 6 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C7_Fb_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C7_Fb_HighvsLowReward/SPM.mat
+No SPM mat file found. Will create a new SPM.mat file.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+01-Mar-2021 23:02:38 - Running job #1
+------------------------------------------------------------------------
+01-Mar-2021 23:02:38 - Running 'Factorial design specification'
+
+= spm_run_factorial_design ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Current directory contains existing SPM file:
+	Continuing will overwrite existing file!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[s]top / [c]ontinue  (Default: stop)? 
+Abort...   (existing SPM file)          :          23:02:38 - 01/03/2021
+
+01-Mar-2021 23:02:38 - Failed  'Factorial design specification'
+Output argument "out" (and maybe others) not assigned during call to "spm_run_factorial_design".
+
+No executable modules, but still unresolved dependencies or incomplete module inputs.
+The following modules did not run:
+Failed: Factorial design specification
+Skipped: Model estimation
+Skipped: Contrast Manager
+
+Contrast 7 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C8_Fb_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C8_Fb_HighvsLowPenalty/SPM.mat
+No SPM mat file found. Will create a new SPM.mat file.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+01-Mar-2021 23:02:52 - Running job #1
+------------------------------------------------------------------------
+01-Mar-2021 23:02:52 - Running 'Factorial design specification'
+
+= spm_run_factorial_design ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Current directory contains existing SPM file:
+	Continuing will overwrite existing file!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[s]top / [c]ontinue  (Default: stop)? 
+Abort...   (existing SPM file)          :          23:02:52 - 01/03/2021
+
+01-Mar-2021 23:02:52 - Failed  'Factorial design specification'
+Output argument "out" (and maybe others) not assigned during call to "spm_run_factorial_design".
+
+No executable modules, but still unresolved dependencies or incomplete module inputs.
+The following modules did not run:
+Failed: Factorial design specification
+Skipped: Model estimation
+Skipped: Contrast Manager
+
+Contrast 8 analyzed.
