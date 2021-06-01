@@ -1,1 +1,0 @@
-FATAL:   could not open image /users/dyee7/data/mri-data/TCB/scripts/nses: failed to retrieve path for /users/dyee7/data/mri-data/TCB/scripts/nses: lstat /gpfs/data/ashenhav/mri-data/TCB/scripts/nses: no such file or directory

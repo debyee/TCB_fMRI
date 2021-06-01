@@ -1,5 +1,0 @@
-module: unloading 'matlab/R2019a'
-module: loading 'matlab/R2019a'
-module: unloading 'spm/spm12'
-module: loading 'spm/spm12'
-slurmstepd: error: *** JOB 336898 ON node1321 CANCELLED AT 2021-02-05T00:07:29 ***
