@@ -1,0 +1,555 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 920731
+##  Job Name : fMRI_L2_group
+##  Nodelist : node1113
+##      CPUs : 16
+##  Mem/Node : 131072 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Wed Mar 24 09:38:44 EDT 2021
+###############################################################################
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats exists. No changes required.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C1_Cue_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C1_Cue_TaskvsBaseline exists. No changes required.
+Moving contrast: Subject 2011 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2012 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2013 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2014 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2015 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2017 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2019 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2020 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2021 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2022 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2024 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2026 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2027 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2028 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2030 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2031 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2032 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2033 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Moving contrast: Subject 2035 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C2_Int_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C2_Int_TaskvsBaseline exists. No changes required.
+Moving contrast: Subject 2011 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2012 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2013 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2014 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2015 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2017 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2019 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2020 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2021 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2022 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2024 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2026 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2027 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2028 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2030 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2031 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2032 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2033 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Moving contrast: Subject 2035 Contrast 2 to Folder C2_Int_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C3_Cue_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C3_Cue_HighvsLowReward exists. No changes required.
+Moving contrast: Subject 2011 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2012 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2013 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2014 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2015 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2019 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2020 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2021 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2022 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2024 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2026 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2027 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2028 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2030 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2031 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2032 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2033 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Moving contrast: Subject 2035 Contrast 3 to Folder C3_Cue_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C4_Cue_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C4_Cue_HighvsLowPenalty exists. No changes required.
+Moving contrast: Subject 2011 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2012 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2013 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2014 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2015 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2019 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2020 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2021 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2022 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2024 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2026 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2027 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2028 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2030 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2031 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2032 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2033 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Moving contrast: Subject 2035 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C5_Int_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C5_Int_HighvsLowReward exists. No changes required.
+Moving contrast: Subject 2011 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2012 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2013 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2014 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2015 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2019 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2020 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2021 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2022 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2024 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2026 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2027 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2028 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2030 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2031 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2032 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2033 Contrast 5 to Folder C5_Int_HighvsLowReward
+Moving contrast: Subject 2035 Contrast 5 to Folder C5_Int_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C6_Int_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C6_Int_HighvsLowPenalty exists. No changes required.
+Moving contrast: Subject 2011 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2012 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2013 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2014 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2015 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2019 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2020 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2021 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2022 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2024 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2026 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2027 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2028 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2030 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2031 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2032 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2033 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Moving contrast: Subject 2035 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C7_Fb_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C7_Fb_HighvsLowReward exists. No changes required.
+Moving contrast: Subject 2011 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2012 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2013 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2014 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2015 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2017 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2019 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2020 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2021 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2022 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2024 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2026 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2027 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2028 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2030 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2031 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2032 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2033 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Moving contrast: Subject 2035 Contrast 7 to Folder C7_Fb_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C8_Fb_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C8_Fb_HighvsLowPenalty exists. No changes required.
+Moving contrast: Subject 2011 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2012 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2013 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2014 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2015 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2017 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2019 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2020 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2021 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2022 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2024 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2026 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2027 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2028 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2030 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2031 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2032 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2033 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Moving contrast: Subject 2035 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C1_Cue_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C1_Cue_TaskvsBaseline/SPM.mat
+No SPM mat file found. Will create a new SPM.mat file.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+24-Mar-2021 09:39:05 - Running job #1
+------------------------------------------------------------------------
+24-Mar-2021 09:39:05 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          09:39:06 - 24/03/2021
+24-Mar-2021 09:39:06 - Done    'Factorial design specification'
+24-Mar-2021 09:39:06 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             09:39:06 - 24/03/2021
+========================================================================
+Chunk   1/1                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          09:39:08 - 24/03/2021
+Done
+24-Mar-2021 09:39:08 - Done    'Model estimation'
+24-Mar-2021 09:39:08 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             09:39:08 - 24/03/2021
+========================================================================
+Contrasts folder                        :        ./C1_Cue_TaskvsBaseline
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          09:39:08 - 24/03/2021
+24-Mar-2021 09:39:08 - Done    'Contrast Manager'
+24-Mar-2021 09:39:08 - Done
+
+Contrast 1 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C2_Int_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C2_Int_TaskvsBaseline/SPM.mat
+No SPM mat file found. Will create a new SPM.mat file.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+24-Mar-2021 09:39:22 - Running job #1
+------------------------------------------------------------------------
+24-Mar-2021 09:39:22 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          09:39:23 - 24/03/2021
+24-Mar-2021 09:39:23 - Done    'Factorial design specification'
+24-Mar-2021 09:39:23 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             09:39:23 - 24/03/2021
+========================================================================
+Chunk   1/1                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          09:39:25 - 24/03/2021
+Done
+24-Mar-2021 09:39:25 - Done    'Model estimation'
+24-Mar-2021 09:39:25 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             09:39:25 - 24/03/2021
+========================================================================
+Contrasts folder                        :        ./C2_Int_TaskvsBaseline
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          09:39:26 - 24/03/2021
+24-Mar-2021 09:39:26 - Done    'Contrast Manager'
+24-Mar-2021 09:39:26 - Done
+
+Contrast 2 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C3_Cue_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C3_Cue_HighvsLowReward/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C3_Cue_HighvsLowReward/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+24-Mar-2021 09:39:40 - Running job #1
+------------------------------------------------------------------------
+24-Mar-2021 09:39:40 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          09:39:40 - 24/03/2021
+24-Mar-2021 09:39:40 - Done    'Factorial design specification'
+24-Mar-2021 09:39:40 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             09:39:40 - 24/03/2021
+========================================================================
+Chunk   1/1                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          09:39:43 - 24/03/2021
+Done
+24-Mar-2021 09:39:43 - Done    'Model estimation'
+24-Mar-2021 09:39:43 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             09:39:43 - 24/03/2021
+========================================================================
+Contrasts folder                        :       ./C3_Cue_HighvsLowReward
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          09:39:43 - 24/03/2021
+24-Mar-2021 09:39:43 - Done    'Contrast Manager'
+24-Mar-2021 09:39:43 - Done
+
+Contrast 3 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C4_Cue_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C4_Cue_HighvsLowPenalty/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C4_Cue_HighvsLowPenalty/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+24-Mar-2021 09:39:57 - Running job #1
+------------------------------------------------------------------------
+24-Mar-2021 09:39:57 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          09:39:58 - 24/03/2021
+24-Mar-2021 09:39:58 - Done    'Factorial design specification'
+24-Mar-2021 09:39:58 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             09:39:58 - 24/03/2021
+========================================================================
+Chunk   1/1                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          09:40:00 - 24/03/2021
+Done
+24-Mar-2021 09:40:00 - Done    'Model estimation'
+24-Mar-2021 09:40:00 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             09:40:00 - 24/03/2021
+========================================================================
+Contrasts folder                        :      ./C4_Cue_HighvsLowPenalty
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          09:40:00 - 24/03/2021
+24-Mar-2021 09:40:00 - Done    'Contrast Manager'
+24-Mar-2021 09:40:00 - Done
+
+Contrast 4 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C5_Int_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C5_Int_HighvsLowReward/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C5_Int_HighvsLowReward/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+24-Mar-2021 09:40:14 - Running job #1
+------------------------------------------------------------------------
+24-Mar-2021 09:40:14 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          09:40:15 - 24/03/2021
+24-Mar-2021 09:40:15 - Done    'Factorial design specification'
+24-Mar-2021 09:40:15 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             09:40:15 - 24/03/2021
+========================================================================
+Chunk   1/1                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          09:40:17 - 24/03/2021
+Done
+24-Mar-2021 09:40:17 - Done    'Model estimation'
+24-Mar-2021 09:40:17 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             09:40:17 - 24/03/2021
+========================================================================
+Contrasts folder                        :       ./C5_Int_HighvsLowReward
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          09:40:17 - 24/03/2021
+24-Mar-2021 09:40:17 - Done    'Contrast Manager'
+24-Mar-2021 09:40:17 - Done
+
+Contrast 5 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C6_Int_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C6_Int_HighvsLowPenalty/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C6_Int_HighvsLowPenalty/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+24-Mar-2021 09:40:32 - Running job #1
+------------------------------------------------------------------------
+24-Mar-2021 09:40:32 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          09:40:32 - 24/03/2021
+24-Mar-2021 09:40:32 - Done    'Factorial design specification'
+24-Mar-2021 09:40:32 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             09:40:32 - 24/03/2021
+========================================================================
+Chunk   1/1                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          09:40:34 - 24/03/2021
+Done
+24-Mar-2021 09:40:34 - Done    'Model estimation'
+24-Mar-2021 09:40:35 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             09:40:35 - 24/03/2021
+========================================================================
+Contrasts folder                        :      ./C6_Int_HighvsLowPenalty
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          09:40:35 - 24/03/2021
+24-Mar-2021 09:40:35 - Done    'Contrast Manager'
+24-Mar-2021 09:40:35 - Done
+
+Contrast 6 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C7_Fb_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C7_Fb_HighvsLowReward/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C7_Fb_HighvsLowReward/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+24-Mar-2021 09:40:49 - Running job #1
+------------------------------------------------------------------------
+24-Mar-2021 09:40:49 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          09:40:50 - 24/03/2021
+24-Mar-2021 09:40:50 - Done    'Factorial design specification'
+24-Mar-2021 09:40:50 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             09:40:50 - 24/03/2021
+========================================================================
+Chunk   1/1                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          09:40:52 - 24/03/2021
+Done
+24-Mar-2021 09:40:52 - Done    'Model estimation'
+24-Mar-2021 09:40:52 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             09:40:52 - 24/03/2021
+========================================================================
+Contrasts folder                        :        ./C7_Fb_HighvsLowReward
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          09:40:52 - 24/03/2021
+24-Mar-2021 09:40:52 - Done    'Contrast Manager'
+24-Mar-2021 09:40:52 - Done
+
+Contrast 7 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C8_Fb_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C8_Fb_HighvsLowPenalty/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/design_CueIntFb12_EventEpoch_rwls/C8_Fb_HighvsLowPenalty/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+24-Mar-2021 09:41:06 - Running job #1
+------------------------------------------------------------------------
+24-Mar-2021 09:41:06 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          09:41:07 - 24/03/2021
+24-Mar-2021 09:41:07 - Done    'Factorial design specification'
+24-Mar-2021 09:41:07 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             09:41:07 - 24/03/2021
+========================================================================
+Chunk   1/1                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          09:41:09 - 24/03/2021
+Done
+24-Mar-2021 09:41:09 - Done    'Model estimation'
+24-Mar-2021 09:41:09 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             09:41:09 - 24/03/2021
+========================================================================
+Contrasts folder                        :       ./C8_Fb_HighvsLowPenalty
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          09:41:09 - 24/03/2021
+24-Mar-2021 09:41:09 - Done    'Contrast Manager'
+24-Mar-2021 09:41:09 - Done
+
+Contrast 8 analyzed.

@@ -10,19 +10,17 @@
 #SBATCH --output logs/TCB-postfmriprep-dataformat-%J.txt
 
 # Directories
-#bids_dir=/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.0.6-nofs/fmriprep/
 bids_dir=/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.2.0-nofs/fmriprep/
 spm_dir=/gpfs/data/ashenhav/mri-data/TCB/spm-data/
 
 # Participant, session, and run labels
-# NOTE: missing tcb2006
-#participant_labels=( "tcb2002" "tcb2003" "tcb2004" "tcb2005" "tcb2008" )
-participant_labels=( "tcb2011" "tcb2012" "tcb2013" "tcb2014" )
-participant_numbers=( 2011 2012 2013 2014 )
+participant_labels=("tcb2043" "tcb2048")
+participant_numbers=(2043 2048)
+#participant_labels=( "tcb2011" "tcb2012" "tcb2013" "tcb2014" "tcb2015" "tcb2020" "tcb2017" "tcb2018" "tcb2019" "tcb2021" "tcb2022" "tcb2024" "tcb2028"
+#"tcb2029" "tcb2037" "tcb2038" "tcb2036" "tcb2034" "tcb2040" "tcb2039" "tcb2041" "tcb2043" "tcb2042" "tcb2045" "tcb2044" "tcb2047" "tcb2031" "tcb2046" "tcb2049")
+#participant_numbers=( 2011 2012 2013 2014 2015 2020 2017 2018 2019 2021 2022 2024 2028 2029 2037 2038 2036 2034 2040 2039 2041 2043 2042 2045 2044 2047 2031 2046 2049)
 run_labels=( "1" "2" "3" "4" "5" "6" "7" "8")
-#session_labels=( "xnat2e00002" "xnat2e00019" "xnat2e00005" "xnat2e00006" "xnat2e00018" ) 
 session_label=("01")
-
 
 # Move the relevant bids derivatives to the spm-data folder for 1st level analysis
 for pid in "${!participant_labels[@]}"; do

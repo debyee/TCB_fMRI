@@ -1,0 +1,9 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1409179
+##  Job Name : TCB-fmriprep-fieldmap_ica
+##  Nodelist : node1743
+##      CPUs : 32
+##  Mem/Node : 131072 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Thu May 27 16:02:44 EDT 2021
+###############################################################################

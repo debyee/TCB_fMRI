@@ -77,8 +77,7 @@ if exist('design_foldername')
             confoundFiles = {confoundFiles(:).name};
             numConfFiles = length(confoundFiles);
             
-            % Loop over each of the confounds and create an array with all
-            % confounds
+            % Loop over each of the confounds and create an array with all confounds
             for confi = 1:numConfFiles
                 
                 % Read in confound file

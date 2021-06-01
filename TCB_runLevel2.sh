@@ -14,14 +14,27 @@
 module load matlab/R2019a
 module load spm/spm12
 
+
+#--------- Variables ---------
+
+# This line makes our bash script complaint if we have undefined variables
+set -u
+
 #--------- CONFIGURE THESE VARIABLES ---------
-participant_numbers=('2011' '2012' '2013' '2014')
+participant_numbers=('2011' '2012' '2013' '2014' '2015' '2017' '2019' '2020' '2021' '2022' '2024' 
+                    '2026' '2027' '2028' '2030' '2031' '2032' '2033' '2035')
 root_path='/gpfs/data/ashenhav/mri-data/TCB/spm-data/'
-design_foldername='design_Cue4_Event_rwls'
+design_foldername='design_CueIntFb12_EventEpoch_rwls'  #'design_Cue4_Event_rwls'
+
 # Declare an associate array with relevant contrasts
-declare -A contrast=(['1']='C1_Cue_TaskvsBaseline'  \
-                     ['2']='C2_Cue_HighvsLowReward' \
-                     ['3']='C3_Cue_HighvsLowPenalty')
+declare -A contrast=(['1']='C1_Cue_TaskvsBaseline'   \
+                     ['2']='C2_Int_TaskvsBaseline'   \
+                     ['3']='C3_Cue_HighvsLowReward'  \
+                     ['4']='C4_Cue_HighvsLowPenalty' \
+                     ['5']='C5_Int_HighvsLowReward'  \
+                     ['6']='C6_Int_HighvsLowPenalty' \
+                     ['7']='C7_Fb_HighvsLowReward'   \
+                     ['8']='C8_Fb_HighvsLowPenalty'  )
 
 #contrasts=('C1_Cue_TaskvsBaseline' 'C2_Cue_HighvsLowReward' 'C3_Cue_HighvsLowPenalty')
 #contrasts_num=('0001','002','003')
@@ -80,37 +93,19 @@ for cid in "${!contrast[@]}"; do
     echo "${contrast_folder}"
     echo ${participant_numbers[@]} >> "${contrast_folder}/participant_numbers.txt"
 
-    matlab-threaded -r "TCB_runlevel2_group('${contrast_folder}','${design_foldername}','${contrast[$cid]}');exit;"
-
-done
-
-
-# Loop over participants and run level 2 analyses in SPM
-for pid in "${participant_numbers[@]}"; do
-    
-    echo
-    echo "Running Subject ${pid}"
-    echo "Root Path is ${root_path}"
-    echo "Design Contrast is ${design_foldername}"
-    echo "Stimulus Onset File is ${design_SOTS}" 
-    echo
-
-    #--------- RUNNING FMRI MODEL SPECIFICATION AND ESTIMATES ---------
     # If SPM.mat file already exists, then remove it
-    spm_mat_file="${root_path}sub-${pid}/${design_foldername}/SPM.mat"
+    spm_mat_file="${contrast_folder}/SPM.mat"
     echo ${spm_mat_file}
     if [[ -f ${spm_mat_file} ]]; then
         echo "SPM mat file ${spm_mat_file} exists. Will delete and overwrite."
         rm ${spm_mat_file}
     else
-        echo "No SPM mat file found."
+        echo "No SPM mat file found. Will create a new SPM.mat file."
     fi
-    
-    # Run matlab script to specify model and calculate estimates
-    matlab-threaded -nodesktop -r "TCB_runLevel1GLM_fMRIModelSpec_Estimate('${pid}','${root_path}','${design_foldername}','${design_SOTS}');exit;"
-    echo "Subject ${pid} estimates calculated."
 
-    #--------- RUNNING FMRI MODEL CONTRASTS ---------
-    matlab-threaded -nodesktop -r "TCB_runLevel1_contrast('${pid}','${root_path}','${design_foldername}');exit;"
-    echo "Subject ${pid} contrast maps created."
+    # Runs Level 2 analyses 
+    matlab-threaded -nodesktop -nodisplay -r "TCB_runLevel2_group('${root_path}','${contrast_folder}','${design_foldername}','${contrast[$cid]}');exit;"
+    # if issues, try: #matlab -nodesktop -r addpath '/gpfs/rt/7.2/opt/spm/spm12' "TCB_runLevel2_group('${root_path}','${contrast_folder}','${design_foldername}','${contrast[$cid]}');exit;"
+    echo "Contrast ${cid} analyzed."
+
 done

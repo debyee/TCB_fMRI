@@ -1,0 +1,28 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 920346
+##  Job Name : TCB-postfmriprep-smooth
+##  Nodelist : node1139
+##      CPUs : 16
+##  Mem/Node : 65536 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Wed Mar 24 09:26:20 EDT 2021
+###############################################################################
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2028/ exists
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2028/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2028
+Moving Functional Run 2 for Subject 2028
+Moving Functional Run 3 for Subject 2028
+Moving Functional Run 4 for Subject 2028
+Moving Functional Run 5 for Subject 2028
+Moving Functional Run 6 for Subject 2028
+Moving Functional Run 7 for Subject 2028
+Moving Functional Run 8 for Subject 2028
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2028/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2028
+Moving Mask Image for Subject 2028
+Moving Anat MNI Image for Subject 2028
+Moving Mask MNI Image for Subject 2028
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2028/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files

@@ -1,0 +1,11 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 531541
+##  Job Name : xnat2bids
+##  Nodelist : node1128
+##      CPUs : 
+##  Mem/Node : 32768 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Thu Feb 25 13:03:46 EST 2021
+###############################################################################
+/var/spool/slurmd/job531541/slurm_script: line 57: syntax error near unexpected token `)'
+/var/spool/slurmd/job531541/slurm_script: line 57: `                     [135]="XNAT7_E00039")'

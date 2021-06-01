@@ -1,5 +1,5 @@
 function TCB_runLevel1_contrast(participant_id,root_path, design_foldername)
-%function TCB_runLevel1_contrast
+% function TCB_runLevel1_contrast
 % Script that creates contrasts at first level analysis (single subject)
 
 %% ---------------- Initialize spm  ------------------------------
@@ -27,19 +27,36 @@ matlabbatch{1}.spm.stats.con.spmmat = {dir_SPMfile};
 
 % Task Contrasts (Control: Task vs. Baseline)
 matlabbatch{1}.spm.stats.con.consess{1}.tcon.name = 'Cue_TaskvsBaseline';
-matlabbatch{1}.spm.stats.con.consess{1}.tcon.weights = [.25 .25 .25 .25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
+matlabbatch{1}.spm.stats.con.consess{1}.tcon.weights = [.25 .25 .25 .25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
 matlabbatch{1}.spm.stats.con.consess{1}.tcon.sessrep = 'none';
 matlabbatch{1}.spm.stats.con.consess{2}.tcon.name = 'Int_TaskvsBaseline';
-matlabbatch{1}.spm.stats.con.consess{2}.tcon.weights = [0 0 0 0 .25 .25 .25 .25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
+matlabbatch{1}.spm.stats.con.consess{2}.tcon.weights = [0 0 0 0 .25 .25 .25 .25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
 matlabbatch{1}.spm.stats.con.consess{2}.tcon.sessrep = 'none';
 
 % Cue Related Contrasts
 matlabbatch{1}.spm.stats.con.consess{3}.tcon.name = 'Cue_HighvsLowReward';
-matlabbatch{1}.spm.stats.con.consess{3}.tcon.weights = [0.5 0.5 -0.5 -0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
+matlabbatch{1}.spm.stats.con.consess{3}.tcon.weights = [0.5 0.5 -0.5 -0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
 matlabbatch{1}.spm.stats.con.consess{3}.tcon.sessrep = 'none';
 matlabbatch{1}.spm.stats.con.consess{4}.tcon.name = 'Cue_HighvsLowPenalty';
-matlabbatch{1}.spm.stats.con.consess{4}.tcon.weights = [0.5 -0.5 0.5 -0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
+matlabbatch{1}.spm.stats.con.consess{4}.tcon.weights = [0.5 -0.5 0.5 -0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
 matlabbatch{1}.spm.stats.con.consess{4}.tcon.sessrep = 'none';
+
+% Interval Related Contrasts
+matlabbatch{1}.spm.stats.con.consess{5}.tcon.name = 'Int_HighvsLowReward';
+matlabbatch{1}.spm.stats.con.consess{5}.tcon.weights = [0 0 0 0 0.5 0.5 -0.5 -0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
+matlabbatch{1}.spm.stats.con.consess{5}.tcon.sessrep = 'none';
+matlabbatch{1}.spm.stats.con.consess{6}.tcon.name = 'Int_HighvsLowPenalty';
+matlabbatch{1}.spm.stats.con.consess{6}.tcon.weights = [0 0 0 0 0.5 -0.5 0.5 -0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
+matlabbatch{1}.spm.stats.con.consess{6}.tcon.sessrep = 'none';
+
+% Feedback Related Contrasts
+matlabbatch{1}.spm.stats.con.consess{7}.tcon.name = 'Fb_HighvsLowReward';
+matlabbatch{1}.spm.stats.con.consess{7}.tcon.weights = [0 0 0 0 0 0 0 0 0.5 0.5 -0.5 -0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
+matlabbatch{1}.spm.stats.con.consess{7}.tcon.sessrep = 'none';
+matlabbatch{1}.spm.stats.con.consess{8}.tcon.name = 'Fb_HighvsLowPenalty';
+matlabbatch{1}.spm.stats.con.consess{8}.tcon.weights = [0 0 0 0 0 0 0 0 0.5 -0.5 0.5 -0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
+matlabbatch{1}.spm.stats.con.consess{8}.tcon.sessrep = 'none';
+
 % matlabbatch{1}.spm.stats.con.consess{5}.tcon.name = 'Cue_GAIN-HighvsLow';
 % matlabbatch{1}.spm.stats.con.consess{5}.tcon.weights = [1 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0];
 % matlabbatch{1}.spm.stats.con.consess{5}.tcon.sessrep = 'none';

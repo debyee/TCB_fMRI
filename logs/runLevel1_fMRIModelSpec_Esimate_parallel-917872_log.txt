@@ -1,0 +1,671 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 917872
+##  Job Name : fMRIModelSpec_Esimate_parallel
+##  Nodelist : node1622
+##      CPUs : 16
+##  Mem/Node : 131072 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Tue Mar 23 23:12:09 EDT 2021
+###############################################################################
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+PROCESSING Regressors for Subject 2011
+PROCESSING Regressors for Subject 2012
+PROCESSING Regressors for Subject 2013
+PROCESSING Regressors for Subject 2014
+PROCESSING Regressors for Subject 2015
+PROCESSING Regressors for Subject 2017
+EXCLUDING subject2018
+PROCESSING Regressors for Subject 2019
+PROCESSING Regressors for Subject 2020
+PROCESSING Regressors for Subject 2021
+PROCESSING Regressors for Subject 2022
+PROCESSING Regressors for Subject 2024
+PROCESSING Regressors for Subject 2026
+PROCESSING Regressors for Subject 2027
+PROCESSING Regressors for Subject 2028
+PROCESSING Regressors for Subject 2030
+PROCESSING Regressors for Subject 2031
+PROCESSING Regressors for Subject 2032
+PROCESSING Regressors for Subject 2033
+PROCESSING Regressors for Subject 2035
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2011
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2011
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2012
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2012
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2013
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2013
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2014
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2014
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2015
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2015
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2017
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2017
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2018
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2018
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2019
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2019
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2020
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2020
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2021
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2021
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2022
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2022
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2024
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2024
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2026
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2026
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2027
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2027
+Error! No nifits were detected for sub-2028. Regressors were not created for this subject.
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2030
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2030
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2031
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2031
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2032
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2032
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2033
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2033
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2035
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2035
+Running job array number: 139
+Processing participant: 2031
+
+Running Subject 2031
+Root Path is /gpfs/data/ashenhav/mri-data/TCB/spm-data/
+Design Contrast is design_CueIntFb12_EventEpoch_rwls
+Stimulus Onset File is TCB_Event_CueIntervalFb_RewPenHighLow_sots_allTcat
+
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2031/design_CueIntFb12_EventEpoch_rwls/SPM.mat
+No SPM mat file found. Will create a new SPM.mat file.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+23-Mar-2021 23:12:41 - Running job #1
+------------------------------------------------------------------------
+23-Mar-2021 23:12:41 - Running 'Expand image frames'
+23-Mar-2021 23:12:41 - Done    'Expand image frames'
+23-Mar-2021 23:12:41 - Running 'fMRI model specification'
+
+SPM12: spm_fMRI_design (v7210)                     23:12:41 - 23/03/2021
+========================================================================
+Saving fMRI design                      :               ...SPM.mat saved
+
+SPM12: spm_rwls_fmri_spm_ui (v$Rev: 4.0 $)         23:12:42 - 23/03/2021
+========================================================================
+Mapping files                           :                        ...done
+Calculating globals                     :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          23:13:24 - 23/03/2021
+23-Mar-2021 23:13:24 - Done    'fMRI model specification'
+23-Mar-2021 23:13:24 - Done
+
+
+SPM12: spm_rwls_spm (v$Rev: 4.0$)                  23:13:24 - 23/03/2021
+========================================================================
+
+SPM12: spm_rwls_est_non_sphericity (v$Rev: 4.0 $)  23:13:27 - 23/03/2021
+========================================================================
+Chunk   1/34                            :                  ...processing                       ...doneChunk   2/34                            :                  ...processing                       ...doneChunk   3/34                            :                  ...processingChunk   4/34                            :                  ...processing                       ...doneChunk   5/34                            :                  ...processing                       ...doneChunk   6/34                            :                  ...processing                       ...doneChunk   7/34                            :                  ...processing                       ...doneChunk   8/34                            :                  ...processing                       ...doneChunk   9/34                            :                  ...processing                       ...doneChunk  10/34                            :                  ...processing                       ...doneChunk  11/34                            :                  ...processing                       ...doneChunk  12/34                            :                  ...processing                       ...doneChunk  13/34                            :                  ...processing                       ...doneChunk  14/34                            :                  ...processing                       ...doneChunk  15/34                            :                  ...processing                       ...doneChunk  16/34                            :                  ...processing                       ...doneChunk  17/34                            :                  ...processing                       ...doneChunk  18/34                            :                  ...processing                       ...doneChunk  19/34                            :                  ...processing                       ...doneChunk  20/34                            :                  ...processing                       ...doneChunk  21/34                            :                  ...processing                       ...doneChunk  22/34                            :                  ...processing                       ...doneChunk  23/34                            :                  ...processing                       ...doneChunk  24/34                            :                  ...processing                       ...doneChunk  25/34                            :                  ...processing                       ...doneChunk  26/34                            :                  ...processing                       ...doneChunk  27/34                            :                  ...processing                       ...doneChunk  28/34                            :                  ...processing                       ...doneChunk  29/34                            :                  ...processing                       ...doneChunk  30/34                            :                  ...processing                       ...doneChunk  31/34                            :                  ...processingChunk  32/34                            :                  ...processingChunk  33/34                            :                  ...processingChunk  34/34                            :                  ...processing
+Temporal non-sphericity (215986 voxels) :             ...ReML estimation
+  ReML Block 1                
+  ReML Iteration              : 1                            ...5.009020e+04
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.287517e-42.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 2                            ...1.223153e+02
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.088132e-42.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 3                            ...2.688474e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.615609e-41.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 4                            ...1.731547e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  6.994756e-41.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 5                            ...1.626749e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.967699e-40.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 6                            ...1.554689e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.199819e-39.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 7                            ...1.487439e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.610713e-39.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 8                            ...1.423754e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.686484e-38.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 9                            ...1.363335e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.882889e-38.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 10                            ...1.305970e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.960796e-37.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 11                            ...1.251472e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  6.256270e-37.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 12                            ...1.199670e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.914307e-36.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 13                            ...1.150403e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.626737e-36.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 14                            ...1.103523e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.591299e-35.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 15                            ...1.058891e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.336763e-35.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 16                            ...1.016380e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.140607e-34.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 17                            ...9.758670e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.899155e-34.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 18                            ...9.372418e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  7.131038e-34.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 19                            ...9.003989e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.699552e-33.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 20                            ...8.652404e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.929584e-33.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 21                            ...8.316748e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  8.824603e-33.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 22                            ...7.996163e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.926923e-32.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 23                            ...7.689846e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.095596e-32.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 24                            ...7.397044e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  8.481959e-32.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 25                            ...7.117051e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.713268e-31.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 26                            ...6.849206e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.378392e-31.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 27                            ...6.592885e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  6.509370e-31.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 28                            ...6.347505e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.226547e-30.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 29                            ...6.112515e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.262051e-30.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 30                            ...5.887399e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.086347e-30.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 31                            ...5.671671e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  7.236199e-30.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 32                            ...5.464870e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.257021e-29.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 33                            ...5.266567e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.143545e-29.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 34                            ...5.076352e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.590628e-29.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 35                            ...4.893843e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.911989e-29.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 36                            ...4.718674e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  9.573898e-29.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 37                            ...4.550505e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.525781e-28.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 38                            ...4.389010e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.394361e-28.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 39                            ...4.233884e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.701841e-28.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 40                            ...4.084836e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.641618e-28.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 41                            ...3.941592e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  8.479413e-28.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 42                            ...3.803892e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.257518e-27.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 43                            ...3.671490e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.840987e-27.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 44                            ...3.544152e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.661765e-27.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 45                            ...3.421658e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.802405e-27.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 46                            ...3.303796e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.369036e-27.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 47                            ...3.190368e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  7.496470e-27.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 48                            ...3.081184e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.035396e-26.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 49                            ...2.976064e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.415162e-26.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 50                            ...2.874836e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.914743e-26.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 51                            ...2.777339e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.565476e-26.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 52                            ...2.683417e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.405041e-26.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 53                            ...2.592923e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.478288e-26.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 54                            ...2.505716e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.838080e-26.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 55                            ...2.421663e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  7.546143e-26.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 56                            ...2.340637e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  9.673882e-26.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 57                            ...2.262515e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.230316e-25.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 58                            ...2.187182e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.552701e-25.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 59                            ...2.114528e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.945026e-25.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 60                            ...2.044446e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.419004e-25.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 61                            ...1.976837e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.987616e-25.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 62                            ...1.911603e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.665131e-25.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 63                            ...1.848653e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.467115e-25.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 76)] 
+  ReML Iteration              : 64                            ...1.787899e+00
+
+SPM12: spm_rwls_spm (v$Rev: 4.0$)                  23:15:04 - 23/03/2021
+========================================================================
+Chunk   1/34                            :                  ...processing                       ...doneChunk   2/34                            :                  ...processing                       ...doneChunk   3/34                            :                  ...processing                       ...doneChunk   4/34                            :                  ...processing                       ...doneChunk   5/34                            :                  ...processing                       ...doneChunk   6/34                            :                  ...processing                       ...doneChunk   7/34                            :                  ...processing                       ...doneChunk   8/34                            :                  ...processing                       ...doneChunk   9/34                            :                  ...processing                       ...doneChunk  10/34                            :                  ...processing                       ...doneChunk  11/34                            :                  ...processing                       ...doneChunk  12/34                            :                  ...processing                       ...doneChunk  13/34                            :                  ...processing                       ...doneChunk  14/34                            :                  ...processing                       ...doneChunk  15/34                            :                  ...processing                       ...doneChunk  16/34                            :                  ...processing                       ...doneChunk  17/34                            :                  ...processing                       ...doneChunk  18/34                            :                  ...processing                       ...doneChunk  19/34                            :                  ...processing                       ...doneChunk  20/34                            :                  ...processing                       ...doneChunk  21/34                            :                  ...processing                       ...doneChunk  22/34                            :                  ...processing                       ...doneChunk  23/34                            :                  ...processing                       ...doneChunk  24/34                            :                  ...processing                       ...doneChunk  25/34                            :                  ...processing                       ...doneChunk  26/34                            :                  ...processing                       ...doneChunk  27/34                            :                  ...processing                       ...doneChunk  28/34                            :                  ...processing                       ...doneChunk  29/34                            :                  ...processing                       ...doneChunk  30/34                            :                  ...processing                       ...doneChunk  31/34                            :                  ...processing                       ...doneChunk  32/34                            :                  ...processing                       ...doneChunk  33/34                            :                  ...processing                       ...doneChunk  34/34                            :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          23:16:21 - 23/03/2021
+Subject 2031 estimates calculated.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+23-Mar-2021 23:16:34 - Running job #1
+------------------------------------------------------------------------
+23-Mar-2021 23:16:35 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             23:16:35 - 23/03/2021
+========================================================================
+Contrasts folder                        : ..n_CueIntFb12_EventEpoch_rwls
+Deleting contrasts                      :                        ...done
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	contrast image  2               :                   ...computing       ...written con_0002.nii
+	spm{T} image  2                 :                   ...computing      ...written spmT_0002.nii
+	contrast image  3               :                   ...computing       ...written con_0003.nii
+	spm{T} image  3                 :                   ...computing      ...written spmT_0003.nii
+	contrast image  4               :                   ...computing       ...written con_0004.nii
+	spm{T} image  4                 :                   ...computing      ...written spmT_0004.nii
+	contrast image  5               :                   ...computing       ...written con_0005.nii
+	spm{T} image  5                 :                   ...computing      ...written spmT_0005.nii
+	contrast image  6               :                   ...computing       ...written con_0006.nii
+	spm{T} image  6                 :                   ...computing      ...written spmT_0006.nii
+	contrast image  7               :                   ...computing       ...written con_0007.nii
+	spm{T} image  7                 :                   ...computing      ...written spmT_0007.nii
+	contrast image  8               :                   ...computing       ...written con_0008.nii
+	spm{T} image  8                 :                   ...computing      ...written spmT_0008.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          23:16:37 - 23/03/2021
+23-Mar-2021 23:16:37 - Done    'Contrast Manager'
+23-Mar-2021 23:16:37 - Done
+
+Subject 2031 contrast maps created.

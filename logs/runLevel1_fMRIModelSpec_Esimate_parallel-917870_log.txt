@@ -1,0 +1,159 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 917870
+##  Job Name : fMRIModelSpec_Esimate_parallel
+##  Nodelist : node1620
+##      CPUs : 16
+##  Mem/Node : 131072 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Tue Mar 23 23:12:34 EDT 2021
+###############################################################################
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+PROCESSING Regressors for Subject 2011
+PROCESSING Regressors for Subject 2012
+PROCESSING Regressors for Subject 2013
+PROCESSING Regressors for Subject 2014
+PROCESSING Regressors for Subject 2015
+PROCESSING Regressors for Subject 2017
+EXCLUDING subject2018
+PROCESSING Regressors for Subject 2019
+PROCESSING Regressors for Subject 2020
+PROCESSING Regressors for Subject 2021
+PROCESSING Regressors for Subject 2022
+PROCESSING Regressors for Subject 2024
+PROCESSING Regressors for Subject 2026
+PROCESSING Regressors for Subject 2027
+PROCESSING Regressors for Subject 2028
+PROCESSING Regressors for Subject 2030
+PROCESSING Regressors for Subject 2031
+PROCESSING Regressors for Subject 2032
+PROCESSING Regressors for Subject 2033
+PROCESSING Regressors for Subject 2035
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2011
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2011
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2012
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2012
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2013
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2013
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2014
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2014
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2015
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2015
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2017
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2017
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2018
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2018
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2019
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2019
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2020
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2020
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2021
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2021
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2022
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2022
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2024
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2024
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2026
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2026
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2027
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2027
+Error! No nifits were detected for sub-2028. Regressors were not created for this subject.
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2030
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2030
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2031
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2031
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2032
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2032
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2033
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2033
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 67)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2035
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2035
+Running job array number: 137
+Processing participant: 2028
+
+Running Subject 2028
+Root Path is /gpfs/data/ashenhav/mri-data/TCB/spm-data/
+Design Contrast is design_CueIntFb12_EventEpoch_rwls
+Stimulus Onset File is TCB_Event_CueIntervalFb_RewPenHighLow_sots_allTcat
+
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2028/design_CueIntFb12_EventEpoch_rwls/SPM.mat
+No SPM mat file found. Will create a new SPM.mat file.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Item 'NIfTI file(s)', field 'val': Number of matching files (0) less than required (1).
+Subject 2028 estimates calculated.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Subject 2028 contrast maps created.

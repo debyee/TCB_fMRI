@@ -1,0 +1,287 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1391945
+##  Job Name : TCB-postfmriprep-smooth
+##  Nodelist : node1137
+##      CPUs : 16
+##  Mem/Node : 65536 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Tue May 25 10:48:01 EDT 2021
+###############################################################################
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2031/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2031/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2031
+cp: cannot stat ‘/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.2.0-nofs/fmriprep/sub-tcb2031/ses-01/func/sub-tcb2031_ses-01_task-TSSblock_run-1_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz’: No such file or directory
+Moving Functional Run 2 for Subject 2031
+cp: cannot stat ‘/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.2.0-nofs/fmriprep/sub-tcb2031/ses-01/func/sub-tcb2031_ses-01_task-TSSblock_run-2_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz’: No such file or directory
+Moving Functional Run 3 for Subject 2031
+cp: cannot stat ‘/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.2.0-nofs/fmriprep/sub-tcb2031/ses-01/func/sub-tcb2031_ses-01_task-TSSblock_run-3_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz’: No such file or directory
+Moving Functional Run 4 for Subject 2031
+cp: cannot stat ‘/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.2.0-nofs/fmriprep/sub-tcb2031/ses-01/func/sub-tcb2031_ses-01_task-TSSblock_run-4_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz’: No such file or directory
+Moving Functional Run 5 for Subject 2031
+cp: cannot stat ‘/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.2.0-nofs/fmriprep/sub-tcb2031/ses-01/func/sub-tcb2031_ses-01_task-TSSblock_run-5_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz’: No such file or directory
+Moving Functional Run 6 for Subject 2031
+cp: cannot stat ‘/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.2.0-nofs/fmriprep/sub-tcb2031/ses-01/func/sub-tcb2031_ses-01_task-TSSblock_run-6_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz’: No such file or directory
+Moving Functional Run 7 for Subject 2031
+cp: cannot stat ‘/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.2.0-nofs/fmriprep/sub-tcb2031/ses-01/func/sub-tcb2031_ses-01_task-TSSblock_run-7_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz’: No such file or directory
+Moving Functional Run 8 for Subject 2031
+cp: cannot stat ‘/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.2.0-nofs/fmriprep/sub-tcb2031/ses-01/func/sub-tcb2031_ses-01_task-TSSblock_run-8_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz’: No such file or directory
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2031/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2031
+Moving Mask Image for Subject 2031
+cp: cannot stat ‘/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.2.0-nofs/fmriprep/sub-tcb2031/ses-01/anat/sub-tcb2031_ses-01_acq-memprageRMS_desc-brain_mask.nii.gz’: No such file or directory
+Moving Anat MNI Image for Subject 2031
+cp: cannot stat ‘/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.2.0-nofs/fmriprep/sub-tcb2031/ses-01/anat/sub-tcb2031_ses-01_acq-memprageRMS_space-MNI152NLin2009cAsym_desc-preproc_T1w.nii.gz’: No such file or directory
+Moving Mask MNI Image for Subject 2031
+cp: cannot stat ‘/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.2.0-nofs/fmriprep/sub-tcb2031/ses-01/anat/sub-tcb2031_ses-01_acq-memprageRMS_space-MNI152NLin2009cAsym_desc-brain_mask.nii.gz’: No such file or directory
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2031/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files
+find: ‘/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/derivatives/fmriprep-20.2.0-nofs/fmriprep/sub-tcb2031/ses-01/func/’: No such file or directory
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2029/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2029/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2029
+Moving Functional Run 2 for Subject 2029
+Moving Functional Run 3 for Subject 2029
+Moving Functional Run 4 for Subject 2029
+Moving Functional Run 5 for Subject 2029
+Moving Functional Run 6 for Subject 2029
+Moving Functional Run 7 for Subject 2029
+Moving Functional Run 8 for Subject 2029
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2029/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2029
+Moving Mask Image for Subject 2029
+Moving Anat MNI Image for Subject 2029
+Moving Mask MNI Image for Subject 2029
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2029/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2037/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2037/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2037
+Moving Functional Run 2 for Subject 2037
+Moving Functional Run 3 for Subject 2037
+Moving Functional Run 4 for Subject 2037
+Moving Functional Run 5 for Subject 2037
+Moving Functional Run 6 for Subject 2037
+Moving Functional Run 7 for Subject 2037
+Moving Functional Run 8 for Subject 2037
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2037/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2037
+Moving Mask Image for Subject 2037
+Moving Anat MNI Image for Subject 2037
+Moving Mask MNI Image for Subject 2037
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2037/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2038/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2038/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2038
+Moving Functional Run 2 for Subject 2038
+Moving Functional Run 3 for Subject 2038
+Moving Functional Run 4 for Subject 2038
+Moving Functional Run 5 for Subject 2038
+Moving Functional Run 6 for Subject 2038
+Moving Functional Run 7 for Subject 2038
+Moving Functional Run 8 for Subject 2038
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2038/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2038
+Moving Mask Image for Subject 2038
+Moving Anat MNI Image for Subject 2038
+Moving Mask MNI Image for Subject 2038
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2038/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2036/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2036/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2036
+Moving Functional Run 2 for Subject 2036
+Moving Functional Run 3 for Subject 2036
+Moving Functional Run 4 for Subject 2036
+Moving Functional Run 5 for Subject 2036
+Moving Functional Run 6 for Subject 2036
+Moving Functional Run 7 for Subject 2036
+Moving Functional Run 8 for Subject 2036
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2036/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2036
+Moving Mask Image for Subject 2036
+Moving Anat MNI Image for Subject 2036
+Moving Mask MNI Image for Subject 2036
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2036/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2034/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2034/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2034
+Moving Functional Run 2 for Subject 2034
+Moving Functional Run 3 for Subject 2034
+Moving Functional Run 4 for Subject 2034
+Moving Functional Run 5 for Subject 2034
+Moving Functional Run 6 for Subject 2034
+Moving Functional Run 7 for Subject 2034
+Moving Functional Run 8 for Subject 2034
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2034/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2034
+Moving Mask Image for Subject 2034
+Moving Anat MNI Image for Subject 2034
+Moving Mask MNI Image for Subject 2034
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2034/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2040/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2040/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2040
+Moving Functional Run 2 for Subject 2040
+Moving Functional Run 3 for Subject 2040
+Moving Functional Run 4 for Subject 2040
+Moving Functional Run 5 for Subject 2040
+Moving Functional Run 6 for Subject 2040
+Moving Functional Run 7 for Subject 2040
+Moving Functional Run 8 for Subject 2040
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2040/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2040
+Moving Mask Image for Subject 2040
+Moving Anat MNI Image for Subject 2040
+Moving Mask MNI Image for Subject 2040
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2040/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2039/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2039/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2039
+Moving Functional Run 2 for Subject 2039
+Moving Functional Run 3 for Subject 2039
+Moving Functional Run 4 for Subject 2039
+Moving Functional Run 5 for Subject 2039
+Moving Functional Run 6 for Subject 2039
+Moving Functional Run 7 for Subject 2039
+Moving Functional Run 8 for Subject 2039
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2039/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2039
+Moving Mask Image for Subject 2039
+Moving Anat MNI Image for Subject 2039
+Moving Mask MNI Image for Subject 2039
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2039/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2041/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2041/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2041
+Moving Functional Run 2 for Subject 2041
+Moving Functional Run 3 for Subject 2041
+Moving Functional Run 4 for Subject 2041
+Moving Functional Run 5 for Subject 2041
+Moving Functional Run 6 for Subject 2041
+Moving Functional Run 7 for Subject 2041
+Moving Functional Run 8 for Subject 2041
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2041/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2041
+Moving Mask Image for Subject 2041
+Moving Anat MNI Image for Subject 2041
+Moving Mask MNI Image for Subject 2041
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2041/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2043/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2043/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2043
+Moving Functional Run 2 for Subject 2043
+Moving Functional Run 3 for Subject 2043
+Moving Functional Run 4 for Subject 2043
+Moving Functional Run 5 for Subject 2043
+Moving Functional Run 6 for Subject 2043
+Moving Functional Run 7 for Subject 2043
+Moving Functional Run 8 for Subject 2043
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2043/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2043
+Moving Mask Image for Subject 2043
+Moving Anat MNI Image for Subject 2043
+Moving Mask MNI Image for Subject 2043
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2043/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2042/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2042/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2042
+Moving Functional Run 2 for Subject 2042
+Moving Functional Run 3 for Subject 2042
+Moving Functional Run 4 for Subject 2042
+Moving Functional Run 5 for Subject 2042
+Moving Functional Run 6 for Subject 2042
+Moving Functional Run 7 for Subject 2042
+Moving Functional Run 8 for Subject 2042
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2042/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2042
+Moving Mask Image for Subject 2042
+Moving Anat MNI Image for Subject 2042
+Moving Mask MNI Image for Subject 2042
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2042/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2045/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2045/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2045
+Moving Functional Run 2 for Subject 2045
+Moving Functional Run 3 for Subject 2045
+Moving Functional Run 4 for Subject 2045
+Moving Functional Run 5 for Subject 2045
+Moving Functional Run 6 for Subject 2045
+Moving Functional Run 7 for Subject 2045
+Moving Functional Run 8 for Subject 2045
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2045/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2045
+Moving Mask Image for Subject 2045
+Moving Anat MNI Image for Subject 2045
+Moving Mask MNI Image for Subject 2045
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2045/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2044/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2044/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2044
+Moving Functional Run 2 for Subject 2044
+Moving Functional Run 3 for Subject 2044
+Moving Functional Run 4 for Subject 2044
+Moving Functional Run 5 for Subject 2044
+Moving Functional Run 6 for Subject 2044
+Moving Functional Run 7 for Subject 2044
+Moving Functional Run 8 for Subject 2044
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2044/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2044
+Moving Mask Image for Subject 2044
+Moving Anat MNI Image for Subject 2044
+Moving Mask MNI Image for Subject 2044
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2044/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2047/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2047/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 2047
+Moving Functional Run 2 for Subject 2047
+Moving Functional Run 3 for Subject 2047
+Moving Functional Run 4 for Subject 2047
+Moving Functional Run 5 for Subject 2047
+Moving Functional Run 6 for Subject 2047
+Moving Functional Run 7 for Subject 2047
+Moving Functional Run 8 for Subject 2047
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2047/anat/ does not exist. Will create an anat directory.
+Moving Anat Image for Subject 2047
+Moving Mask Image for Subject 2047
+Moving Anat MNI Image for Subject 2047
+Moving Mask MNI Image for Subject 2047
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2047/confounds/ does not exist. Will create an anat directory.
+Copying confound regressor files

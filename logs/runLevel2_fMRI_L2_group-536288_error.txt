@@ -1,0 +1,36 @@
+module: unloading 'matlab/R2017b'
+module: loading 'matlab/R2019a'
+module: loading 'spm/spm12'
+module: loading 'conn/18b_runtime'
+{Error using addpath (line 34)
+Not enough input arguments.
+} 
+/var/spool/slurmd/job536288/slurm_script: line 97: spm_jobman: command not found
+{Error using addpath (line 34)
+Not enough input arguments.
+} 
+/var/spool/slurmd/job536288/slurm_script: line 97: spm_jobman: command not found
+{Error using addpath (line 34)
+Not enough input arguments.
+} 
+/var/spool/slurmd/job536288/slurm_script: line 97: spm_jobman: command not found
+{Error using addpath (line 34)
+Not enough input arguments.
+} 
+/var/spool/slurmd/job536288/slurm_script: line 97: spm_jobman: command not found
+{Error using addpath (line 34)
+Not enough input arguments.
+} 
+/var/spool/slurmd/job536288/slurm_script: line 97: spm_jobman: command not found
+{Error using addpath (line 34)
+Not enough input arguments.
+} 
+/var/spool/slurmd/job536288/slurm_script: line 97: spm_jobman: command not found
+{Error using addpath (line 34)
+Not enough input arguments.
+} 
+/var/spool/slurmd/job536288/slurm_script: line 97: spm_jobman: command not found
+{Error using addpath (line 34)
+Not enough input arguments.
+} 
+/var/spool/slurmd/job536288/slurm_script: line 97: spm_jobman: command not found

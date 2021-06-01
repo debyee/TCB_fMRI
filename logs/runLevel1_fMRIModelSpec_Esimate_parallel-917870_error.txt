@@ -1,0 +1,21 @@
+module: unloading 'matlab/R2017b'
+module: loading 'matlab/R2019a'
+module: loading 'spm/spm12'
+{Error using spm_jobman>fill_run_job (line 472)
+No executable modules, but still unresolved dependencies or incomplete module
+inputs.
+
+Error in spm_jobman (line 247)
+        sts = fill_run_job('run', cjob, varargin{3:end});
+
+Error in TCB_runLevel1_fMRIModelSpec_Estimate (line 69)
+spm_jobman('run',matlabbatch);
+} 
+{Error using cd
+Cannot CD to
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2028/design_CueIntFb12_EventEpoch_rwls
+(Name is nonexistent or not a directory).
+
+Error in TCB_runLevel1_contrast (line 22)
+cd(dir_level1Data);
+} 

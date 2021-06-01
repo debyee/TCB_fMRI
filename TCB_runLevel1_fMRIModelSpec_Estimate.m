@@ -8,6 +8,7 @@ function TCB_runLevel1_fMRIModelSpec_Estimate(participant_id,root_path, design_f
 %% ---------------- Initialize spm  ------------------------------
 spm('defaults', 'FMRI');
 spm_jobman('initcfg');                         % necessary for parallel job submits
+spm_get_defaults('cmdline',true);              % command line, no pop-up
 
 %% ---------------- Customize these variables -----------------------------
 

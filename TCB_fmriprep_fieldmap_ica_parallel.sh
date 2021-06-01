@@ -9,15 +9,12 @@
 #SBATCH -J TCB-fmriprep-fieldmap_ica
 #SBATCH --output logs/fmriprep-log-%J.txt
 #SBATCH --error logs/fmriprep-error-%J.txt
-#SBATCH --array=137,135
+#SBATCH --array=135
 
 #--------- CONFIGURE THESE VARIABLES ---------
 
 bids_root_dir=/gpfs/data/ashenhav/mri-data/TCB     # based on oscar path
 #bids_root_dir=/gpfs/data/bnc/scratch
-#participant_labels=( "tcb2002" "tcb2003" "tcb2004" "tcb2005" "tcb2008" )
-#participant_labels=( "tcb2006" )
-#participant_labels=( "tcb2011" "tcb2012" )
 investigator=shenhav                            # investigator
 study_label=201226                              # study label 
 fmriprep_version=20.2.0   #20.0.6               # check /gpfs/data/bnc/simgs/poldracklab for the latest version
@@ -25,8 +22,15 @@ fmriprep_version=20.2.0   #20.0.6               # check /gpfs/data/bnc/simgs/pol
 
 #----------- Dictionaries for subject specific variables -----
 # Dictionary of labels per subject
-declare -A labels=([137]="tcb2020") # \
-				  # [135]="tcb2014")
+declare -A labels=([135]="tcb2043" )
+		#    [136]="tcb2049"  )
+		#    [137]="tcb2031"  )
+		#    [138]="tcb2041"  \
+		#    [139]="tcb2043"  \
+        #    [140]="tcb2042"  \
+        #    [141]="tcb2045"  \
+        #    [142]="tcb2044"  \
+        #    [143]="tcb2047"  )
 
 # Use the task array ID to get the right value for this job
 # These are defined with the SBATCH header

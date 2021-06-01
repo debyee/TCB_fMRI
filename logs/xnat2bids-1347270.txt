@@ -1,0 +1,52 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1347270
+##  Job Name : xnat2bids
+##  Nodelist : node1145
+##      CPUs : 
+##  Mem/Node : 32768 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Mon May 17 17:43:57 EDT 2021
+###############################################################################
+XNAT_PASSWORD=
+XNAT_USER=dyee7
+XNAT_HOST=https://bnc.brown.edu/xnat
+Processing session:
+XNAT7_E00046
+Subject label:
+tcb2031
+Series to skip:
+-s 6 -s 12
+------------------------------------------------
+Get project and subject information
+Request Failed
+    401 Client Error: Unauthorized for url: https://bnc.brown.edu/xnat/data/experiments/XNAT7_E00046?format=json&handler=values&columns=project%2Csubject_ID
+sys:1: ResourceWarning: unclosed <ssl.SSLSocket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.20.207.45', 39482), raddr=('10.4.131.28', 443)>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/var/spool/slurmd/job1347270/slurm_script: line 113: -v: command not found
+EXPERIMENT DIRECTORY: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/
+2021-05-17 17:44:00 node1145.oscar.ccv.brown.edu xnat_tools.bids_postprocess[182198] INFO ---------------------------------
+2021-05-17 17:44:00 node1145.oscar.ccv.brown.edu xnat_tools.bids_postprocess[182198] INFO Processing Subjects ['tcb2031']: 
+2021-05-17 17:44:00 node1145.oscar.ccv.brown.edu xnat_tools.bids_postprocess[182198] INFO ---------------------------------
+2021-05-17 17:44:00 node1145.oscar.ccv.brown.edu xnat_tools.bids_utils[182198] INFO Processing participant tcb2031 at path /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids//sub-tcb2031
+Traceback (most recent call last):
+  File "/usr/local/bin/bids-postprocess", line 8, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.7/site-packages/xnat_tools/bids_postprocess.py", line 89, in main
+    app()
+  File "/usr/local/lib/python3.7/site-packages/typer/main.py", line 214, in __call__
+    return get_command(self)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.7/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/local/lib/python3.7/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/typer/main.py", line 497, in wrapper
+    return callback(**use_params)  # type: ignore
+  File "/usr/local/lib/python3.7/site-packages/xnat_tools/bids_postprocess.py", line 84, in bids_postprocess
+    insert_intended_for_fmap(bids_experiment_dir, includesubj)
+  File "/usr/local/lib/python3.7/site-packages/xnat_tools/bids_utils.py", line 24, in insert_intended_for_fmap
+    subj_sub_dirs = os.listdir(subj_path)
+FileNotFoundError: [Errno 2] No such file or directory: '/gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids//sub-tcb2031'

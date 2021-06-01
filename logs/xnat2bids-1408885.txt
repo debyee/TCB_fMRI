@@ -1,0 +1,22 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1408885
+##  Job Name : xnat2bids
+##  Nodelist : node1319
+##      CPUs : 
+##  Mem/Node : 32768 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Thu May 27 15:03:50 EDT 2021
+###############################################################################
+200
+Processing session:
+XNAT7_E00005
+Subject label:
+tcb2048
+Series to skip:
+-s 6
+------------------------------------------------
+Get project and subject information
+Request Failed
+    404 Client Error: Not Found for url: https://xnat.bnc.brown.edu/data/experiments/XNAT7_E00005?format=json&handler=values&columns=project%2Csubject_ID
+sys:1: ResourceWarning: unclosed <ssl.SSLSocket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.20.209.19', 57532), raddr=('138.16.225.82', 443)>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback

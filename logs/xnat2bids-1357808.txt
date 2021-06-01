@@ -1,0 +1,55 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1357808
+##  Job Name : xnat2bids
+##  Nodelist : node1326
+##      CPUs : 
+##  Mem/Node : 32768 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Wed May 19 11:53:48 EDT 2021
+###############################################################################
+200
+Processing session:
+XNAT7_E00063
+Subject label:
+tcb2040
+Series to skip:
+-s 6
+------------------------------------------------
+Get project and subject information
+Traceback (most recent call last):
+  File "/usr/local/bin/xnat2bids", line 8, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.7/site-packages/xnat_tools/xnat2bids.py", line 99, in main
+    app()
+  File "/usr/local/lib/python3.7/site-packages/typer/main.py", line 214, in __call__
+    return get_command(self)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.7/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/local/lib/python3.7/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/typer/main.py", line 497, in wrapper
+    return callback(**use_params)  # type: ignore
+  File "/usr/local/lib/python3.7/site-packages/xnat_tools/xnat2bids.py", line 83, in xnat2bids
+    overwrite=overwrite,
+  File "/usr/local/lib/python3.7/site-packages/xnat_tools/dicom_export.py", line 109, in dicom_export
+    project, subject = get_project_and_subject_id(connection, host, session)
+  File "/usr/local/lib/python3.7/site-packages/xnat_tools/xnat_utils.py", line 61, in get_project_and_subject_id
+    sessionValuesJson = r.json()["ResultSet"]["Result"][0]
+  File "/usr/local/lib/python3.7/site-packages/requests/models.py", line 900, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/simplejson/__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.7/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.7/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+sys:1: ResourceWarning: unclosed <ssl.SSLSocket fd=3, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.20.209.26', 57272), raddr=('10.4.131.28', 443)>
+sys:1: ResourceWarning: unclosed <socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.20.209.26', 51552), raddr=('10.4.131.28', 80)>
+/var/spool/slurmd/job1357808/slurm_script: line 123: --verbose: command not found
+EXPERIMENT DIRECTORY: /gpfs/data/ashenhav/mri-data/TCB/shenhav/study-201226/bids/
+FATAL:   "bids_postprocess": executable file not found in $PATH

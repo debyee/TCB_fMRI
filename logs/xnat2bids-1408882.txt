@@ -1,0 +1,18 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1408882
+##  Job Name : xnat2bids
+##  Nodelist : node1319
+##      CPUs : 
+##  Mem/Node : 32768 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Thu May 27 15:01:51 EDT 2021
+###############################################################################
+200
+Processing session:
+XNAT7_E00005
+Subject label:
+tcb2048
+Series to skip:
+-s 6
+User: Aborted!
+/var/spool/slurmd/job1408882/slurm_script: line 120: -u: command not found

@@ -1,0 +1,43 @@
+module: unloading 'matlab/R2017b'
+module: loading 'matlab/R2019a'
+module: loading 'spm/spm12'
+{Not enough input arguments.
+
+Error in TCB_runLevel2_group (line 30)
+    allRuns =
+    dir(fullfile(root_path,'groupstats',design_foldername,contrast_name,'/sub*_con_*.nii'));} 
+{Not enough input arguments.
+
+Error in TCB_runLevel2_group (line 30)
+    allRuns =
+    dir(fullfile(root_path,'groupstats',design_foldername,contrast_name,'/sub*_con_*.nii'));} 
+{Not enough input arguments.
+
+Error in TCB_runLevel2_group (line 30)
+    allRuns =
+    dir(fullfile(root_path,'groupstats',design_foldername,contrast_name,'/sub*_con_*.nii'));} 
+{Not enough input arguments.
+
+Error in TCB_runLevel2_group (line 30)
+    allRuns =
+    dir(fullfile(root_path,'groupstats',design_foldername,contrast_name,'/sub*_con_*.nii'));} 
+{Not enough input arguments.
+
+Error in TCB_runLevel2_group (line 30)
+    allRuns =
+    dir(fullfile(root_path,'groupstats',design_foldername,contrast_name,'/sub*_con_*.nii'));} 
+{Not enough input arguments.
+
+Error in TCB_runLevel2_group (line 30)
+    allRuns =
+    dir(fullfile(root_path,'groupstats',design_foldername,contrast_name,'/sub*_con_*.nii'));} 
+{Not enough input arguments.
+
+Error in TCB_runLevel2_group (line 30)
+    allRuns =
+    dir(fullfile(root_path,'groupstats',design_foldername,contrast_name,'/sub*_con_*.nii'));} 
+{Not enough input arguments.
+
+Error in TCB_runLevel2_group (line 30)
+    allRuns =
+    dir(fullfile(root_path,'groupstats',design_foldername,contrast_name,'/sub*_con_*.nii'));} 

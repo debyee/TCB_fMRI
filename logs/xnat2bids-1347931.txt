@@ -1,0 +1,10 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1347931
+##  Job Name : xnat2bids
+##  Nodelist : node1148
+##      CPUs : 
+##  Mem/Node : 32768 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts
+##   Started : Mon May 17 18:23:51 EDT 2021
+###############################################################################
+/var/spool/slurmd/job1347931/slurm_script: line 85: labels[${SLURM_ARRAY_TASK_ID}]: unbound variable
