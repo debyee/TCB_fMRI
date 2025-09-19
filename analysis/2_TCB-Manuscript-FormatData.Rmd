@@ -1,0 +1,589 @@
+---
+title: "TCB Manuscript Format Data"
+author: "Debbie Yee"
+date: "2024-02-13"
+output: 
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: true
+    code_folding: hide
+    number_sections: true
+---
+
+This is the script for formatting and combining the following data for analyses. Note that we Exclude Subject 2018 and 2069 from the data analysis.
+
+-   Input
+    -   Self Report Data
+    -   Likert Data
+    -   Task Data
+    -   fMRI Data
+-   Output
+    -   Formatted SRM Data: "data_fMRI-TCB_RewardPenalty_SRM_formatted.csv"
+    -   Formatted Likert Data: "data_fMRI-TCB_RewardPenalty_Likert_formatted.csv"
+    -   Formatted Trial Data: "data_fMRI-TCB_RewardPenalty_Trial_formatted.csv"
+    -   Formatted Interval Data: "data_fMRI-TCB_RewardPenalty_Interval_formatted.csv"
+    -   DDM Data (Behavior): "data_fMRI-TCB_RewardPenalty_Trial_betas_formatted.csv"
+    -   DDM Data (Behavior + ROIs): "data_fMRI-TCB_RewardPenalty_Interval_betas_formatted.csv"
+
+# Set Packages and Paths
+
+## Set working directory
+
+```{r, message=FALSE}
+# Set current working directory
+setwd("/oscar/data/ashenhav/mri-data/TCB/manuscript/analysis")
+```
+
+## Load in Packages
+
+```{r, message = FALSE}
+if (!require("pacman")) install.packages("pacman")
+ pacman::p_load(
+   knitr,   
+   tidyverse, 
+   rmarkdown,
+   data.table
+   )
+```
+
+## Set current directory and paths
+
+Comments about data: Problem with GLM AllIntervals for 2047 and 2112
+
+```{r}
+# Set current working directory
+# setwd("/Volumes/TCB/manuscript/analysis/")
+
+# INPUT
+
+# Set path for formatted behavioral data
+datapath.RewardPenalty<-"data/behavior/formatted/data_fMRI-TCB_RewardPenalty_Trial.csv"
+
+# Set paths for Self Report Measures and Likert data (Available after 1_TCB-Manuscript_CleanSRMS-impute.Rmd is compiled)
+datapath.SRM<-"data/qualtrics/formatted/TCB_qualtrics_SRM_formatted_imputed.csv"
+datapath.Likert<-"data/qualtrics/formatted/TCB_qualtrics_Likert_formatted.csv"
+
+# Set path for DDM results
+datapath.DDM<-"ddm/output/errors_automatic/rewardpenalty/"
+
+# Set path for fMRI Results
+datapath.betas<-"data/fmri/BetaExport/"
+datapath.combinedROI<-"data/fMRI/"
+
+# Set path for Task Bug Interval
+datapath.TaskBug<-"data/behavior/formatted/allTaskBugIntervalsRemove.csv"
+
+# OUTPUT 
+
+# Set path for writing forrmatted data 
+datapath.formatted.behavior<-"data/behavior/formatted/"
+datapath.formatted.qualtrics<-"data/qualtrics/formatted/"
+datapath.formatted.ddm<-"ddm/data/"
+datapath.formatted.combined<-"data/combined/"
+```
+
+## Load in data (Format Data, Clean up Task Bug)
+
+```{r}
+# Data scrubbing variables (constant set in task)
+task_ISI = 250                  
+thresh_maxRT_performed = 3500  # Max RT (ms)
+thresh_minRT_performed = 250   # Min RT (ms)
+thresh_meanAcc_subj = .6
+
+# Load in the behavioral data
+df.trial.rp<-fread(datapath.RewardPenalty)
+
+# Identify and Remove the Intervals with the TaskBug
+df.TaskBug<-fread(datapath.TaskBug) 
+
+for (i in 1:length(df.TaskBug$SubID)) {
+  if (df.TaskBug$TaskBugCount[i] > 0) {
+      
+    int_remove = as.numeric(unlist(strsplit(df.TaskBug$Intervals[i], split = ",")))
+    print(paste0("Subject with Task Bug is: ",df.TaskBug$SubID[i]))
+    print(int_remove)
+    
+    df.trial.rp <- df.trial.rp %>%
+      mutate(Int_To_Remove = (SubID==df.TaskBug$SubID[i] & df.trial.rp$IntervalNum %in% int_remove)) %>%
+      filter(Int_To_Remove == FALSE)
+  }
+}
+
+# Load the SRM data, format demographic variables
+df.SRM<-fread(file = datapath.SRM, sep = ",") %>%
+    mutate(SubID = as.numeric(str_remove(string = SubID, pattern = "TCB")),
+         Age_center = scale(x = Age, center = TRUE, scale = FALSE),
+         Sex = as.factor(x = Sex)) %>%
+  select(SubID, Age, Age_center, Sex, Gender, Gender_Description, RaceEthnicity, Hispanic, 
+         Education, MotherEducation, FatherEducation, NumLanguages, ListLanguages, PrimaryLang, 
+         Income_Relative_Uni, Income_Low_Uni, Income_High_Uni,
+         IncomeNeedRatio_Total_Uni, IncomeNeedRatio_Over18_Uni, IncomeNeedRatio_Under18_Uni,
+         Household_Uni, MacArthurUS_Uni, MacArthurComm_Uni, Name_Uni, GPA_Uni,      
+         BIS11_5:Ravens_Scored_Total)
+
+df.SRMTrim<-df.SRM %>% select(SubID, Age, Age_center, Sex) 
+
+# Load the Likert data
+df.Likert<-fread(file = datapath.Likert, sep = ",") %>%
+  mutate(SubID = as.numeric(str_remove(string = SubID, pattern = "TCB")),
+         Reward = factor(Reward, levels = c("Low Reward","High Reward")),
+         Penalty = factor(Penalty, levels = c("Low Penalty","High Penalty"))) %>%
+  dplyr::rename(CueDisplayed = condition) %>%
+  select(-V1)
+
+# contrast code: Low Reward or Low Penalty = -1, High Reward or High Penalty = 1
+contrast.code<-contr.sum(2)*-1
+contrasts(df.Likert$Reward)<-contrast.code
+contrasts(df.Likert$Penalty)<-contrast.code
+```
+
+## Format trial-level data
+
+```{r}
+# Loop over participants to find button mappings to colors
+subjectIDs = unique(df.trial.rp$SubID)
+colorMapping = as.data.frame(matrix(data=NA, nrow=length(subjectIDs), ncol = 5, dimnames=list(c(NULL),c("SubID","red", "green", "blue", "yellow"))))
+
+for (s in 1:length(subjectIDs)) { # s = 1
+  
+  # subset data per participant and assign buttons
+  sub1 = df.trial.rp[df.trial.rp$SubID==subjectIDs[s],]
+
+  # assign buttons 
+  colorMapping$SubID[s] = subjectIDs[s]
+  colorMapping$blue[s] = unique(sub1$CorrectResp[sub1$StimWord == "BLUE" & sub1$StimColor == "blue"])
+  colorMapping$red[s] = unique(sub1$CorrectResp[sub1$StimWord == "RED" & sub1$StimColor == "red"])
+  colorMapping$green[s] = unique(sub1$CorrectResp[sub1$StimWord == "GREEN" & sub1$StimColor == "green"])
+  colorMapping$yellow[s] = unique(sub1$CorrectResp[sub1$StimWord == "YELLOW" & sub1$StimColor == "yellow"])
+  
+  # blocks = unique(sub1$BlockNum)
+  # for (b in 1:length(blocks)) { # b = 1
+  #   print(b)
+  #   #tmp.block = sub1 %>% filter(BlockType)
+  # }
+}
+
+# for subject 2030 (not saved in data, must have restarted the task), red = 1, green = 2, yellow = 3, blue = 4
+colorMapping[colorMapping$SubID==2030,"red"] = 1
+colorMapping[colorMapping$SubID==2030,"green"] = 2
+colorMapping[colorMapping$SubID==2030,"yellow"] = 3
+colorMapping[colorMapping$SubID==2030,"blue"] = 4
+
+# Rew-Fixed (Pen-Varying) vs. Pen-Fixed (Rew-Varying) Blocks
+df.blockType = df.trial.rp %>% group_by(SubID, BlockNum)%>%
+  dplyr::summarise(n_rew=length(unique(RewardLevel)),
+                   n_pen=length(unique(PenaltyLevel)), .groups = "keep") %>%
+  mutate(block_type = ifelse(n_rew==2 & n_pen==1, "VaryReward",
+                      ifelse(n_rew==1 & n_pen==2, "VaryPenalty",
+                      "mixed")))%>%
+  dplyr::select(SubID,BlockNum,block_type)
+         
+# Need to create a column for response color based on the response number associated with the color (counterbalanced across subjects), in order to determine whether an error is random or automatic.
+# Error on congruent trial = random error
+# Error on incongruent trial, if response color matches the distractor color, = automatic error
+# Error on incongruent trial, if response color doesn't match distractor color = random error
+
+df.trial.complete <- df.trial.rp %>%
+  left_join(y = df.SRMTrim, by = c("SubID")) %>%
+  left_join(y = df.Likert, by = c("SubID","CueDisplayed")) %>%
+  left_join(y = colorMapping, by = c("SubID")) %>%
+  left_join(y = df.blockType, by = c("SubID","BlockNum")) %>%
+  dplyr::filter(IntervalTrialNum <= TrialsCompletedPerInterval) %>%
+  dplyr::mutate(RT = RT*1000,
+                IntervalLength_Actual = IntervalLength_Actual*1000,
+                AccRT=ifelse(Accuracy==1,RT,NaN),
+                log10_AccRT = log10(AccRT),
+                scaled_log10_AccRT=scale(log10_AccRT, center = TRUE, scale = TRUE),
+                catRewardLevelNum = as.factor(RewardLevel),
+                catPenaltyLevelNum = as.factor(PenaltyLevel),
+                catRewardLevel = factor(RewardLevel, labels = c("Low Reward","High Reward")),
+                catPenaltyLevel = factor(PenaltyLevel, labels = c("Low Penalty","High Penalty")),
+                catBlockType = factor(block_type, levels = c("VaryPenalty","VaryReward"), labels = c("VaryPenalty","VaryReward")),
+                scaledIntervalSessionNum = scale(IntervalNum, center = TRUE, scale = TRUE),
+                scaledTrialSessionNum = scale(TrialNum, center = TRUE, scale = TRUE),
+                scaledIntervalLength = scale(IntervalLength_Actual, center = TRUE, scale = TRUE),
+                distractor_lower=tolower(StimWord),
+                target_lower = StimColor,
+                respcolor = case_when(
+                  Resp==red ~ "red",
+                  Resp==green ~ "green",
+                  Resp==blue ~ "blue",
+                  Resp==yellow ~ "yellow"),
+                ErrorType = case_when(
+                  Accuracy==0 & Congruency==1 & respcolor!=distractor_lower ~ "random",
+                  Accuracy==0 & Congruency==0 & respcolor!=distractor_lower ~ "random",
+                  Accuracy==0 & Congruency==0 & respcolor==distractor_lower ~ "automatic",
+                  Accuracy==1 ~ "NoError"),
+                # ErrorType=case_when(
+                #    Accuracy==0 & StimColor!=distractor_lower ~ "random",
+                #    Accuracy==0 & StimColor==distractor_lower ~ "automatic",
+                #    Accuracy==1 ~ "NoError"),
+                AutomaticError=ifelse(ErrorType=="automatic",1,0),
+                RandomError=ifelse(ErrorType=="random",1,0),
+                AnyError=ifelse((ErrorType=="random" | ErrorType=="automatic"),1,0)) %>%
+  dplyr::group_by(SubID, BlockNum, IntervalNum) %>%
+  dplyr::mutate(ISI = ifelse(IntervalTrialNum == 1, yes = 0, no = 250),
+                RT_Plus_ISI = RT + ISI,
+                RunningTime = cumsum(RT_Plus_ISI)) %>%
+  dplyr::ungroup(SubID, BlockNum, IntervalNum) %>%
+  mutate(scaledRunningTime = scale(x = RunningTime, center = TRUE, scale = TRUE),
+         trial_keep = ifelse(RT<thresh_maxRT_performed, TRUE, FALSE)) %>%
+  select(-BlockType)
+
+# # Check Manually for Random vs. Automatic Errors
+# df. = df.trial.complete %>% select(SubID, Congruency, StimWord, StimColor, CorrectResp, Resp, Accuracy, 
+#                                        distractor_lower, target_lower, respcolor, "red", "green", "blue", "yellow", ErrorType)
+
+
+# contrast code: Low Reward or Penalty = -1, High Reward or Penalty = 1
+contrast.code<-contr.sum(2)*-1
+contrasts(df.trial.complete$catRewardLevel)<-contrast.code
+contrasts(df.trial.complete$catPenaltyLevel)<-contrast.code
+contrasts(df.trial.complete$Sex)<-contrast.code
+contrasts(df.trial.complete$catBlockType)<-contrast.code
+
+#  contrasts
+contrasts(df.trial.complete$catRewardLevel)
+contrasts(df.trial.complete$catPenaltyLevel)
+contrasts(df.trial.complete$Sex)
+contrasts(df.trial.complete$catBlockType)
+```
+
+## Format interval-level data
+
+```{r}
+# Format interval-level data
+# NOTE 1: Subset trial data by Reward-Penalty MRI scanner task, intervals with Taskbug are already removed
+# NOTE 2: BlockType from the matlab file is wrong, but not sure why.
+df.interval <- df.trial.complete %>% 
+  group_by(SubID,Age_center,Sex,Version,BlockNum,IntervalNum,IntervalLength_Actual,
+           IntervalLengthNoISI_Actual,CueDisplayed,catRewardLevel,catPenaltyLevel,RewardLevel,PenaltyLevel,catBlockType) %>% 
+  dplyr::summarise(trialsPerInterval = n(), 
+                   IntervalISI = (trialsPerInterval)*task_ISI,
+                   Interval_Acc = mean(Accuracy, na.rm=TRUE),
+                   Interval_sum_Acc=sum(Accuracy,na.rm=TRUE),
+                   Interval_sum_Err=trialsPerInterval-Interval_sum_Acc,
+                   Interval_AccRT=mean(AccRT,na.rm=T),
+                   Interval_log10_AccRT=mean(log10_AccRT,na.rm=T),
+                   Interval_RT=mean(RT,na.rm=T),
+                   Interval_Congruence=mean(Congruency,na.rm=T),
+                   BlockNum = mean(BlockNum),
+                   scaledIntervalSessionNum = mean(scaledIntervalSessionNum),
+                   scaledIntervalLength = mean(scaledIntervalLength), 
+                   scaledMotivation = mean(scaledMotivation),
+                   scaledEffort = mean(scaledEffort),
+                   scaledAttention = mean(scaledAttention),
+                   scaledArousal = mean(scaledArousal),
+                   scaledPleasantness = mean(scaledPleasantness),
+                   scaledDifficult = mean(scaledDifficult),
+                   scaledMeanMotivation = mean(scaledMeanMotivation),
+                   .groups="keep") %>% ungroup() %>%
+  group_by(SubID,BlockNum) %>%
+  dplyr::mutate(Interval_cum_Err=cumsum(Interval_sum_Err),
+                Interval_norm_sum_Acc=((Interval_sum_Acc)/(IntervalLength_Actual-IntervalISI))*1000) %>% ungroup() %>%
+  dplyr::mutate(scaledIntervalCong = scale(Interval_Congruence, center = TRUE, scale = TRUE), 
+                scale_Interval_log10_AccRT=scale(Interval_log10_AccRT, center = TRUE, scale = TRUE)) 
+  #filter(abs(scale_Interval_log10_AccRT) < 3, Interval_Congruence<=0.6)
+
+# contrast code: Low Reward or Penalty = -1, High Reward or Penalty = 1
+contrast.code<-contr.sum(2)*-1
+contrasts(df.interval$catRewardLevel)<-contrast.code
+contrasts(df.interval$catPenaltyLevel)<-contrast.code
+contrasts(df.interval$Sex)<-contrast.code
+contrasts(df.trial.complete$catBlockType)<-contrast.code
+
+contrasts(df.interval$catPenaltyLevel)
+contrasts(df.interval$catRewardLevel)
+contrasts(df.interval$Sex)
+contrasts(df.trial.complete$catBlockType)
+```
+
+## Format data for ddm analysis
+
+```{r}
+# Format trial-level data for ddm (remove random errors)
+# Note: need to use subj_idx because this is convention in pymc
+# Note 2: Remove Subject 2030 because the random errors are not clearly denoted (stim data not saved)
+df.ddm <- df.trial.complete %>% 
+  select(SubID, Accuracy, RT,  catRewardLevel, catPenaltyLevel, catBlockType, Congruency, RandomError, AutomaticError, 
+         IntervalTrialNum, scaledTrialSessionNum, scaledRunningTime) %>%
+  filter(RandomError!=1,
+         SubID != 2030) %>%
+  mutate(rt = RT/1000,
+         response = Accuracy,
+         RewardLevel = catRewardLevel,
+         PenaltyLevel = catPenaltyLevel,
+         BlockType = catBlockType,
+         congruence = Congruency - .5,
+         Congruency=factor(x = congruence, levels = c(-.5,.5), labels = c("Incongruent","Congruent")),
+         scaledTrialSession = scaledTrialSessionNum,
+         scaledRunningTime = scaledRunningTime) %>%
+  select(subj_idx = SubID, rt, response, RewardLevel, PenaltyLevel, BlockType, Congruency, congruence, IntervalTrialNum, scaledTrialSession, scaledRunningTime)
+
+# Check that when random errors are removed, incongruent trials are not artificially high
+df.ddm. <- df.trial.complete %>%
+  select(SubID, Accuracy, RT, catRewardLevel, catPenaltyLevel, catBlockType, Congruency, RandomError, AutomaticError, ErrorType) %>%
+  filter(RandomError!=1) %>%
+  group_by(SubID, Congruency, ErrorType) %>% 
+  dplyr::summarise(meanRT = mean(RT),
+         meanAcc = round(mean(Accuracy),3), .groups = "keep")
+
+# check subject per data
+df.ddm.subject <- df.ddm %>% 
+  group_by(subj_idx) %>%
+  dplyr::summarise(n=n(),rt = mean(rt, na.rm=TRUE), acc=mean(response, na.rm=TRUE), .groups="keep") %>%
+  mutate(thresh_acc = as.factor(ifelse(acc<thresh_meanAcc_subj,0,1)))
+
+# to verify that there is only one subject for prolific ID (run the first chunk without last line)
+# kable(df.ddm.subject)
+# ggplot(data = df.ddm.subject, aes(x = rt, y = acc)) + geom_point()
+```
+
+## Format data for fMRI analysis
+
+```{r}
+# Specify number of betas that reflect mean and trend regressors, and intercept
+# note that subjects with a task bug will have 18 regressors (16 mean/intercept Regressors, 1 Error Regressor, 1 TaskBug Regressor (only if bug is present))
+df.TaskBug<-df.TaskBug %>%
+  mutate(numExtraReg = ifelse(TaskBugCount>0, 18, 17))
+
+# Identify csv files 
+files.betas<-list.files(datapath.betas)
+
+# Clean up prior dataframes if re-running
+if (exists("df.trial.betas.combined")) { rm(df.trial.betas.combined) }
+if (exists("df.interval.betas.combined")) { rm(df.interval.betas.combined) }
+
+# Loop over beta files and stitch together
+for (fid in files.betas) { 
+  
+  # # DEBUGGING 
+  # fid<-files.betas[21]
+  # print(fid)
+  
+  # Identify subject number and extra nuisance regressors
+  tmp.SubID<-as.numeric(str_sub(fid,-8,-5))
+  tmp.numExtraReg = df.TaskBug$numExtraReg[which(df.TaskBug$SubID == tmp.SubID)]
+     
+  # Identify all completed intervals in the task
+  tmp.int.completed <- df.trial.complete %>% 
+    filter(SubID == tmp.SubID, !is.na(AccRT)) %>% 
+    select(IntervalNum) %>% 
+    distinct()
+  
+  # Subset interval-level behavioral data to match correct interval numbers
+  tmp.int <- df.interval %>% 
+    filter(SubID == tmp.SubID, 
+           (Version==202 | Version==204), 
+           !is.na(Interval_AccRT))
+  
+  # Identify selected intervals based on slow RT (>3500)
+  tmp.int.include = intersect(unique(tmp.int.completed$IntervalNum),unique(tmp.int$IntervalNum))
+  
+  # Read in betas for subject 
+  tmp.beta<-fread(paste0(datapath.betas,fid)) 
+  tmp.beta2 <- tmp.beta %>%
+    slice_head(n = dim(tmp.beta)[1]-tmp.numExtraReg) %>%
+    separate(col = BetaNum, into = c("tmp","betaFile"), sep = "_", remove = FALSE) %>%
+    separate(col = betaFile, into = c("beta_num","nii"), sep = "[.]", remove = TRUE) %>%
+    mutate(beta_num = as.numeric(beta_num)) %>%
+    select(-tmp,-nii) %>%
+    mutate(IntervalNum = rep(tmp.int.completed$IntervalNum, each = 3)) %>%
+    filter(IntervalNum %in% tmp.int.include)
+   
+   # If datasets do not match, spits out an error
+   if (length(tmp.int$SubID)*3 != length(tmp.beta2$SubID)) { 
+      stop(paste0("Behavioral and fMRI data do not match for subject ", unique(tmp.beta$SubID))) 
+      }
+   
+   # Update beta dataframe to include matching betas
+   tmp.int.key <- tmp.int %>%
+      dplyr::select(SubID, IntervalNum) %>%
+      mutate(cue = "cue", interval = "interval", feedback = "feedback") %>%
+      pivot_longer(cols = cue:feedback, names_to = "beta_type") %>%
+      select(-value) %>%
+      mutate(beta_num = 1:length(tmp.beta2$SubID)) %>%
+      left_join(tmp.beta2, by = c("SubID","beta_num","IntervalNum"), multiple = "all")
+   
+  # Stitch together fMRI betas and trial-level data for single subject
+   tmp.trial <- df.trial.complete %>% 
+     filter(SubID == unique(tmp.beta$SubID),
+            (Version==202 | Version==204))
+            #!is.na(AccRT))
+   tmp.trial2 <- tmp.trial %>%
+      left_join(y = tmp.int.key, by = c("SubID","IntervalNum"), multiple = "all")
+   
+   # Create or append trial-based dataframes with betas
+   if (!exists("df.trial.betas.combined")) {
+      df.trial.betas.combined<-tmp.trial2
+   } else {
+      df.trial.betas.combined <- rbind(df.trial.betas.combined,tmp.trial2)
+   }
+   
+   # Stitch together fMRI betas and interval-level data for single subject
+   tmp.int2 <- tmp.int %>%
+      full_join(y = tmp.int.key, by = c("SubID","IntervalNum"), multiple = "all")
+   
+   # Create or append interval-based dataframes with betas
+   if (!exists("df.interval.betas.combined") ) {
+      df.interval.betas.combined<-tmp.int2
+   } else {
+      df.interval.betas.combined <- rbind(df.interval.betas.combined,tmp.int2)
+   }
+
+}
+```
+
+## Rename betas to remove the dashes
+
+```{r}
+df.interval.betas.combined <- df.interval.betas.combined %>%
+  dplyr::rename(Bilateral_AI = `Bilateral-AI_Bartra_mean`,
+                Bilateral_IFG = `Bilateral-IFG_HarvardOxford_p025_2mm_mean`,
+                Bilateral_PFCl_ctrl = `Bilateral-PFCl_ctrl_mean`,
+                Bilateral_PFCl_sal =  `Bilateral-PFCl_sal_mean`,
+                Bilateral_Putamen = `Bilateral-Putamen_GLM_mean`,
+                Bilateral_Striatum = `Bilateral_Striatum_FXC_CuexRew_2mm_NoIns_mean`,
+                dACC_ctrl = `dACC_ctrl_mean`,
+                dACC_sal = `dACC_sal_mean`) %>%
+  dplyr::mutate(scaled_Bilateral_AI = scale(Bilateral_AI, center = TRUE, scale = TRUE),
+                scaled_Bilateral_IFG = scale(Bilateral_IFG, center = TRUE, scale = TRUE),
+                scaled_Bilateral_PFCl_ctrl = scale(Bilateral_PFCl_ctrl, center = TRUE, scale = TRUE),
+                scaled_Bilateral_PFCl_sal = scale(Bilateral_PFCl_sal, center = TRUE, scale = TRUE),
+                scaled_Bilateral_Putamen = scale(Bilateral_Putamen, center = TRUE, scale = TRUE),
+                scaled_Bilateral_Striatum = scale(Bilateral_Striatum, center = TRUE, scale = TRUE),
+                scaled_dACC_ctrl = scale(dACC_ctrl, center = TRUE, scale = TRUE),
+                scaled_dACC_sal = scale(dACC_sal, center = TRUE, scale = TRUE))
+    
+# contrast code: Low Reward or Penalty = -1, High Reward or Penalty = 1
+contrast.code<-contr.sum(2)*-1
+contrasts(df.interval.betas.combined$catRewardLevel)<-contrast.code
+contrasts(df.interval.betas.combined$catPenaltyLevel)<-contrast.code
+contrasts(df.interval.betas.combined$catBlockType)<-contrast.code
+
+# Code to validate that contrast coding is correct
+contrasts(df.interval.betas.combined$catRewardLevel)
+contrasts(df.interval.betas.combined$catPenaltyLevel)
+contrasts(df.interval.betas.combined$catBlockType)
+
+# Rename the betas to remove the dashes 
+df.trial.betas.combined <- df.trial.betas.combined %>%
+ dplyr::rename(Bilateral_AI = `Bilateral-AI_Bartra_mean`,
+                Bilateral_IFG = `Bilateral-IFG_HarvardOxford_p025_2mm_mean`,
+                Bilateral_PFCl_ctrl = `Bilateral-PFCl_ctrl_mean`,
+                Bilateral_PFCl_sal =  `Bilateral-PFCl_sal_mean`,
+                Bilateral_Putamen = `Bilateral-Putamen_GLM_mean`,
+                Bilateral_Striatum = `Bilateral_Striatum_FXC_CuexRew_2mm_NoIns_mean`,
+                dACC_ctrl = `dACC_ctrl_mean`,
+                dACC_sal = `dACC_sal_mean`) %>%
+  dplyr::mutate(scaled_Bilateral_AI = scale(Bilateral_AI, center = TRUE, scale = TRUE),
+                scaled_Bilateral_IFG = scale(Bilateral_IFG, center = TRUE, scale = TRUE),
+                scaled_Bilateral_PFCl_ctrl = scale(Bilateral_PFCl_ctrl, center = TRUE, scale = TRUE),
+                scaled_Bilateral_PFCl_sal = scale(Bilateral_PFCl_sal, center = TRUE, scale = TRUE),
+                scaled_Bilateral_Putamen = scale(Bilateral_Putamen, center = TRUE, scale = TRUE),
+                scaled_Bilateral_Striatum = scale(Bilateral_Striatum, center = TRUE, scale = TRUE),
+                scaled_dACC_ctrl = scale(dACC_ctrl, center = TRUE, scale = TRUE),
+                scaled_dACC_sal = scale(dACC_sal, center = TRUE, scale = TRUE))
+
+# contrast code: Low Reward or Penalty = -1, High Reward or Penalty = 1
+contrast.code<-contr.sum(2)*-1
+contrasts(df.trial.betas.combined$catRewardLevel)<-contrast.code
+contrasts(df.trial.betas.combined$catPenaltyLevel)<-contrast.code
+contrasts(df.trial.betas.combined$catBlockType)<-contrast.code
+
+# Code to validate that contrast coding is correct
+contrasts(df.trial.betas.combined$catRewardLevel)
+contrasts(df.trial.betas.combined$catPenaltyLevel)
+contrasts(df.trial.betas.combined$catBlockType)
+```
+
+## Format data for model-based fMRI analysis
+
+```{r}
+# Note: need to use subj_idx because this is convention in pymc
+df.ddm.betas <- df.trial.betas.combined %>%
+  select(SubID, Accuracy, RT, catRewardLevel, catPenaltyLevel, catBlockType, Congruency, RandomError, AutomaticError, 
+         IntervalTrialNum, scaledTrialSessionNum, scaledRunningTime,
+         beta_type, beta_num, scaled_Bilateral_AI, scaled_Bilateral_IFG, scaled_Bilateral_PFCl_ctrl, 
+         scaled_Bilateral_PFCl_sal, scaled_Bilateral_Putamen, scaled_Bilateral_Striatum, scaled_dACC_ctrl, scaled_dACC_sal) %>%
+  filter(RandomError!=1, SubID != 2030) %>%
+  mutate(rt = RT/1000,
+         response = Accuracy,
+         RewardLevel = catRewardLevel,
+         PenaltyLevel = catPenaltyLevel,
+         BlockType = catBlockType,
+         congruence = Congruency - .5,
+         Congruency=factor(x = congruence, levels = c(-.5,.5), labels = c("Incongruent","Congruent")),
+         scaledTrialSession = scaledTrialSessionNum,
+         scaledRunningTime = scaledRunningTime) %>%
+  select(SubID, rt, response, RewardLevel, PenaltyLevel, BlockType, Congruency, congruence, IntervalTrialNum, scaledTrialSession, scaledRunningTime,
+         beta_type, scaled_Bilateral_AI, scaled_Bilateral_IFG, scaled_Bilateral_PFCl_ctrl, scaled_Bilateral_PFCl_sal, scaled_Bilateral_Putamen, 
+         scaled_Bilateral_Striatum, scaled_dACC_ctrl, scaled_dACC_sal) %>%
+  pivot_wider(names_from = beta_type, values_from = c(scaled_Bilateral_AI, scaled_Bilateral_IFG, scaled_Bilateral_PFCl_ctrl, 
+                                                      scaled_Bilateral_PFCl_sal, scaled_Bilateral_Putamen, scaled_Bilateral_Striatum, 
+                                                      scaled_dACC_ctrl, scaled_dACC_sal)) %>%
+select(subj_idx = SubID, rt, response, RewardLevel, PenaltyLevel, BlockType, Congruency, congruence, IntervalTrialNum, scaledTrialSession, scaledRunningTime,
+       scaled_Bilateral_AI_cue, scaled_Bilateral_AI_interval, scaled_Bilateral_AI_feedback,  
+       scaled_Bilateral_IFG_cue, scaled_Bilateral_IFG_interval, scaled_Bilateral_IFG_feedback,  
+       scaled_Bilateral_PFCl_ctrl_cue, scaled_Bilateral_PFCl_ctrl_interval, scaled_Bilateral_PFCl_ctrl_feedback,  
+       scaled_Bilateral_PFCl_sal_cue, scaled_Bilateral_PFCl_sal_interval, scaled_Bilateral_PFCl_sal_feedback,  
+       scaled_Bilateral_Putamen_cue, scaled_Bilateral_Putamen_interval, scaled_Bilateral_Putamen_feedback,  
+       scaled_Bilateral_Striatum_cue, scaled_Bilateral_Striatum_interval, scaled_Bilateral_Striatum_feedback,  
+       scaled_dACC_ctrl_cue, scaled_dACC_ctrl_interval, scaled_dACC_ctrl_feedback, 
+       scaled_dACC_sal_cue, scaled_dACC_sal_interval, scaled_dACC_sal_feedback) %>%
+  drop_na(scaled_Bilateral_Striatum_cue)
+  
+# sum(is.na(df.ddm.betas$scaled_Bilateral_AI_cue))
+# tmp <- df.ddm.betas %>% filter(is.na(scaled_Bilateral_AI_cue))
+# table(tmp$SubID)
+# 
+# 2035 2039 2049 2069 2079 2113 2121 
+#  654  449  203  156  444  134  516 
+```
+
+### Save Data
+
+```{r}
+# Subjects to Exclude from Analysis:
+# Subject 2018, Task fMRI data was not saved.
+# Maybe: Subject 2069, since they only responded 1 interval for the Low Reward High Penalty Intervals
+# Exclude subject 2039, something weird with the data.
+# Note: Subject 2030 had a issue where the stimulus data was not saved (probably from restarting partially through)
+SubID.exclude <- c(2018, 2039)
+sub.likert <- unique(df.Likert$SubID)
+
+df.SRM <- df.SRM %>% filter(!(SubID %in% SubID.exclude))
+df.Likert <- df.Likert %>% filter(!(SubID %in% SubID.exclude)) 
+df.trial.complete <- df.trial.complete %>% filter(!(SubID %in% SubID.exclude)) 
+df.interval <- df.interval %>% filter(!(SubID %in% SubID.exclude)) 
+df.ddm <- df.ddm %>% filter(!(subj_idx %in% SubID.exclude)) 
+df.ddm.betas <- df.ddm.betas %>% filter(!(subj_idx %in% SubID.exclude)) 
+df.interval.betas.combined <- df.interval.betas.combined %>% filter(!(SubID %in% SubID.exclude))
+df.trial.betas.combined <- df.trial.betas.combined %>% filter(!(SubID %in% SubID.exclude))
+
+# Filter and Remove Trials with Slow RTs (>3500 ms)
+# df.trial.complete.trim <- df.trial.complete %>% 
+#   filter(RT<thresh_maxRT_performed)
+
+# Set current date
+curDate = gsub("-", "", Sys.Date())
+
+# Save formatted SRM and Likert Data
+fwrite(x = df.SRM, file = paste0(datapath.formatted.qualtrics,"data_fMRI-TCB_RewardPenalty_SRM_formatted_",curDate,".csv"), row.names = FALSE)
+fwrite(x = df.Likert, file = paste0(datapath.formatted.qualtrics,"data_fMRI-TCB_RewardPenalty_Likert_formatted_",curDate,".csv"), row.names = FALSE)
+
+# Save formatted behavioral data
+fwrite(x = df.trial.complete, file = paste0(datapath.formatted.behavior,"data_fMRI-TCB_RewardPenalty_Trial_formatted_",curDate,".csv"), row.names = FALSE)
+fwrite(x = df.interval, file = paste0(datapath.formatted.behavior,"data_fMRI-TCB_RewardPenalty_Interval_formatted_",curDate,".csv"), row.names = FALSE)
+
+# Save formatted ddm data
+fwrite(x = df.ddm, file = paste0(datapath.formatted.ddm,"data_fMRI-TCB_RewardPenalty_ddm_",curDate,".csv"), row.names = FALSE)
+fwrite(x = df.ddm.betas, file = paste0(datapath.formatted.ddm,"data_fMRI-TCB_RewardPenalty_ddm_betas_",curDate,".csv"), row.names = FALSE)
+
+# Save the combined betas and behavior dataframe csv
+# NOTE: this is the data frame we will use for subsequent analyses
+fwrite(x = df.trial.betas.combined, file = paste0(datapath.formatted.combined,"data_fMRI-TCB_RewardPenalty_Trial_betas_formatted_",curDate,".csv"), row.names = FALSE)
+fwrite(x = df.interval.betas.combined, file = paste0(datapath.formatted.combined,"data_fMRI-TCB_RewardPenalty_Interval_betas_formatted_",curDate,".csv"), row.names = FALSE)
+```

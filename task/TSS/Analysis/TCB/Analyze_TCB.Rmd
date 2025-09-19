@@ -1,0 +1,285 @@
+---
+title: "TSS-TCB behavioral"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+---
+
+### Data Prep and Scrubbing 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+rm(list=ls())
+
+library(lme4)
+library(ggplot2)
+library(sjPlot)
+library(dplyr)
+library(tidyr)
+library(forcats)
+library(effects)
+library(here)
+library(kableExtra)
+if("plyr" %in% (.packages())) detach("package:plyr",unload=TRUE)
+source("RFunctions/normDataWithin.R")
+source("RFunctions/summarySE.R")
+source("RFunctions/summarySEwithinO.R")
+```
+
+
+Path Directories of Data Input/Ouput
+```{r paths}
+# Paths for data  
+data.path<-here("DataFormatted/data_TSS-TCB-fMRIstudy_version201.csv")
+srm.path<-here("Data/Redcap/cleanSRMS1.csv")
+
+# Paths for storing Figures
+figure.path<-here("Figures")
+```
+
+Task Version (Set by User)
+```{r}
+curVersion=201
+```
+
+Read in the data, format/average data based on relevant conditions (subject-level, interval-level)
+```{r}
+# read in the formatted data
+df<-read.csv(data.path)
+
+# Summarise accuracy by subject
+df.subject <- df %>% filter(Vers==curVersion) %>%
+  group_by(SubID) %>%
+  dplyr::summarise(meanAcc=mean(Acc,na.rm=T))
+
+# Summarise data by subject and interval
+df.interval <- df %>% filter(Vers==curVersion) %>%
+  group_by(SubID,IntervalNum,BlockNum,RewLvl,GainLvl,BlockType) %>%
+  dplyr::summarise(meanCongruence=mean(Congruency),
+                   meanAcc=mean(Acc,na.rm=T),
+                   respRate=sum(Acc,na.rm=T)/mean(IntervalLengthSecsNoISI),
+                   IntervalDur=mean(IntervalLengthSecsNoISI),
+                   meanAccRT=mean(AccRT,na.rm=T)) %>% ungroup() %>%
+  mutate(catRewLvl=relevel(factor(RewLvl,labels=c('Low','High')),'High'),
+         catGainLvl=relevel(factor(GainLvl,labels=c('Loss','Gain')),'Loss'),
+         catSessionType=relevel(fct_collapse(BlockType,
+                                             'ByLevel'=c('lowRew','highRew'),
+                                             'ByType'=c('gain','loss')),
+                                ref='ByLevel'),
+         scaledIntervalNum=(IntervalNum-64)/64,
+         scaledIntervalDur=scale(IntervalDur),
+         scaledMeanCong=scale(meanCongruence),
+         logMeanAccRT=log10(meanAccRT)) %>%
+  filter(meanAcc>=0.6 & meanCongruence >0 & meanCongruence <1)
+# Add contrast coding to the variables of interest
+contrasts(df.interval$catGainLvl)<-contr.sum
+contrasts(df.interval$catRewLvl)<-contr.sum
+contrasts(df.interval$catSessionType)<-contr.sum
+
+# Formatting for congruency effects
+df.prev.cong <- df %>% group_by(SubID,BlockNum,IntervalNum) %>%
+  mutate(prevCongruence=c(NaN,Congruency[1:length(Congruency)-1])) %>%
+  ungroup()
+
+# Summarise data by subject and trial
+df.trial <- df.prev.cong %>% filter(Vers==curVersion & !is.na(prevCongruence)) %>% 
+  mutate(catRewLvl=factor(RewLvl,labels=c('Low','High')),
+         catGainLvl=factor(GainLvl,labels=c('Loss','Gain')),
+         catSessionType=relevel(fct_collapse(BlockType,
+                                             'ByLevel'=c('lowRew','highRew'),
+                                             'ByType'=c('gain','loss')),
+                                ref='ByLevel'),
+         catCongruence=factor(Congruency,labels=c('InCongruent','Congruent')),
+         catPrevCongruence=factor(prevCongruence,labels=c('InCongruent','Congruent')),
+         scaledIntervalNum=(IntervalNum-64)/64,
+         scaledTrialNum=(IntervalTrialNum-5)/5,
+         scaledIntervalDur=(IntervalLength-7.5)/1.5,
+         mean_Acc=RespRateCorr/RespRateAll)
+# Add contrast coding to the variables of interest
+contrasts(df.trial$catGainLvl)<-contr.sum
+contrasts(df.trial$catRewLvl)<-contr.sum
+contrasts(df.trial$catSessionType)<-contr.sum
+contrasts(df.trial$catCongruence)<-contr.sum
+contrasts(df.trial$catPrevCongruence)<-contr.sum
+```
+
+
+# Main Performance
+
+## Interval-Based Analyses
+### Contrast Coding: 
+Incentive Magnitude (catRewLvl): High=1, Low=-1 \newline
+
+Incentive Type (catGainLvl): Loss=1, Gain=-1 
+
+### Experimental Coding Variables: \newline
+Incentive Magnitude (RewLvl): High=1, Low=-1 \newline
+
+Incentive Type (GainLvl): Gain=1, Loss=0 
+
+```{r}
+# Response Rate Model
+model.rr <- lme4::lmer(respRate ~ catRewLvl * catGainLvl + scaledIntervalNum + 
+                         scaledIntervalDur + scaledMeanCong +  
+                          (1 + catRewLvl * catGainLvl|SubID), data = df.interval)
+# Response Time Model
+model.rt <- lme4::lmer(meanAccRT ~ catRewLvl * catGainLvl + scaledIntervalNum + 
+                         scaledIntervalDur + scaledMeanCong +
+                         (1 + catRewLvl * catGainLvl|SubID), data = df.interval)
+# Accuracy Model
+model.acc <- lme4::glmer(meanAcc==1 ~ catRewLvl * catGainLvl + scaledIntervalNum + 
+                           scaledIntervalDur + scaledMeanCong +  
+                           (1 + catRewLvl * catGainLvl|SubID), family=binomial,data = df.interval)
+
+tab_model(model.acc)
+
+# Visulize the model
+tab_model(model.rr,model.rt,model.acc,digits = 3, 
+          pred.labels = c("Intercept","Incentive Magnitude","Incentive Type", "Interval Number", 
+                          "Interval Duration", "Mean Congruency", "Magnitude:Type"),
+          dv.labels = c("Response Rate", "Respeonse Time","Accuracy"))
+```
+
+### Code for Displaying Each Model Separately
+```{r}
+# Response Rate Only
+tab_model(model.rr, digits = 3, show.icc = FALSE, show.re.var = FALSE,
+          pred.labels = c("Intercept","Incentive Magnitude","Incentive Type", "Interval Number", 
+                          "Interval Duration", "Mean Congruency", "Magnitude:Type"),
+          dv.labels = c("Response Rate"))
+
+# Response Time Only
+tab_model(model.rt, digits = 3, show.icc = FALSE, show.re.var = FALSE,
+          pred.labels = c("Intercept","Incentive Magnitude","Incentive Type", "Interval Number", 
+                          "Interval Duration", "Mean Congruency", "Magnitude:Type"),
+          dv.labels = c("Response Time"))
+
+# Accuracy Only
+tab_model(model.acc, digits = 3, show.icc = FALSE, show.re.var = FALSE,
+          pred.labels = c("Intercept","Incentive Magnitude","Incentive Type", "Interval Number", 
+                          "Interval Duration", "Mean Congruency", "Magnitude:Type"),
+          dv.labels = c("Accuracy"))
+
+```
+
+
+
+## Visualization
+```{r}
+
+dfwc <- summarySEwithinO(df.interval %>% mutate(meanAccRT=meanAccRT*1000), measurevar="meanAccRT", 
+                         withinvars=c("catRewLvl","catGainLvl"),idvar="SubID",na.rm=TRUE, conf.interval=.95)
+dfwc$catGainLvl<-relevel(dfwc$catGainLvl,ref = 'Gain')
+dfwc$catRewLvl<-relevel(dfwc$catRewLvl,ref = 'Low')
+ggplot(dfwc, aes(x=catGainLvl, y=meanAccRTNormed, fill=interaction(catRewLvl,catGainLvl))) + 
+  geom_bar(stat='identity',position = position_dodge(),width = 0.8) + 
+  geom_errorbar(position = position_dodge(.8),width=0.2,size=1,aes(ymin=meanAccRTNormed-se, ymax=meanAccRTNormed + se)) + xlab('') + ylab('Reaction Time of\nCorrect Responses/ms') +  theme_bw() + #ggtitle('Reaction Time') +
+  scale_fill_manual(name = "",values=c('#56B4E9','#0072B2',"#E69F00","#D55E00"))+
+  theme(axis.line = element_line(colour = "black"),plot.margin=grid::unit(c(2,2,2,2), "mm"),
+        axis.title.y = element_text(margin = margin(t = 0, r = 20, b = 0, l = 0)),
+        text = element_text(size=25),legend.position = "none",
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    panel.background = element_blank(),plot.title = element_text(hjust = 0.5,size = 30, face = "bold")) + coord_cartesian(ylim=c(450,550)) + ggtitle("Reaction Time") + scale_y_continuous(breaks = c(450,500,550))
+ggsave(file="Figures/TCB_AccRT.eps",width = 18,height = 15,units ='cm')
+```
+
+
+```{r}
+dfwc <- summarySEwithinO(df.interval, measurevar="respRate", 
+                         withinvars=c("catRewLvl","catGainLvl"),idvar="SubID",na.rm=TRUE, conf.interval=.95)
+dfwc$catGainLvl<-relevel(dfwc$catGainLvl,ref = 'Gain')
+dfwc$catRewLvl<-relevel(dfwc$catRewLvl,ref = 'Low')
+ggplot(dfwc, aes(x=catGainLvl, y=respRateNormed, fill=interaction(catRewLvl,catGainLvl))) + 
+  geom_bar(stat='identity',width = 0.8,position = position_dodge()) + 
+  geom_errorbar(position = position_dodge(.8),width=0.25,size=1,aes(ymin=respRateNormed-se, ymax=respRateNormed +se))  + xlab('') + ylab('Response Rate\n(Correct/s)') +  theme_bw() + #ggtitle('Reaction Time') +
+  scale_fill_manual(name = "",values=c('#56B4E9','#0072B2',"#E69F00","#D55E00"))+
+  theme(axis.line = element_line(colour = "black"),plot.margin=grid::unit(c(2,2,2,2), "mm"),
+        axis.title.y = element_text(margin = margin(t = 0, r = 20, b = 0, l = 0)),
+        text = element_text(size=25),legend.position = "none",
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    panel.background = element_blank(),plot.title = element_text(hjust = 0.5,size = 30, face = "bold")) + coord_cartesian(ylim=c(1.5,1.7)) + scale_y_continuous(breaks = c(1.5,1.6,1.7)) + ggtitle("Response Rate")
+
+ggsave(file="Figures/TCB_RR.eps",width = 18,height = 15,units ='cm')
+```
+
+
+```{r}
+dfwc <- summarySEwithinO(df.interval, measurevar="meanAcc", 
+                         withinvars=c("catRewLvl","catGainLvl"),idvar="SubID",na.rm=TRUE, conf.interval=.95)
+dfwc$catGainLvl<-relevel(dfwc$catGainLvl,ref = 'Gain')
+dfwc$catRewLvl<-relevel(dfwc$catRewLvl,ref = 'Low')
+ggplot(dfwc, aes(x=catGainLvl, y=meanAccNormed, fill=interaction(catRewLvl,catGainLvl))) + 
+  geom_bar(stat='identity',width = 0.8,position = position_dodge()) + 
+  geom_errorbar(position = position_dodge(.8),width=0.2,size=1,aes(ymin=meanAccNormed-se, ymax=meanAccNormed +se))  + xlab("") + ylab('Mean Accuracy') +  theme_bw() + #ggtitle('Reaction Time') +
+  scale_fill_manual(name = "",values=c('#56B4E9','#0072B2',"#E69F00","#D55E00"))+
+  theme(axis.line = element_line(colour = "black"),plot.margin=grid::unit(c(2,2,2,2), "mm"),
+        axis.title.y = element_text(margin = margin(t = 0, r = 20, b = 0, l = 0)),
+        text = element_text(size=25),legend.position = "none",
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    panel.background = element_blank(),plot.title = element_text(hjust = 0.5,size = 30, face = "bold")) + coord_cartesian(ylim=c(0.85,0.95)) + ggtitle("Accuracy") + scale_y_continuous(breaks = c(0.85,0.9,0.95))
+
+ggsave(file="Figures/TCB_Acc.eps",width = 18,height = 15,units ='cm')
+```
+
+
+```{r}
+dfwc <- summarySEwithinO(df.interval, measurevar="meanAcc", 
+                         withinvars=c("catRewLvl","catGainLvl"),idvar="SubID",na.rm=TRUE, conf.interval=.95)
+
+p.acc<- ggplot(dfwc, aes(x=catGainLvl, y=meanAccNormed, fill=interaction(catGainLvl,catRewLvl))) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge(.9)) +
+  geom_errorbar(aes(ymin=meanAccNormed-se, ymax=meanAccNormed+se), width=.2,
+                 position=position_dodge(.9)) + coord_cartesian(ylim=c(0.85,0.95)) + 
+  labs(x="", y = "Accuracy")+
+  theme_classic() + theme(text = element_text(size=20),
+                           axis.text.y = element_text(size=10)) +
+  scale_fill_manual(values=c('#992200','#009F55','#EE0000','#00EE55')) + 
+  guides(fill=guide_legend(title="Interval")) + 
+  scale_y_continuous(labels = scales::number_format(accuracy = 0.01))
+p.acc
+```
+
+
+## Trial-Based Congruency Analyses
+```{r}
+model.accrt <- lmer(logAccRT ~ catSessionType * catRewLvl * catGainLvl * catCongruence * 
+                      catPrevCongruence + scaledIntervalNum + scaledTrialNum + scaledIntervalDur + 
+                      (1+catRewLvl*catGainLvl|SubID), data = df.trial)
+tab_model(model.accrt)
+```
+
+
+```{r}
+eff_df <- Effect(c("catPrevCongruence","catRewLvl","catGainLvl"), model.accrt)
+IA <- as.data.frame(eff_df) 
+```
+
+### Visualize the Congruency Effects Table
+```{r}
+IA %>%
+  kable() %>%
+  kable_styling()
+```
+
+
+```{r}
+dfwc <- summarySEwithinO(df.trial, measurevar="logAccRT", 
+                         withinvars=c("catCongruence","catPrevCongruence","catGainLvl","catRewLvl"),
+                         idvar="SubID",na.rm=TRUE, conf.interval=.95)
+
+# Make the graph with the 95% confidence interval
+ggplot(dfwc, aes(x=catPrevCongruence, y=logAccRTNormed, 
+                 color=catCongruence,group=catCongruence)) + 
+  geom_line() + 
+  geom_errorbar(width=.1, aes(ymin=logAccRTNormed-se, ymax=logAccRTNormed+se)) + 
+  facet_grid(rows=vars(catGainLvl),cols=vars(catRewLvl)) +
+  labs(x="Previous Trial", y="Log RT", title="Congruency Effects", color=" Current Trial")
+```

@@ -1,0 +1,1383 @@
+---
+title: "TCB Manuscript CleanSRMS impute"
+author: "Debbie Yee"
+date: "2/2/2024"
+output: 
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: true
+    code_folding: hide
+    number_sections: true
+---
+# Data Scrubbing
+Load in packages
+```{r, message = FALSE}
+if (!require("pacman")) install.packages("pacman")
+ pacman::p_load(
+   knitr,  # For join function
+   tidyverse, #for dplyr functions
+   tidyr,
+   rmarkdown,
+   psych,
+   RColorBrewer,
+   sjPlot,
+   lme4,
+   Rmisc,
+   rstudioapi,
+   data.table,
+   matrixStats
+   )
+```
+
+Set Relevant Paths and Version Number 
+```{r}
+# Set current working directory
+#dir_name =  sub("\\/analysis.*", "", dirname(rstudioapi::getSourceEditorContext()$path))
+#setwd(dir_name)
+
+# Set Paths to Qualtrics Data
+path.rawSRM = "data/qualtrics/raw/TCB-MRI2-SRMs-Part1_May+11,+2022_13.27_corrected.csv"
+path.rawSRM2 = "data/qualtrics/raw/TCB-MRI2-SRMs-Part2_May+11,+2022_13.43.csv"
+path.rawLikert = "data/qualtrics/raw/TCB-MRI2-CollectorPenalty-Debrief_May+17,+2022_13.12_corrected.csv" 
+path.SubID_key = "data/SubID_key.csv"
+path.clean.data = "data/qualtrics/formatted/"
+
+# Other data quirks
+# TCB2054 filled out SRM1 twice, need to remove the first INDEPENDENT_PID ("R_psIPQp3PPhrwQo1") and swap out second ("R_psIPQp3PPhrwQo1_2B")
+# TCB2018 behavioral data was not saved for fmri task session
+# Raw Likert file has typo in column names in original raw file, now corrected.
+# Raw SRM file has missing missing ages for 2 subjects in original raw file, now correctd
+```
+
+Read in raw SRM and Likert data
+```{r}
+data.SRM1.raw = data.table::fread(file = path.rawSRM, stringsAsFactors = FALSE)
+data.SRM2.raw = fread(file = path.rawSRM2, stringsAsFactors = FALSE)
+data.Likert.raw = fread(file = path.rawLikert, stringsAsFactors = FALSE)
+SubID_key = fread(file = path.SubID_key, stringsAsFactors = FALSE)
+```
+
+Combine SRM 1, SRM 2, Debrief Likert Data
+
+* NOTE: Should check that the ACE is coded correctly. There is a Q31 that I am unsure of what is exactly...
+```{r} 
+# SRM 1 
+data.SRM1 = data.SRM1.raw %>% 
+  select(INDEPENDENT_PID,StartDate:QUIC_5_38,Uni_1:Uni_57) %>%
+  dplyr::slice(3:n()) %>%
+  filter(INDEPENDENT_PID != "R_psIPQp3PPhrwQo1", Finished == "TRUE") %>% 
+  select(!StartDate:UserLanguage) %>%
+  mutate(INDEPENDENT_PID = recode(INDEPENDENT_PID, "R_psIPQp3PPhrwQo1_2B" = "R_psIPQp3PPhrwQo1"),
+         Education = recode(Education, "12(high school)" = "12", "16(Years of College)" = "16"))
+
+# SRM 2
+colnames(data.SRM2.raw)[85] <- "MDNS_2_father"
+colnames(data.SRM2.raw)[86] <- "MDNS_2_mother"
+colnames(data.SRM2.raw)[87] <- "MDNS_2_alone"
+data.SRM2 = data.SRM2.raw %>%
+  select(INDEPENDENT_PID,StartDate:C19IS_13) %>%
+  dplyr::slice(3:n()) %>%
+  filter(Finished == "TRUE") %>%
+  select(!StartDate:UserLanguage) %>%
+  dplyr::rename_with(stringr::str_replace, pattern = "Q31", replacement = "STAIY2", matches("Q31")) %>%
+  dplyr::rename(., c(ACEIQ_5_1 = Q24,
+                     ACEIQ_8_1 = Q10_1,
+                     ACEIQ_8_2 = Q10_2,
+                     ACEIQ_8_3 = Q10_3,
+                     ACEIQ_9 = Q11_1,
+                     ACEIQ_10 = Q13_1,
+                     ACEIQ_11_1 = Q14_1,
+                     ACEIQ_11_2 = Q14_2,
+                     ACEIQ_11_3 = Q14_3,
+                     ACEIQ_12_1 = Q15_1,
+                     ACEIQ_12_2 = Q15_2,
+                     ACEIQ_12_3 = Q15_3,
+                     ACEIQ_12_4 = Q15_4,
+                     ACEIQ_12_5 = Q15_5,
+                     ACEIQ_12_6 = Q15_6,
+                     ACEIQ_12_7 = Q15_7,
+                     ACEIQ_12_8 = Q15_8,
+                     ACEIQ_13 = Q16_1,
+                     ACEIQ_14 = Q18,
+                     ACEIQ_15 = Q19_1,
+                     ACEIQ_16_1 = Q21_1,
+                     ACEIQ_16_2 = Q21_2,
+                     ACEIQ_16_3 = Q21_3,
+                     ACEIQ_17_1 = Q22_1,
+                     ACEIQ_17_2 = Q22_2,
+                     ACEIQ_17_3 = Q22_3,
+                     ACEIQ_17_4 = Q22_4,
+                     STAIY2_1_Rev = STAIY2_1,
+                     STAIY2_3_Rev = STAIY2_3,
+                     STAIY2_6_Rev = STAIY2_6,
+                     STAIY2_7_Rev = STAIY2_7,
+                     STAIY2_10_Rev = STAIY2_10,
+                     STAIY2_13_Rev = STAIY2_13,
+                     STAIY2_14_Rev = STAIY2_14,
+                     STAIY2_16_Rev = STAIY2_16,
+                     STAIY2_19_Rev = STAIY2_19))
+
+# Debrief Likert Ratings
+# Note the labels are not entirely correct... #2 (PosLPenH) and #3 (PosHPenL) are swapped (check qualtrics to confirm)
+# Cue 1 = Low Reward, Low Penalty
+# Cue 2 = High Reward, Low Penalty
+# Cue 3 = Low Reward, High Penalty
+# Cue 4 = High Reward, High Penalty
+data.Likert = data.Likert.raw %>%
+  dplyr::slice(3:n()) %>%
+  filter(grepl('IP Address',Status), grepl('TRUE',Finished)) %>%
+  dplyr::rename(INDEPENDENT_PID = ResponseId,
+                Version = Q4,
+                InScanner = Q5,
+                SubID = Q6) %>%
+  dplyr::select(SubID, INDEPENDENT_PID, Version, Composite_Collector_PosLPenL_1:Composite_Collector_PosHPenH_6) %>%
+  mutate(SubID = recode(SubID, 
+                        "2059" = "TCB2059", 
+                        "2062" = "TCB2062", 
+                        "2064" = "TCB2064", 
+                        "2067" = "TCB2067"),
+         Version = recode(Version, 
+                          "2036" = "204", 
+                          "2004" = "204")) %>%
+  replace(.=="0  Neutral",0) %>%
+  replace(.=="5 pleasant/positive",5) %>%
+  replace(.=="-5 unpleasant/negative",-5) %>%
+  replace(.=="-5  relaxed/calm",-5) %>%
+  replace(.=="5  stimulated/aroused",5) %>%
+  replace(.=="-5  Not at all",-5) %>%
+  replace(.=="5  A lot",5) %>%
+  dplyr::rename(., c(Pleasant_R1P1 = Composite_Collector_PosLPenL_1,
+                     Pleasant_R2P1 = Composite_Collector_PosHPenL_1,
+                     Pleasant_R1P2 = Composite_Collector_PosLPenH_1,
+                     Pleasant_R2P2 = Composite_Collector_PosHPenH_1,
+                     Arousal_R1P1 = Composite_Collector_PosLPenL_2,
+                     Arousal_R1P2 = Composite_Collector_PosLPenH_2,
+                     Arousal_R2P1 = Composite_Collector_PosHPenL_2,
+                     Arousal_R2P2 = Composite_Collector_PosHPenH_2,
+                     Motivation_R1P1 = Composite_Collector_PosLPenL_3,
+                     Motivation_R1P2 = Composite_Collector_PosLPenH_3,
+                     Motivation_R2P1 = Composite_Collector_PosHPenL_3,
+                     Motivation_R2P2 = Composite_Collector_PosHPenH_3,
+                     Difficult_R1P1 = Composite_Collector_PosLPenL_4,
+                     Difficult_R1P2 = Composite_Collector_PosLPenH_4,
+                     Difficult_R2P1 = Composite_Collector_PosHPenL_4,
+                     Difficult_R2P2 = Composite_Collector_PosHPenH_4,
+                     Effort_R1P1 = Composite_Collector_PosLPenL_5,
+                     Effort_R1P2 = Composite_Collector_PosLPenH_5,
+                     Effort_R2P1 = Composite_Collector_PosHPenL_5,
+                     Effort_R2P2 = Composite_Collector_PosHPenH_5,
+                     Attention_R1P1 = Composite_Collector_PosLPenL_6,
+                     Attention_R1P2 = Composite_Collector_PosLPenH_6,
+                     Attention_R2P1 = Composite_Collector_PosHPenL_6,
+                     Attention_R2P2 = Composite_Collector_PosHPenH_6))
+
+# Combine SRMs into one data frame
+data.SRM.clean = left_join(x = SubID_key, y = data.SRM1, by = "INDEPENDENT_PID") %>%
+  left_join(y = data.SRM2, by = "INDEPENDENT_PID") %>%
+  left_join(y = data.Likert, by = c("SubID","INDEPENDENT_PID")) %>%
+  filter(SubID != "TCB2018")
+```
+
+# Extract Demographic Information 
+Language free response could be cleaned more
+```{r}
+data.Demographic = data.SRM.clean %>% # Uni_3 and 4 are family income range
+  dplyr::select(INDEPENDENT_PID, SubID, Age, Sex, Gender, Handedness, 
+                Gender_Description, Education, RaceEthnicity, Hispanic, 
+                MotherEducation, FatherEducation, NumLanguages, ListLanguages, PrimaryLang,
+                Income_Relative_Uni = Uni_1, 
+                Income_Low_Uni = Uni_3,
+                Income_High_Uni = Uni_4,
+                IncomeNeedRatio_Total_Uni = INR18_4_total,
+                IncomeNeedRatio_Over18_Uni = INR18_4_018,
+                IncomeNeedRatio_Under18_Uni = INR18_4_U18,
+                Household_Uni = Uni_6,
+                MacArthurUS_Uni = Uni_8,
+                MacArthurComm_Uni = Uni_10,
+                Name_Uni = Uni_11,
+                GPA_Uni = Uni_12) %>%
+  replace(.=="16(Years of College)",16) %>%
+  replace(.=="12(high school)",12) %>%
+  mutate(Income_Relative_Uni = factor(Income_Relative_Uni, 
+                                      levels = c("1 Low","2","3","4","5 Average","6","7","8","9","10 High"),
+                                      labels = c("1","2","3","4","5","6","7","8","9","10")),
+         MacArthurUS_Uni = factor(MacArthurUS_Uni, 
+                                             levels = c("1 (Bottom)","2","3","4","5","6","7","8","9","10  (Top)"),
+                                             labels = c("1","2","3","4","5","6","7","8","9","10")),
+         MacArthurComm_Uni = factor(MacArthurComm_Uni, 
+                                             levels = c("1 (Bottom)","2","3","4","5","6","7","8","9","10 (Top)"),
+                                             labels = c("1","2","3","4","5","6","7","8","9","10"))) %>%
+  dplyr::mutate_at(vars(Age, NumLanguages, Education, Income_Relative_Uni, Income_Low_Uni, Income_High_Uni, 
+                        IncomeNeedRatio_Total_Uni, IncomeNeedRatio_Over18_Uni, IncomeNeedRatio_Under18_Uni,
+                        MacArthurUS_Uni, MacArthurComm_Uni), as.numeric) %>%
+  dplyr::mutate_at(vars(Income_Low_Uni,Income_High_Uni), na_if, 0)
+  
+```
+
+# Format Specific Scales
+## Barrett Impulsiveness Scale (BIS-11)
+Scored on a 4 point scale. Reverse Coded Items: 9,20,30,1,7,8,12,13,10,15,29
+
+1. Rarely/Never = 1 
+2. Occasionally = 2 
+3. Often = 3 
+4. Almost Always/Always = 4
+
+Subscales
+* Attention= 5,9,11,20,28
+* Cognitve Instability = 6,24,26
+* Motor= 2,3,4,17,19,22,25
+* Perseverance= 16,21,23,30
+* Self-Control= 1,7,8,12,13,14
+* Cogntive Complexity= 10,15,18,27,29 
+
+Scoring using sum
+```{r}
+max_code=5
+
+# Extract BIS items and reverse code
+data.BIS11=data.SRM.clean %>%
+  dplyr::select("INDEPENDENT_PID", "SubID", starts_with("BIS11_")) %>%
+  replace(.=="Rarely/Never",1)%>%
+  replace(.=="Occasionally",2)%>%
+  replace(.=="Often",3)%>%
+  replace(.=="Almost Always/Always",4) %>%
+  replace(.=="Prefer not to answer",NA) %>%
+  dplyr::mutate_at(vars(starts_with("BIS11_")), as.numeric) %>% 
+  dplyr::mutate_at(.vars = vars(ends_with("_Rev")), .funs = list(~max_code-.)) # this line does the reverse coding 
+
+# Imputation NAs with medians of subscales, and score subscales
+imp.attention<-data.BIS11 %>%
+  select(BIS11_5,BIS11_9_Rev,BIS11_11,BIS11_20_Rev,BIS11_28) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(BIS11_5,BIS11_9_Rev,BIS11_11,BIS11_20_Rev,BIS11_28), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>% # add to calculate sum subscale score; named it with "scored" for easier column extraction later
+  dplyr::mutate(BIS11_Scored_Attention =sum(c(BIS11_5,BIS11_9_Rev,BIS11_11,BIS11_20_Rev,BIS11_28), na.rm = TRUE))
+
+imp.cognitiveinstability<-data.BIS11 %>%
+  select(BIS11_6,BIS11_24,BIS11_26) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(BIS11_6,BIS11_24,BIS11_26), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  dplyr::mutate(BIS11_Scored_CognitveInstability=sum(c(BIS11_6,BIS11_24,BIS11_26), na.rm = TRUE))
+
+imp.motor<-data.BIS11 %>% 
+  select(BIS11_2,BIS11_3,BIS11_4,BIS11_17,BIS11_19,BIS11_22,BIS11_25) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(BIS11_2,BIS11_3,BIS11_4,BIS11_17,BIS11_19,BIS11_22,BIS11_25), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  dplyr::mutate(BIS11_Scored_Motor=sum(c(BIS11_2,BIS11_3,BIS11_4,BIS11_17,BIS11_19,BIS11_22,BIS11_25), na.rm = TRUE))
+
+imp.perseverence<-data.BIS11 %>%
+  select(BIS11_16,BIS11_21,BIS11_23,BIS11_30_Rev) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(BIS11_16,BIS11_21,BIS11_23,BIS11_30_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  dplyr::mutate(BIS11_Scored_Perseverance=sum(c(BIS11_16,BIS11_21,BIS11_23,BIS11_30_Rev), na.rm = TRUE))
+
+imp.selfcontrol<-data.BIS11 %>%
+  select(BIS11_1_Rev,BIS11_7_Rev,BIS11_8_Rev,BIS11_12_Rev,BIS11_13_Rev,BIS11_14) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(BIS11_1_Rev,BIS11_7_Rev,BIS11_8_Rev,BIS11_12_Rev,BIS11_13_Rev,BIS11_14), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  dplyr::mutate(BIS11_Scored_SelfControl=sum(c(BIS11_1_Rev,BIS11_7_Rev,BIS11_8_Rev,BIS11_12_Rev,BIS11_13_Rev,BIS11_14), na.rm = TRUE))
+
+imp.cognitivecomplexity<-data.BIS11 %>%
+  select(BIS11_10_Rev,BIS11_15_Rev,BIS11_18,BIS11_27,BIS11_29_Rev) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(BIS11_10_Rev,BIS11_15_Rev,BIS11_18,BIS11_27,BIS11_29_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  dplyr::mutate(BIS11_Scored_CognitiveComplexity=sum(c(BIS11_10_Rev,BIS11_15_Rev,BIS11_18,BIS11_27,BIS11_29_Rev), na.rm = TRUE))
+
+# Create new imputed dataset
+data.BIS11.imp<-data.frame(INDEPENDENT_PID=data.BIS11$INDEPENDENT_PID,SubID=data.BIS11$SubID,
+                           imp.attention,
+                           imp.cognitiveinstability,
+                           imp.motor,
+                           imp.perseverence,
+                           imp.selfcontrol,
+                           imp.cognitivecomplexity) %>%
+  dplyr::mutate(BIS11_Scored_Total = rowSums(select(., contains("Scored"))))
+```
+
+
+## Need For Cognition (NFC)
+Scored on a 5 point scale. Reverse Coded Items: 1,3,4,5,7,8
+
+1. "Extremely Uncharacteristic" = 1
+2. "Somewhat Uncharacteristic" = 2
+3. "Uncertain" = 3
+4. "Somewhat Characteristic" = 4
+5. "Extremely Characteristic" = 5
+
+Scoring using average
+
+Note: Check that first question is not reverse coded.
+```{r}
+max_code=6
+
+data.NFC=data.SRM.clean %>%
+  dplyr::select("INDEPENDENT_PID","SubID", starts_with("NFC_")) %>%
+  replace(.=="Extremely Uncharacteristic",1) %>%
+  replace(.=="Somewhat Uncharacteristic",2) %>%
+  replace(.=="Uncertain",3) %>%
+  replace(.=="Somewhat Characteristic",4) %>%
+  replace(.=="Extremely Characteristic",5) %>%
+  dplyr::mutate_at(vars(starts_with("NFC_")), as.numeric) %>% 
+  dplyr::mutate_at(.vars = vars(ends_with("_Rev")), .funs = list(~max_code-.))
+
+# NOTE: imputation not technically needed for this dataset, but useful to have generally
+
+# Impute any NAs based on the row median
+imp.NFC<-data.NFC %>%
+  dplyr:: select(starts_with("NFC_")) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(NFC_1,NFC_2,NFC_3_Rev,NFC_4_Rev,NFC_5_Rev,NFC_6,NFC_7_Rev,NFC_8_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)
+
+# Create imputed data set 
+data.NFC.imp<-data.frame(INDEPENDENT_PID=data.NFC$INDEPENDENT_PID, SubID = data.NFC$SubID,
+                         imp.NFC) %>% 
+  mutate(NFC_Scored_Total=rowMeans(select(., -INDEPENDENT_PID, -SubID)))
+```
+
+## Fear of Negative Evaluation (FNE)
+Scored on a 5 point scale. Reverse Coded Items: 6
+
+1. Not at all characteristic of me = 1 
+2. Slightly characteristic of me = 2 
+3. Moderately characteristic of me = 3 
+4. Very characteristic of me = 4 
+5. Extremely characteristic of me = 5
+
+Scoring using average
+```{r}
+max_code=6
+
+# convert responses to numbers, reverse code 
+data.FNE=data.SRM.clean %>%
+  dplyr::select("INDEPENDENT_PID", "SubID", starts_with("FNE_")) %>%
+  replace(.=="Not at all characteristic of me",1) %>%
+  replace(.=="Slightly characteristic of me",2) %>%
+  replace(.=="Moderately characteristic of me",3) %>%
+  replace(.=="Very characteristic of me",4) %>%
+  replace(.=="Extremely characteristic of me",5) %>%
+  dplyr::mutate_at(vars(starts_with("FNE_")), as.numeric) %>%
+  mutate_at(.vars = vars(ends_with("_Rev")), .funs = list(~max_code-.))
+
+# Impute any NAs based on the row median
+imp.FNE<-data.FNE %>%
+  dplyr:: select(starts_with("FNE_")) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(FNE_1,FNE_2,FNE_3,FNE_4,FNE_5,FNE_6_Rev,FNE_7,FNE_8), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)
+
+# Create imputed data set 
+data.FNE.imp<-data.frame(INDEPENDENT_PID=data.FNE$INDEPENDENT_PID, SubID = data.FNE$SubID,
+                         imp.FNE) %>% 
+  mutate(FNE_Scored_Total=rowMeans(select(., -INDEPENDENT_PID, -SubID)))
+```
+
+## Behavioral Inhibition Scale / Behavioral Activation Scale (BIS/BAS)
+Scored on a 4 point scale. Reverse Coded Items: All Except 2, 22
+
+1. Very true for me = 1
+2. Somewhat true for me = 2
+3. Somewhat false for me = 3
+4. Very false for me = 4 
+
+Subscales:
+* BAS Drive: 3, 9, 12, 21
+* BAS Fun Seeking: 5, 10, 15, 20
+* BAS Reward Responsiveness: 4, 7, 14, 18, 23
+* BIS: 2, 8, 13, 16, 19, 22, 24 
+* Note: Items 1, 6, 11, 17, are fillers. 
+
+Scoring using sum
+```{r}
+max_code=5
+
+# Extract BISBAS items and reverse code
+data.BISBAS=data.SRM.clean %>%
+  dplyr::select("INDEPENDENT_PID", "SubID", starts_with("BISBAS_")) %>%
+  replace(.=="Very True",1)%>%
+  replace(.=="Somewhat True",2)%>%
+  replace(.=="Somewhat False",3)%>%
+  replace(.=="Very False",4) %>%
+  replace(.=="Prefer not to answer",NA) %>%
+  dplyr::mutate_at(vars(starts_with("BISBAS_")), as.numeric) %>%
+  mutate_at(.vars = vars(ends_with("_Rev")), .funs = list(~max_code-.)) 
+
+# Impute the NAs with medians of subscales
+imp.BASDrive<-data.BISBAS %>%
+  select(BISBAS_3_Rev,BISBAS_9_Rev,BISBAS_12_Rev,BISBAS_21_Rev) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(BISBAS_3_Rev,BISBAS_9_Rev,BISBAS_12_Rev,BISBAS_21_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  dplyr::mutate(BISBAS_BAS_Scored_Drive=sum(c(BISBAS_3_Rev,BISBAS_9_Rev,BISBAS_12_Rev,BISBAS_21_Rev), na.rm = TRUE))
+
+imp.BASFun<-data.BISBAS %>%
+  select(BISBAS_5_Rev,BISBAS_10_Rev,BISBAS_15_Rev,BISBAS_20_Rev) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(BISBAS_5_Rev,BISBAS_10_Rev,BISBAS_15_Rev,BISBAS_20_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median) %>%
+  dplyr::mutate(BISBAS_BAS_Scored_Fun=sum(c(BISBAS_5_Rev,BISBAS_10_Rev,BISBAS_15_Rev,BISBAS_20_Rev), na.rm = TRUE))
+  
+imp.BASReward<-data.BISBAS %>%
+  select(BISBAS_4_Rev,BISBAS_7_Rev,BISBAS_14_Rev,BISBAS_18_Rev,BISBAS_23_Rev) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(BISBAS_4_Rev,BISBAS_7_Rev,BISBAS_14_Rev,BISBAS_18_Rev,BISBAS_23_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median) %>%
+  dplyr::mutate(BISBAS_BAS_Scored_Reward=sum(c(BISBAS_4_Rev,BISBAS_7_Rev,BISBAS_14_Rev,BISBAS_18_Rev,BISBAS_23_Rev), na.rm = TRUE))
+
+imp.BIS<-data.BISBAS %>%
+  select(BISBAS_2,BISBAS_8_Rev,BISBAS_13_Rev,BISBAS_16_Rev,BISBAS_19_Rev,BISBAS_22,BISBAS_24_Rev) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(BISBAS_2,BISBAS_8_Rev,BISBAS_13_Rev,BISBAS_16_Rev,BISBAS_19_Rev,BISBAS_22,BISBAS_24_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median) %>%
+  dplyr::mutate(BISBAS_BIS_Scored=sum(c(BISBAS_2,BISBAS_8_Rev,BISBAS_13_Rev,BISBAS_16_Rev,BISBAS_19_Rev,BISBAS_22,BISBAS_24_Rev), na.rm = TRUE))
+
+imp.BISBASFiller<-data.BISBAS  %>%
+  select(BISBAS_1_Rev,BISBAS_6_Rev,BISBAS_11_Rev,BISBAS_17_Rev)
+
+# Create new imputed dataset [include fillers as well?]
+data.BISBAS.imp<-data.frame(INDEPENDENT_PID=data.BISBAS$INDEPENDENT_PID, SubID=data.BISBAS$SubID,imp.BASDrive,
+                            imp.BASFun,
+                            imp.BASReward,
+                            imp.BIS,
+                            imp.BISBASFiller) %>% 
+  mutate(BISBAS_BAS_Scored_Avg=(BISBAS_BAS_Scored_Drive+BISBAS_BAS_Scored_Fun+BISBAS_BAS_Scored_Reward)/3)
+```
+
+## Academic Amotivation Inventory (AAI)
+Scored on a 7 point scale. No reverse coding.
+
+1. does not correspond to me at all = 1
+2. never = 1
+3. corresponds moderately = 4
+4. somewhat regularly = 4
+5. corresponds exactly = 7
+6. very frequently = 7 
+
+SubScales:
+* Value of task= 1,2,3,4
+* Ability beliefs = 5,6,7,8 
+* Characteristics of the task= 9,10,11,12
+* Value placed on the task=13,14,15,16
+
+Scoring using sum
+```{r}
+#Convert responses to numeric 
+data.AAI=data.SRM.clean %>%
+  dplyr::select("INDEPENDENT_PID", "SubID", starts_with("AAI_")) %>%
+  replace(.=="1does not correspond to me at all",1)%>%
+  replace(.=="1never",1)%>%
+  replace(.=="2",2)%>%
+  replace(.=="3",3)%>%
+  replace(.=="4corresponds moderately",4)%>%
+  replace(.=="4somewhat regularly",4)%>%
+  replace(.=="5",5)%>%
+  replace(.=="6",6)%>%
+  replace(.=="7corresponds exactly",7)%>%
+  replace(.=="7very frequently",7)%>%
+  replace(.=="Prefer not to answer",NA) %>%
+  dplyr::mutate_at(vars(starts_with("AAI_")), as.numeric) 
+
+# Impute the NAs with medians of subscales
+imp.AAIValueofTask<-data.AAI %>%
+  select(AAI_2_1,AAI_2_2,AAI_2_3, AAI_2_4) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(AAI_2_1,AAI_2_2,AAI_2_3, AAI_2_4), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  dplyr::mutate(AAI_Scored_ValueOfTask=sum(c(AAI_2_1,AAI_2_2,AAI_2_3, AAI_2_4), na.rm = TRUE))
+  
+imp.AAIAbilityBeliefs<-data.AAI %>%
+  select(AAI_2_5, AAI_2_6, AAI_2_7,AAI_2_8) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(AAI_2_5, AAI_2_6, AAI_2_7,AAI_2_8), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  dplyr::mutate(AAI_Scored_AbilityBeliefs=sum(c(AAI_2_5, AAI_2_6, AAI_2_7,AAI_2_8), na.rm = TRUE))
+
+imp.AAICharOfTask<-data.AAI %>%
+  select(AAI_2_9, AAI_2_10, AAI_2_11,AAI_2_12) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(AAI_2_9, AAI_2_10, AAI_2_11,AAI_2_12), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  dplyr::mutate(AAI_Scored_TaskCharacteristics=sum(c(AAI_2_9, AAI_2_10, AAI_2_11,AAI_2_12), na.rm = TRUE))
+
+imp.AAIValPlaced<-data.AAI %>%
+  select(AAI_2_13, AAI_2_14, AAI_2_15,AAI_2_16) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(AAI_2_13, AAI_2_14, AAI_2_15,AAI_2_16), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  dplyr::mutate(AAI_Scored_ValueOnTask=sum(c(AAI_2_13, AAI_2_14, AAI_2_15,AAI_2_16), na.rm = TRUE))
+
+# Create new imputed dataset [include fillers as well?]
+data.AAI.imp<-data.frame(INDEPENDENT_PID=data.AAI$INDEPENDENT_PID,SubID=data.AAI$SubID,
+                         AAI_Scored_Frequency = data.AAI$AAI_1, 
+                         imp.AAIValueofTask,
+                         imp.AAIAbilityBeliefs,
+                         imp.AAICharOfTask,
+                         imp.AAIValPlaced)
+```
+
+## GRIT
+Scored on a 5 point scale. Reverse Coded Items: 1,3,5,6
+
+1. Very much like me = 5 
+2. Mostly like me = 4
+3. Somewhat like me = 3
+4. Not much like me = 2
+5. Not like me at all = 1 
+
+Add up all the points and find mean.The maximum score on this scale is 5 (extremely gritty), and the lowest scale on this scale is 1 (not at all gritty).
+
+Scoring using average
+```{r}
+max_code = 6
+
+#convert responses to numeric
+data.GRIT=data.SRM.clean %>%
+  dplyr::select("INDEPENDENT_PID", "SubID", starts_with("GRIT_")) %>%
+  replace(.=="Very much like me",5) %>%
+  replace(.=="Mostly like me",4) %>%
+  replace(.=="Somewhat like me",3) %>%
+  replace(.=="Not much like me",2) %>%
+  replace(.=="Not like me at all",1) %>%
+  replace(.=="Prefer not to answer",NA) %>%
+  dplyr::mutate_at(vars(starts_with("GRIT_")), as.numeric) %>% #Q5 is not counted?
+  mutate_at(.vars = vars(ends_with("_Rev")), .funs = list(~max_code-.)) 
+
+# Impute any NAs based on the row median 
+imp.GRIT<-data.GRIT %>%
+  dplyr::select(starts_with("GRIT_")) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(GRIT_1_Rev,GRIT_2,GRIT_3_Rev,GRIT_4,GRIT_5_Rev,GRIT_6_Rev,GRIT_7,GRIT_8), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)
+  
+# create Imputed data set 
+data.GRIT.imp<-data.frame(INDEPENDENT_PID=data.GRIT$INDEPENDENT_PID, SubID = data.GRIT$SubID,
+                          imp.GRIT)%>%  
+  mutate(Grit_Scored_Total = rowMeans(select(., -INDEPENDENT_PID, -SubID),na.rm = TRUE))
+```
+
+## Apathy Motivation Index (AMI)
+Note: higher score indicates greater apathy. Level of apathy is assessed by taking the mean rating of the items within the subscale, which are already reverse scored, so no need to do any additional reverse scoring here.
+
+1. Completely Untrue = 4
+2. Mostly Untrue = 3
+3. Neither True Nor Untrue=2
+4. Quite True=1
+5. Completely True=0
+
+SubScales
+* behavioural activation (BA) = 5,9,10,11,12,15
+* social motivation (SM) = 2,3,4,8,14,17
+* emotional sensitivity (ES) = 1,6,7,13,16,18
+
+Scoring using average
+```{r}
+max_code=5
+
+# Extract AMI items and reverse code
+data.AMI=data.SRM.clean %>%
+  dplyr::select("INDEPENDENT_PID", "SubID", starts_with("AMI_")) %>%
+  replace(.=="Completely untrue",4)%>%
+  replace(.=="Mostly untrue",3)%>%
+  replace(.=="Neither true nor untrue",2)%>%
+  replace(.=="Quite true",1)%>%
+  replace(.=="Completely true",0) %>%
+  replace(.=="Prefer not to answer",NA) %>% 
+  dplyr::mutate_at(vars(starts_with("AMI_")), as.numeric)
+
+# Impute the NAs with medians of subscales
+imp.AMI_BA<-data.AMI %>%
+  select(AMI_5_Rev,AMI_9_Rev,AMI_10_Rev,AMI_11_Rev,AMI_12_Rev,AMI_15_Rev) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(AMI_5_Rev,AMI_9_Rev,AMI_10_Rev,AMI_11_Rev,AMI_12_Rev,AMI_15_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  dplyr::mutate(AMI_Scored_BA = mean(c(AMI_5_Rev,AMI_9_Rev,AMI_10_Rev,AMI_11_Rev,AMI_12_Rev,AMI_15_Rev), na.rm = TRUE))
+
+imp.AMI_SM<-data.AMI %>%
+  select(AMI_2_Rev,AMI_3_Rev,AMI_4_Rev,AMI_8_Rev,AMI_14_Rev,AMI_17_Rev) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(AMI_2_Rev,AMI_3_Rev,AMI_4_Rev,AMI_8_Rev,AMI_14_Rev,AMI_17_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  dplyr::mutate(AMI_Scored_SM = mean(c(AMI_2_Rev,AMI_3_Rev,AMI_4_Rev,AMI_8_Rev,AMI_14_Rev,AMI_17_Rev), na.rm = TRUE))
+
+imp.AMI_ES<-data.AMI %>%
+  select(AMI_1_Rev,AMI_6_Rev,AMI_7_Rev,AMI_13_Rev,AMI_16_Rev,AMI_18_Rev) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(AMI_1_Rev,AMI_6_Rev,AMI_7_Rev,AMI_13_Rev,AMI_16_Rev,AMI_18_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  dplyr::mutate(AMI_Scored_ES = mean(c(AMI_1_Rev,AMI_6_Rev,AMI_7_Rev,AMI_13_Rev,AMI_16_Rev,AMI_18_Rev), na.rm = TRUE))
+
+# Create new imputed dataset 
+data.AMI.imp<-data.frame(INDEPENDENT_PID=data.AMI$INDEPENDENT_PID,SubID=data.AMI$SubID,
+                         imp.AMI_BA,
+                         imp.AMI_SM,
+                         imp.AMI_ES)%>%
+                          dplyr::mutate(AMI_Scored_Total= rowMeans(select(., !matches('Scored|ID')),  na.rm = TRUE))
+```
+
+## Questionnaire of Unpredictability in Childhood (QUIC) 
+Higher score indicates greater unpredictability. Reverse Coded Items: 
+
+1. Yes = 1 
+2. No = 0
+
+Subscales (note imputation doesnt make sense here)
+Parental monitoring and involvement (PMI) = 1R + 3R + 4R + 5R + 6R + 7R + 9R + 10R + 14R 
+Parental predictability (PP) = 2 + 8R + 11 + 12 + 15R + 16 + 17R + 31 + 32 + 33 + 34 + 35 
+Parental environment (PAE)= 18 + 19 + 21 + 22 + 28R + 29 + 30 
+Physical environment (PHE)= 13 + 20 + 26 + 27 + 36R + 37 + 38 
+Safety and security (SS) = 23 + 24 + 25 
+Overall = Sum of all subscales
+
+Scoring using sum
+```{r}
+max_code = 1
+
+data.QUIC=data.SRM.clean %>%
+  dplyr::select("INDEPENDENT_PID", "SubID", starts_with("QUIC_")) %>%
+  #convert responses to numeric
+  replace(.=="Yes",1) %>%
+  replace(.=="No",0) %>%
+  replace(.=="Prefer not to answer",NA) %>%
+  dplyr::mutate_at(vars(-SubID,-INDEPENDENT_PID, -QUIC_1_1,-QUIC_1_6,-QUIC_1_7,-QUIC_1_8,-QUIC_1_9), as.numeric)%>%
+  mutate_at(.vars = vars(ends_with("_Rev")), .funs = list(~max_code-.))
+
+# Note that imputation probably doesnt make sense here, so we will use the same data
+data.QUIC.imp=data.QUIC %>%
+  dplyr::mutate(QUIC_Scored_PaMonitorInvolve=rowSums(select(.,QUIC_2_1_Rev, QUIC_2_3_Rev, QUIC_2_4_Rev, QUIC_2_5_Rev, QUIC_2_6_Rev,QUIC_2_7_Rev, QUIC_2_9_Rev, QUIC_3_10_Rev, QUIC_3_14_Rev), na.rm=TRUE)) %>%
+  dplyr::mutate(QUIC_Scored_PaPredict=rowSums(select(.,QUIC_2_2, QUIC_2_8_Rev, QUIC_3_11, QUIC_3_12, QUIC_3_15_Rev, QUIC_3_16, QUIC_3_17_Rev, QUIC_4_31, QUIC_4_32, QUIC_4_33, QUIC_4_34, QUIC_4_35), na.rm=TRUE)) %>%
+  dplyr::mutate(QUIC_Scored_PaEnvironment=rowSums(select(.,QUIC_3_18, QUIC_3_19, QUIC_3_21, QUIC_3_22, QUIC_3_28_Rev, QUIC_3_29, QUIC_3_30), na.rm=TRUE)) %>%
+  dplyr::mutate(QUIC_Scored_PhEnvironment=rowSums(select(.,QUIC_3_13, QUIC_3_20, QUIC_3_26, QUIC_3_27, QUIC_5_36_Rev, QUIC_5_37, QUIC_5_38), na.rm=TRUE)) %>%
+  dplyr::mutate(QUIC_Scored_Safety=rowSums(select(.,QUIC_3_23, QUIC_3_24, QUIC_3_25), na.rm=TRUE)) %>%
+  dplyr::mutate(QUIC_Scored_Total=rowSums(select(., QUIC_Scored_PaMonitorInvolve,QUIC_Scored_PaPredict,
+           QUIC_Scored_PaEnvironment,QUIC_Scored_PhEnvironment,QUIC_Scored_Safety), na.rm=TRUE))
+
+```
+
+## Self Administered Food Security Survey Module for Children Modified (SAFSS)  
+The scoring for this scan can be found here: https://www.ers.usda.gov/media/8283/youth2006.pdf
+
+1. a lot = 1
+2. Sometimes = 1
+3. Never = 0 
+
+Scoring using sum
+```{r}
+# Change responses to numeric (affirmative - 1, not affirmative - 0)
+data.SAFSS = data.SRM.clean %>%
+    dplyr::select("INDEPENDENT_PID", "SubID", contains("SAFSS")) %>%
+    replace(.=="a lot",1) %>%
+    replace(.=="Sometimes",1) %>%
+    replace(.=="Never",0) %>%
+    dplyr::mutate_at(vars(starts_with("SAFSS_")), as.numeric)
+
+# Note that imputation probably doesnt make sense here, so we will use the same data
+data.SAFSS.imp=data.SAFSS %>% 
+  dplyr::mutate(SAFSS_Scored_Total = rowSums(select(., -INDEPENDENT_PID,-SubID), na.rm=TRUE))
+```
+
+## Child Trauma Questionnaire Short Form (CTQSF)  
+Scoring can be found here: https://www.dropbox.com/home/TSS/TCB/Online%20Qualtrics%20SRMS/Scoring?preview=CTQ+SCORING.pdf
+
+1. Emotional abuse: 3, 8, 14, 18, 25
+2. Physical abuse: 9, 11, 12, 15, 17
+3. Sexual abuse: 20, 21, 23, 24, 27
+4. Emotional neglect: 5 (r), 7(r), 13(r), 19(r), 28(r)
+5. Physical neglect: 1, 2(r), 4, 6, 26(r)
+6. Minimization/Denial: 10, 16, 22 
+
+Scoring using sum
+```{r}
+max_code = 6
+
+data.CTQSF = data.SRM.clean %>%
+    dplyr::select("INDEPENDENT_PID", "SubID", contains("CTQSF"))%>%
+    replace(.=="Never true",1)%>%
+    replace(.=="Rarely True",2)%>%
+    replace(.=="Sometimes True",3)%>%
+    replace(.=="Often True",4)%>%
+    replace(.=="Very Often True",5) %>%
+    replace(.=="Prefer not to answer", 0) %>%
+    dplyr::mutate_at(vars(starts_with("CTQSF")), as.numeric)  %>%
+    mutate_at(.vars = vars(ends_with("_Rev")), .funs = list(~max_code-.)) 
+
+# Impute the NAs with medians of subscales
+imp.CTQSF_EA<-data.CTQSF %>%
+  select(CTQSF_3,CTQSF_8,CTQSF_14,CTQSF_18,CTQSF_25) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(CTQSF_3,CTQSF_8,CTQSF_14,CTQSF_18,CTQSF_25), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  mutate(CTQSF_Scored_EmotionalAbuse = rowSums(select(., CTQSF_3,CTQSF_8,CTQSF_14,CTQSF_18,CTQSF_25), na.rm=TRUE))
+
+imp.CTQSF_PA<-data.CTQSF %>%
+  select(CTQSF_9,CTQSF_11,CTQSF_12,CTQSF_15,CTQSF_17) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(CTQSF_9,CTQSF_11,CTQSF_12,CTQSF_15,CTQSF_17), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  mutate(CTQSF_Scored_PhysicalAbuse = rowSums(select(., CTQSF_9,CTQSF_11,CTQSF_12,CTQSF_15,CTQSF_17), na.rm=TRUE))
+
+imp.CTQSF_SA<-data.CTQSF %>%
+  select(CTQSF_20,CTQSF_21,CTQSF_23,CTQSF_24,CTQSF_27) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(CTQSF_20,CTQSF_21,CTQSF_23,CTQSF_24,CTQSF_27), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  mutate(CTQSF_Scored_SexualAbuse = rowSums(select(., CTQSF_20,CTQSF_21,CTQSF_23,CTQSF_24,CTQSF_27), na.rm=TRUE))
+
+imp.CTQSF_EN<-data.CTQSF %>%
+  select(CTQSF_5_Rev,CTQSF_7_Rev,CTQSF_13_Rev,CTQSF_19_Rev,CTQSF_28_Rev) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(CTQSF_5_Rev,CTQSF_7_Rev,CTQSF_13_Rev,CTQSF_19_Rev,CTQSF_28_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median) %>%
+  mutate(CTQSF_Scored_EmotionalNeglect = rowSums(select(., CTQSF_5_Rev,CTQSF_7_Rev,CTQSF_13_Rev,CTQSF_19_Rev,CTQSF_28_Rev), na.rm=TRUE))
+
+imp.CTQSF_PN<-data.CTQSF %>%
+  select(CTQSF_1,CTQSF_2_Rev,CTQSF_4,CTQSF_6,CTQSF_26_Rev) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(CTQSF_1,CTQSF_2_Rev,CTQSF_4,CTQSF_6,CTQSF_26_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  mutate(CTQSF_Scored_PhysicalNeglect = rowSums(select(., CTQSF_1, CTQSF_2_Rev, CTQSF_4, CTQSF_6, CTQSF_26_Rev), na.rm=TRUE))  
+  
+imp.CTQSF_MD<-data.CTQSF %>%
+  select(CTQSF_10,CTQSF_16,CTQSF_22) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(CTQSF_10,CTQSF_16,CTQSF_22), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%
+  mutate(CTQSF_Scored_MinimizationDenial = rowSums(select(., CTQSF_10,CTQSF_16,CTQSF_22), na.rm=TRUE))  
+
+
+# Create new imputed dataset 
+data.CTQSF.imp<-data.frame(INDEPENDENT_PID=data.CTQSF$INDEPENDENT_PID, SubID=data.CTQSF$SubID,
+                           imp.CTQSF_EA,
+                           imp.CTQSF_PA,
+                           imp.CTQSF_SA,
+                           imp.CTQSF_EN,
+                           imp.CTQSF_PN,
+                           imp.CTQSF_MD)
+```
+
+
+## ACE International Questionnaire (ACEIQ) (Check assumption)
+ACE scoring found here: https://www.dropbox.com/preview/TSS/TSS-SES/Analysis/Scoring/ACE%20International%20Scoring.pdf?context=search&role=personal
+
+1. "Never" = 0
+2. "Rarely" = 1
+3. "Once" = 1 (SAM MADE ASSUMPTION THAT RARELY = ONCE)
+4. "Sometimes" = 2
+5. "Most of the time" = 3
+6. "Always" = 4
+6. "Prefer no to" = NA
+```{r}
+data.ACEIQ = data.SRM.clean %>%
+    dplyr::select("INDEPENDENT_PID", "SubID", contains("ACEIQ")) %>%
+    replace(.=="Never",0)%>%
+    replace(.=="Rarely",1)%>%
+    replace(.=="Once",1)%>% # assumptions: that "rarely" and "once" are the same? Debbie & Mahalia
+    replace(.=="Sometimes",2)%>%
+    replace(.=="A few times",2)%>% 
+    replace(.=="Most of the time",3)%>%
+    replace(.=="Many times",3)%>%
+    replace(.=="Always",4) %>%
+    replace(.=="Prefer not to", NA) %>%
+    replace(.=="Prefer not to anser", NA) %>%
+    replace(.=="Prefer not to answer", NA) %>%
+    replace(.=="Not applicable", NA) %>%
+    #replace(.== NA, 0) %>%
+    replace(.=="Yes", 1) %>%
+    replace(.=="No", 0) %>%
+  dplyr::mutate_at(vars(-INDEPENDENT_PID, -SubID, -ACEIQ_1, -ACEIQ_2, -ACEIQ_3, -ACEIQ_4), as.numeric)%>%
+    rowwise()%>%
+    dplyr::mutate(ACEIQ_Scored_EmotionalNeglect_Binary = ifelse((ACEIQ_6_1 < 2 || ACEIQ_6_2 < 2),1,0), 
+                ACEIQ_Scored_PhysicalNeglect_Binary = ifelse((ACEIQ_7_1 > 0 | ACEIQ_7_2 > 0 | ACEIQ_7_3 > 0),1,0),
+                ACEIQ_Scored_DrugAbuse_Binary = ifelse((ACEIQ_8_1 > 0),1,0),
+                ACEIQ_Scored_MentalIllness_Binary = ifelse((ACEIQ_8_2 > 0),1,0),
+                ACEIQ_Scored_Incarcerated_Binary = ifelse((ACEIQ_8_3 > 0),1,0),
+                ACEIQ_Scored_Parents_Binary = ifelse((ACEIQ_9 > 0 | ACEIQ_10 > 0),1,0),
+                ACEIQ_Scored_HouseholdViolence_Binary = ifelse((ACEIQ_11_1 > 0 |ACEIQ_11_2 > 0 | ACEIQ_11_3 > 0),1,0),
+                ACEIQ_Scored_EmotionalAbuse_Binary = ifelse((ACEIQ_12_1 > 0 | ACEIQ_12_2 > 0),1,0),
+                ACEIQ_Scored_PhysicalAbuse_Binary = ifelse((ACEIQ_12_3 > 0 | ACEIQ_12_4 > 0),1,0),
+                ACEIQ_Scored_SexualAbuse_Binary = ifelse((ACEIQ_12_5 > 0 | ACEIQ_12_6 > 0 | ACEIQ_12_7 > 0 | ACEIQ_12_8 > 0),1,0),
+                ACEIQ_Scored_Bullying_Binary = ifelse((ACEIQ_13 > 2),1,0),
+                ACEIQ_Scoed_CommunityViolence_Binary = ifelse((ACEIQ_16_1 > 2 |  ACEIQ_16_2 > 2 |  ACEIQ_16_3 > 2),1,0),
+                ACEIQ_Scored_CollectiveViolence_Binary = ifelse((ACEIQ_17_1 > 0 | ACEIQ_17_2 > 0 | ACEIQ_17_3 > 0 | ACEIQ_17_4),1,0)) 
+
+# Note that imputation probably doesnt make sense here, so we will use the same data
+data.ACEIQ.imp=data.ACEIQ
+```
+
+## Multidimensional Neglect Scale - Adult (MDNS)  
+Scoring Can be found on page 19: https://www.dropbox.com/home/TSS/TCB/Online%20Qualtrics%20SRMS/Scoring?preview=MDNSSFA.pdf 
+
+1. 0 = This has never happened
+2. 1 = Once that year 
+3. 2 = Twice that year
+4. 3 = 3-5 times that year
+5. 4 = 6-10 times that year
+6. 5 = 11-20 times that year
+7. 6 = More than 20 times that year
+8. 7 = Not that year, but it happened before -->
+```{r}
+max_code = 7
+
+data.MDNS = data.SRM.clean %>%
+    dplyr::select("INDEPENDENT_PID", "SubID", contains("MDNS")) %>%
+    replace(.=="This has never happened",0)%>%
+    replace(.=="Once that year",1)%>%
+    replace(.=="Twice that year",2)%>%
+    replace(.=="3-5 times that year",3)%>%
+    replace(.=="6-10 times that year",4) %>%
+    replace(.=="11-20 times that year", 5) %>%
+    replace(.=="More than 20 times that year",6)%>%
+    replace(.=="Not that year, but it happened before",7) %>%
+    replace(.=="Not that year but it happened before",7) %>%
+    replace(.=="Prefer not to answer",NA) %>%
+    dplyr::mutate_at(vars(-INDEPENDENT_PID, -SubID, -MDNS_2_father, -MDNS_2_mother,-MDNS_2_alone), as.numeric)  %>%
+    mutate_at(.vars = vars(ends_with("_Rev")), .funs = list(~max_code-.)) 
+
+# Note that imputation probably doesnt make sense here, so we will use the same data
+data.MDNS.imp = data.MDNS%>%
+ mutate(MDNS_Scored_Emotion = rowSums(select(., MDNS_1, MDNS_2, MDNS_3, MDNS_4, MDNS_5_Rev), na.rm =TRUE))%>%
+  mutate(MDNS_Scored_Cognitive = rowSums(select(., MDNS_6, MDNS_7_Rev, MDNS_8, MDNS_9, MDNS_10), na.rm =TRUE))%>%
+  mutate(MDNS_Scored_Supervision = rowSums(select(., MDNS_11, MDNS_12, MDNS_13, MDNS_14, MDNS_15_Rev), na.rm =TRUE))%>% 
+  mutate(MDNS_Scored_Physical = rowSums(select(., MDNS_16, MDNS_17, MDNS_18, MDNS_19, MDNS_20_Rev), na.rm =TRUE))%>% 
+  mutate(MDNS_Scored_Total = rowSums(select(., MDNS_Scored_Emotion,MDNS_Scored_Cognitive,MDNS_Scored_Supervision,MDNS_Scored_Physical), na.rm =TRUE))
+```
+
+## State Trait Anxiety Form Y-2 (STAIY2)  
+Reverse coded items: 1,3,6,10,13,14,16,19
+
+1. Almost Never = 1
+2. Sometimes = 2
+3. Often = 3
+4. Almost Always = 4
+
+Scoring using sum
+```{r}
+max_code=5
+
+data.STAIY2 = data.SRM.clean %>%
+  dplyr::select("INDEPENDENT_PID","SubID", contains("STAIY2_")) %>%
+  replace(.=="Not at all",1)%>%
+  replace(.=="Somewhat",2)%>%
+  replace(.=="Moderately so",3) %>%
+  replace(.=="Very much so",4) %>%
+  replace(.=="Almost Never",1)%>%
+  replace(.=="Sometimes",2)%>%
+  replace(.=="Often",3) %>%
+  replace(.=="Almost Always",4) %>%
+  replace(.=="Prefer not to answer",NA) %>%
+  dplyr::mutate_at(vars(starts_with("STAIY2")), as.numeric) %>%
+ mutate_at(.vars = vars(ends_with("_Rev")), .funs = list(~max_code-.))  # this line does the reverse coding
+
+# Impute any NAs based on the row median 
+imp.STAIY2<-data.STAIY2 %>% #[SHOULD THIS BE IMPUTED ALL TOGETHER?]
+  dplyr:: select(contains("STAIY2_")) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(STAIY2_1_Rev,STAIY2_2,STAIY2_3_Rev,STAIY2_4,STAIY2_5,STAIY2_6_Rev,STAIY2_7_Rev,
+STAIY2_8,STAIY2_9,STAIY2_10_Rev,STAIY2_11,STAIY2_12,STAIY2_13_Rev,STAIY2_14_Rev,
+STAIY2_15,STAIY2_16_Rev,STAIY2_17,STAIY2_18,STAIY2_19_Rev,STAIY2_20), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)  
+
+# create Imputed data set 
+data.STAIY2.imp<-data.frame(INDEPENDENT_PID=data.STAIY2$INDEPENDENT_PID, SubID=data.STAIY2$SubID,
+                            imp.STAIY2) %>%
+  mutate(STAIY2_Scored_Total=rowSums(select(., -INDEPENDENT_PID,-SubID), na.rm=TRUE))
+```
+
+## Event Reaction Questionnaire (ERQ)   
+
+1. 1  Never or seldom = 1
+2. 2 = 2
+3. 3  Sometimes = 3
+4. 4 = 4
+5. 5  Very often = 5
+6. Prefer not to answer = NA
+
+Six questions quantify Promotion and five questions quantify Prevention. Therefore, the promotion sums must be divided by 6, and the prevention sums must be divided by 5 in order to place scores for both orientations on the same 1-5 scale:
+*Promotion= 1(r), 3, 7, 9(r), 10, 11(r)
+*Prevention= 2(r), 4(r), 5, 6(r), 8(r)
+
+Scoring using average
+```{r}
+max_code = 6
+
+data.ERQ = data.SRM.clean %>%
+    dplyr::select("INDEPENDENT_PID", "SubID", contains("ERQ")) %>%
+    replace(.=="1  Never or seldom",1)%>%
+    replace(.=="2",2)%>%
+    replace(.=="3 Sometimes",3)%>%
+    replace(.=="4",4) %>%
+    replace(.=="5  Very often", 5) %>%
+    replace(.=="Prefer not to answer", NA) %>%
+    dplyr::mutate_at(vars(starts_with("ERQ")), as.numeric)  %>%
+    dplyr::mutate_at(.vars = vars(ends_with("_Rev")), .funs = list(~max_code-.)) 
+
+# Impute any NAs based on the row median according to prevention or promotion
+imp.ERQ_Prom<-data.ERQ %>%
+  select(ERQ_1_Rev,ERQ_3,ERQ_7,ERQ_9_Rev,ERQ_10, ERQ_11_Rev) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(ERQ_1_Rev,ERQ_3,ERQ_7,ERQ_9_Rev,ERQ_10, ERQ_11_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median) %>% 
+  mutate(ERQ_Scored_Promotion=rowMeans(select(., ERQ_1_Rev,ERQ_3,ERQ_7,ERQ_9_Rev,ERQ_10, ERQ_11_Rev), na.rm=TRUE))  
+
+imp.ERQ_Prev<-data.ERQ %>%
+  select(ERQ_2_Rev,ERQ_4_Rev,ERQ_5,ERQ_6_Rev, ERQ_8_Rev) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(ERQ_2_Rev,ERQ_4_Rev,ERQ_5,ERQ_6_Rev, ERQ_8_Rev), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median) %>% 
+  mutate(ERQ_Scored_Prevention=rowMeans(select(., ERQ_2_Rev,ERQ_4_Rev,ERQ_5,ERQ_6_Rev, ERQ_8_Rev), na.rm=TRUE))    
+
+# create Imputed data set 
+data.ERQ.imp<-data.frame(INDEPENDENT_PID=data.ERQ$INDEPENDENT_PID, SubID=data.ERQ$SubID,
+                         imp.ERQ_Prom,imp.ERQ_Prev)
+```
+
+## Intolerance of Uncertainty Scale (IUS)  
+
+1. Not at all characteristic of me = 1
+2. A little characteristic of me = 2
+3. Somewhat characteristic of me = 3
+4. Very characteristic of me = 4
+5. Entirely characteristic of me = 5
+6. Prefer not to answer = NA
+
+Subscales:
+*Factor 1: Uncertainty has negative behavioural and self-referent implications sum(8, 9, 10, 11, 12)
+*Factor 2: Uncertainty is unfair and spoils everything sum(1,2,3,4,5,6,7) 
+
+Scoring using sum
+```{r}
+data.IUS = data.SRM.clean %>%
+    dplyr::select("INDEPENDENT_PID", "SubID", contains("IUS")) %>%
+    replace(.=="Not at all characteristic of me",1)%>%
+    replace(.=="A little characteristic of me",2)%>%
+    replace(.=="Somewhat characteristic of me",3)%>%
+    replace(.=="Very characteristic of me",4) %>%
+    replace(.=="Entirely characteristic of me", 5) %>%
+    replace(.=="Prefer not to answer", NA) %>%
+    dplyr::mutate_at(vars(starts_with("IUS")), as.numeric)
+
+# Impute any NAs based on the row median according to prevention or promotion
+imp.IUS_1<-data.IUS %>%
+  select(IUS_8,IUS_9,IUS_10,IUS_11,IUS_12) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(IUS_8,IUS_9,IUS_10,IUS_11,IUS_12), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%mutate(IUS_Scored_F1=rowSums(select(., IUS_8,IUS_9,IUS_10,IUS_11,IUS_12),na.rm=TRUE))  
+
+imp.IUS_2<-data.IUS %>%
+  select(IUS_1,IUS_2,IUS_3,IUS_4,IUS_5,IUS_6,IUS_7) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(IUS_1,IUS_2,IUS_3,IUS_4,IUS_5,IUS_6,IUS_7), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%mutate(IUS_Scored_F2=rowSums(select(., IUS_1,IUS_2,IUS_3,IUS_4,IUS_5,IUS_6,IUS_7),na.rm=TRUE))    
+
+# create Imputed data set 
+data.IUS.imp<-data.frame(INDEPENDENT_PID=data.IUS$INDEPENDENT_PID, SubID=data.IUS$SubID,
+                         imp.IUS_1,
+                         imp.IUS_2) %>% 
+  mutate(IUS_Scored_Total=IUS_Scored_F1+IUS_Scored_F2)
+```
+
+## Ten-Item Personality Inventory (TenPi)
+
+1. Disagree Strongly = 1
+2. Disagree  Moderately = 2
+3. Disagree A Little = 3
+4. Neither Agree Or  Disagree = 4
+5. Agree A Little = 5
+6. Agree Moderately = 6
+7. Agree  Strongly = 7
+8. Prefer not to answer = NA 
+
+Subscales:
+*Extraversion (EX): 1, 6R
+*Agreeableness (A): 2R, 7
+*Conscientiousness (C): 3, 8R
+*Emotional Stability (EM): 4R, 9
+*Openness to Experiences (O): 5, 10R 
+
+Scoring using sum
+```{r}
+max_code = 8
+
+data.TenPi = data.SRM.clean %>%
+    dplyr::select("INDEPENDENT_PID", "SubID", contains("TenPi")) %>%
+    replace(.=="Disagree Strongly",1)%>%
+    replace(.=="Disagree  Moderately",2)%>%
+    replace(.=="Disagree A Little",3)%>%
+    replace(.=="Neither Agree Or  Disagree",4) %>%
+    replace(.=="Agree A Little", 5) %>%
+    replace(.=="Agree Moderately", 6) %>%
+    replace(.=="Agree  Strongly", 7) %>%
+    replace(.=="Prefer not to answer", NA) %>%
+    dplyr::mutate_at(vars(starts_with("TenPi")), as.numeric) %>%
+    dplyr::mutate_at(.vars = vars(TenPI_2, TenPI_4, TenPI_6, TenPI_8, TenPI_10), .funs = list(~max_code-.))
+
+
+# Impute any NAs based on the row median according to prevention or promotion
+imp.TenPi_EX<-data.TenPi %>%
+  select(TenPI_1, TenPI_6) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(TenPI_1, TenPI_6), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%mutate(TenPi_Scored_Extraversion=rowSums(select(.,TenPI_1, TenPI_6), na.rm=TRUE))   
+
+imp.TenPi_A<-data.TenPi %>%
+  select(TenPI_2, TenPI_7) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(TenPI_2, TenPI_7), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%mutate(TenPi_Scored_Agreeableness=rowSums(select(.,TenPI_2, TenPI_7), na.rm=TRUE))     
+
+imp.TenPi_C<-data.TenPi %>%
+  select(TenPI_3, TenPI_8) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(TenPI_3, TenPI_8), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%mutate(TenPi_Scored_Conscientious=rowSums(select(.,TenPI_3, TenPI_8), na.rm=TRUE))      
+
+imp.TenPi_EM<-data.TenPi %>%
+  select(TenPI_4, TenPI_9) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(TenPI_4, TenPI_9), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%mutate(TenPi_Scored_EmStability=rowSums(select(.,TenPI_4, TenPI_9), na.rm=TRUE))      
+
+imp.TenPi_O<-data.TenPi %>%
+  select(TenPI_5, TenPI_10) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(TenPI_5, TenPI_10), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median)%>%mutate(TenPi_Scored_OpenToExp=rowSums(select(.,TenPI_5, TenPI_10), na.rm=TRUE))      
+
+# Create imputed data set 
+data.TenPi.imp<-data.frame(INDEPENDENT_PID=data.TenPi$INDEPENDENT_PID, SubID=data.TenPi$SubID,
+                           imp.TenPi_EX,
+                           imp.TenPi_A,
+                           imp.TenPi_C,
+                           imp.TenPi_EM,
+                           imp.TenPi_O) 
+```
+
+
+## Depression, Anxiety, and Stress Scales - Depression Subscale (DASS) 
+Note that we only selected the subscale for Depression (need to confirm this) becaue we already have anxiety from the STAIY2.
+
+1. Did not apply to me at all = 0
+2. Applied to me to some degree, or some of the time = 1
+3. Applied to me to a considerable degree, or a good part of time = 2
+4. Applied to me very much, or most of the time = 3
+
+DASS Sub Scales -- WE ONLY HAVE 7 QUESTIONS 
+*Depression: 3,5,10,13,16,17,21
+*Anxiety: 2,4,7,9,15,19,20
+*Stress: 1,6,8,11,12,14,18
+
+To obtain scores, sum the scores. If 21 item scale, then multiply sum by 2
+```{r}
+data.DASS = data.SRM.clean %>%
+  dplyr::select("INDEPENDENT_PID", "SubID", contains("DASS")) %>%
+  replace(.=="Did not apply to me at all",0) %>%
+  replace(.=="Applied to me to some degree, or some of the time",1) %>%
+  replace(.=="Applied to me to a considerable degree, or a good part of time",2) %>%
+  replace(.=="Applied to me very much, or most of the time",3) %>%
+  replace(.=="Prefer not to answer",NA) %>%
+  dplyr::mutate_at(vars(-INDEPENDENT_PID,-SubID), as.numeric)
+
+# Impute any NAs based on the row median 
+imp.DASS<-data.DASS %>% 
+  dplyr:: select(contains("DASS")) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(DASS_1,DASS_2,DASS_3,DASS_4,DASS_5,DASS_6,DASS_6,DASS_7), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median) %>% 
+  mutate(DASS_Scored_Dep = rowSums(select(., DASS_1,DASS_2,DASS_3,DASS_4,DASS_5,DASS_6,DASS_6,DASS_7), na.rm=TRUE))  
+
+# Create imputed data set 
+data.DASS.imp<-data.frame(INDEPENDENT_PID=data.DASS$INDEPENDENT_PID, SubID=data.DASS$SubID,
+                          imp.DASS)
+```
+
+## Generalized Self-Efficacy Scale (GSES) 
+
+1. Not at all true = 1
+2. Hardly true = 2
+3. Moderately true = 3 
+4. Exactly true = 4
+
+Scoring using sum
+```{r}
+data.GSES = data.SRM.clean %>%
+    dplyr::select("INDEPENDENT_PID", "SubID", contains("GSES"))%>%
+    replace(.=="Not at all true",1)%>%
+    replace(.=="Hardly true",2)%>%
+    replace(.=="Moderately true",3)%>%
+    replace(.=="Exactly true",4) %>%
+    replace(.=="Prefer not to answer", NA) %>%
+    dplyr::mutate_at(vars(starts_with("GSES")), as.numeric)
+
+# Impute any NAs based on the row median 
+imp.GSES<-data.GSES %>% 
+  dplyr:: select(contains("GSES")) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(replace_median = median(c(GSES_1,GSES_2,GSES_3,GSES_4,GSES_5,GSES_6,GSES_6,GSES_7,GSES_8,GSES_9,GSES_10), na.rm = TRUE)) %>%
+  dplyr::mutate_all(~ifelse(is.na(.), replace_median, .)) %>%
+  select(-replace_median) %>% 
+  mutate(GSE_Scored_Total = rowSums(select(., GSES_1,GSES_2,GSES_3,GSES_4,GSES_5,GSES_6,GSES_6,GSES_7,GSES_8,GSES_9,GSES_10), na.rm=TRUE))   
+
+# Create imputed data set 
+data.GSES.imp<-data.frame(INDEPENDENT_PID=data.GSES$INDEPENDENT_PID, SubID=data.GSES$SubID,
+                          imp.GSES)
+```
+
+## Ravens (Ravens)
+Answer key is below: 
+
+1. 8
+2. 4
+3. 5
+4. 4
+5. 1
+6. 5
+7. 2
+8. 7
+9. 8
+10. 6
+11. 7
+12. 5
+13. 4
+14. 3
+```{r}
+data.Ravens = data.SRM.clean %>%
+    dplyr::select("INDEPENDENT_PID", "SubID", contains("Ravens")) %>%
+    dplyr::mutate_at(vars(starts_with("Ravens")), as.numeric)%>%mutate(Ravens_1_corr=ifelse(Ravens_1==8,1,0),
+                                                                       Ravens_2_corr=ifelse(Ravens_2==4,1,0),
+                                                                       Ravens_3_corr=ifelse(Ravens_3==5,1,0),
+                                                                       Ravens_4_corr=ifelse(Ravens_4==4,1,0),
+                                                                       Ravens_5_corr=ifelse(Ravens_5==1,1,0),
+                                                                       Ravens_6_corr=ifelse(Ravens_6==5,1,0),
+                                                                       Ravens_7_corr=ifelse(Ravens_7==2,1,0),
+                                                                       Ravens_8_corr=ifelse(Ravens_8==7,1,0),
+                                                                       Ravens_9_corr=ifelse(Ravens_9==8,1,0),
+                                                                       Ravens_10_corr=ifelse(Ravens_10==6,1,0),
+                                                                       Ravens_11_corr=ifelse(Ravens_11==7,1,0),
+                                                                       Ravens_12_corr=ifelse(Ravens_12==5,1,0),
+                                                                       Ravens_13_corr=ifelse(Ravens_13==4,1,0),
+                                                                       Ravens_14_corr=ifelse(Ravens_14==3,1,0))%>%
+  mutate(Ravens_Scored_Total=rowSums(select(., contains("corr")),na.rm=FALSE))%>%select(-contains("corr"))
+
+# Create imputed data set 
+data.Ravens.imp = data.Ravens%>%select(!contains("corr"))
+```
+
+# Merge All Self Report Measures into one dataframe
+```{r}
+data.SRM.clean.formatted <-data.Demographic %>%
+  join(data.BIS11,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.NFC,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.FNE,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.BISBAS,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.AAI,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.GRIT,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.AMI,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.QUIC,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.SAFSS,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.CTQSF,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.ACEIQ,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.MDNS,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.STAIY2,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.ERQ,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.IUS,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.TenPi,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.DASS,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.GSES,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.Ravens, by=c("INDEPENDENT_PID","SubID")) #%>%
+  # join(y = data.Likert, by = "SubID")
+
+data.SRM.clean.formatted.imp <-data.Demographic %>%
+  join(data.BIS11.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.NFC.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.FNE.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.BISBAS.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.AAI.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.GRIT.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.AMI.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.QUIC.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.SAFSS.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.CTQSF.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.ACEIQ.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.MDNS.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.STAIY2.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.ERQ.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.IUS.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.TenPi.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.DASS.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.GSES.imp,by=c("INDEPENDENT_PID","SubID")) %>%
+  join(data.Ravens.imp, by=c("INDEPENDENT_PID","SubID")) #%>%
+  # join(y = data.Likert, by = "SubID")
+
+# Save the SRM formatted qualtrics dataframe 
+write.csv(x = data.SRM.clean.formatted, file = paste0(path.clean.data,"TCB_qualtrics_SRM_formatted.csv"))
+write.csv(x = data.SRM.clean.formatted.imp, file = paste0(path.clean.data,"TCB_qualtrics_SRM_formatted_imputed.csv"))
+```
+
+# Format Likert Data
+1. Pleasantness (How unpleasant/negative or pleasant/positive it made you feel)
+2. Arousal (How relaxed/calm or stimulated/aroused it made you feel)
+3. Motivation (How MOTIVATED you were)
+4. Difficulty (How DIFFICULT the task was)
+5. Effort (How much EFFORT you exerted)
+6. Attention (How much you paid attention)
+
+```{r}
+# Pleasantness
+data.debrief.pleasant = data.Likert %>%
+  dplyr::select(SubID, INDEPENDENT_PID, Pleasant_R1P1:Pleasant_R2P2) %>%
+  pivot_longer(cols = Pleasant_R1P1:Pleasant_R2P2, names_to = "condition", values_to = "Pleasantness") %>%
+  mutate(condition = recode(condition, 
+                            "Pleasant_R1P1" = "Rew1_Pen1",
+                            "Pleasant_R1P2" = "Rew1_Pen2",
+                            "Pleasant_R2P1" = "Rew2_Pen1",
+                            "Pleasant_R2P2" = "Rew2_Pen2")) %>%
+  separate(col = condition, into = c("Reward", "Penalty"), sep = "_", remove = FALSE) %>%
+  mutate(Reward = factor(recode(Reward, "Rew1" = "Low Reward", "Rew2" = "High Reward"), levels = c("Low Reward","High Reward")),
+         Penalty = factor(recode(Penalty, "Pen1" = "Low Penalty", "Pen2" = "High Penalty"), levels = c("Low Penalty","High Penalty")),
+         Pleasantness = as.integer(Pleasantness))
+
+# Arousal
+data.debrief.arousal = data.Likert %>%
+  dplyr::select(SubID, INDEPENDENT_PID, Arousal_R1P1:Arousal_R2P2) %>%
+  pivot_longer(cols = Arousal_R1P1:Arousal_R2P2, names_to = "condition", values_to = "Arousal") %>%
+  mutate(condition = recode(condition, 
+                            "Arousal_R1P1" = "Rew1_Pen1",
+                            "Arousal_R1P2" = "Rew1_Pen2",
+                            "Arousal_R2P1" = "Rew2_Pen1",
+                            "Arousal_R2P2" = "Rew2_Pen2")) %>%
+  separate(col = condition, into = c("Reward", "Penalty"), sep = "_", remove = FALSE) %>%
+  mutate(Reward = factor(recode(Reward, "Rew1" = "Low Reward", "Rew2" = "High Reward"), levels = c("Low Reward","High Reward")),
+         Penalty = factor(recode(Penalty, "Pen1" = "Low Penalty", "Pen2" = "High Penalty"), levels = c("Low Penalty","High Penalty")),
+         Arousal = as.integer(Arousal))
+
+# Motivation
+data.debrief.motivation = data.Likert %>%
+  dplyr::select(SubID, INDEPENDENT_PID, Motivation_R1P1:Motivation_R2P2) %>%
+  pivot_longer(cols = Motivation_R1P1:Motivation_R2P2, names_to = "condition", values_to = "Motivation") %>%
+  mutate(condition = recode(condition, 
+                            "Motivation_R1P1" = "Rew1_Pen1",
+                            "Motivation_R1P2" = "Rew1_Pen2",
+                            "Motivation_R2P1" = "Rew2_Pen1",
+                            "Motivation_R2P2" = "Rew2_Pen2")) %>%
+  separate(col = condition, into = c("Reward", "Penalty"), sep = "_", remove = FALSE) %>%
+  mutate(Reward = factor(recode(Reward, "Rew1" = "Low Reward", "Rew2" = "High Reward"), levels = c("Low Reward","High Reward")),
+         Penalty = factor(recode(Penalty, "Pen1" = "Low Penalty", "Pen2" = "High Penalty"), levels = c("Low Penalty","High Penalty")),
+         Motivation = as.integer(Motivation))
+
+# Difficulty
+data.debrief.difficulty = data.Likert %>%
+  dplyr::select(SubID, INDEPENDENT_PID, Difficult_R1P1:Difficult_R2P2) %>%
+  pivot_longer(cols = Difficult_R1P1:Difficult_R2P2, names_to = "condition", values_to = "Difficult") %>%
+  mutate(condition = recode(condition, 
+                            "Difficult_R1P1" = "Rew1_Pen1",
+                            "Difficult_R1P2" = "Rew1_Pen2",
+                            "Difficult_R2P1" = "Rew2_Pen1",
+                            "Difficult_R2P2" = "Rew2_Pen2")) %>%
+  separate(col = condition, into = c("Reward", "Penalty"), sep = "_", remove = FALSE) %>%
+  mutate(Reward = factor(recode(Reward, "Rew1" = "Low Reward", "Rew2" = "High Reward"), levels = c("Low Reward","High Reward")),
+         Penalty = factor(recode(Penalty, "Pen1" = "Low Penalty", "Pen2" = "High Penalty"), levels = c("Low Penalty","High Penalty")),
+         Difficult = as.integer(Difficult))
+
+
+# Effort
+data.debrief.effort = data.Likert %>%
+  dplyr::select(SubID, INDEPENDENT_PID, Effort_R1P1:Effort_R2P2) %>%
+  pivot_longer(cols = Effort_R1P1:Effort_R2P2, names_to = "condition", values_to = "Effort") %>%
+  mutate(condition = recode(condition, 
+                            "Effort_R1P1" = "Rew1_Pen1",
+                            "Effort_R1P2" = "Rew1_Pen2",
+                            "Effort_R2P1" = "Rew2_Pen1",
+                            "Effort_R2P2" = "Rew2_Pen2")) %>%
+  separate(col = condition, into = c("Reward", "Penalty"), sep = "_", remove = FALSE) %>%
+  mutate(Reward = factor(recode(Reward, "Rew1" = "Low Reward", "Rew2" = "High Reward"), levels = c("Low Reward","High Reward")),
+         Penalty = factor(recode(Penalty, "Pen1" = "Low Penalty", "Pen2" = "High Penalty"), levels = c("Low Penalty","High Penalty")),
+         Effort = as.integer(Effort))
+
+# Attention
+data.debrief.attention = data.Likert %>%
+  dplyr::select(SubID, INDEPENDENT_PID, Attention_R1P1:Attention_R2P2) %>%
+  pivot_longer(cols = Attention_R1P1:Attention_R2P2, names_to = "condition", values_to = "Attention") %>%
+  mutate(condition = recode(condition, 
+                            "Attention_R1P1" = "Rew1_Pen1",
+                            "Attention_R1P2" = "Rew1_Pen2",
+                            "Attention_R2P1" = "Rew2_Pen1",
+                            "Attention_R2P2" = "Rew2_Pen2")) %>%
+  separate(col = condition, into = c("Reward", "Penalty"), sep = "_", remove = FALSE) %>%
+  mutate(Reward = factor(recode(Reward, "Rew1" = "Low Reward", "Rew2" = "High Reward"), levels = c("Low Reward","High Reward")),
+         Penalty = factor(recode(Penalty, "Pen1" = "Low Penalty", "Pen2" = "High Penalty"), levels = c("Low Penalty","High Penalty")),
+         Attention = as.integer(Attention))
+```
+
+
+# Combine dataframes 
+```{r}
+# Combine dataframes
+data.debrief.combined <- data.debrief.pleasant %>%
+  inner_join(y = data.debrief.arousal, by = c("SubID","INDEPENDENT_PID","condition","Reward","Penalty")) %>%
+  inner_join(y = data.debrief.motivation, by = c("SubID","INDEPENDENT_PID","condition","Reward","Penalty")) %>%
+  inner_join(y = data.debrief.difficulty, by = c("SubID","INDEPENDENT_PID","condition","Reward","Penalty")) %>%
+  inner_join(y = data.debrief.effort, by = c("SubID","INDEPENDENT_PID","condition","Reward","Penalty")) %>%
+  inner_join(y = data.debrief.attention, by = c("SubID","INDEPENDENT_PID","condition","Reward","Penalty")) %>%
+  mutate(Pleasantness = as.numeric(Pleasantness),
+         Arousal = as.numeric(Arousal),
+         Motivation = as.numeric(Motivation),
+         Difficult = as.numeric(Difficult),
+         Effort = as.numeric(Effort),
+         Attention = as.numeric(Attention),
+         MeanMotivation = rowMeans(.[, c("Motivation","Attention","Effort")]),
+         scaledPleasantness = scale(Pleasantness, scale = TRUE, center = TRUE),
+         scaledArousal = scale(Arousal, scale = TRUE, center = TRUE),
+         scaledMotivation = scale(Motivation, scale = TRUE, center = TRUE),
+         scaledDifficult = scale(Difficult, scale = TRUE, center = TRUE),
+         scaledEffort = scale(Effort, scale = TRUE, center = TRUE),
+         scaledAttention = scale(Attention, scale = TRUE, center = TRUE),
+         scaledMeanMotivation = scale(MeanMotivation, scale = TRUE, center = TRUE))
+
+# Save combined debrief ratings
+write.csv(x = data.debrief.combined, file = paste0(path.clean.data,"TCB_qualtrics_Likert_formatted.csv"))
+```
+
+
