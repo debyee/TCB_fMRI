@@ -1,0 +1,4 @@
+module: unloading 'matlab/R2017b'
+module: loading 'matlab/R2019a'
+module: loading 'spm/spm12'
+slurmstepd: error: *** JOB 7531899 ON node1139 CANCELLED AT 2023-01-24T17:15:40 ***

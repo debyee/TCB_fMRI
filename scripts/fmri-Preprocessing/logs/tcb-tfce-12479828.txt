@@ -1,0 +1,43 @@
+
+
+
+
+========== tcb level 2 TFCE ==========
+dir: '/oscar/data/ashenhav/mri-data/TCB' | name: 'glm6_Pmod_RewPenTask_RTACC_CueFixed_rwls'
+
+
+
+
+started at:
+Sun Aug 31 09:03:16 PM EDT 2025
+
+
+
+
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+              R2019a Update 9 (9.6.0.1472908) 64-bit (glnxa64)
+                             September 2, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+.            ._.DS_Store  .vscode      bidsmaps     masks        spm-data     
+..           ._atlases    analysis     data         scripts      
+.DS_Store    .venv        atlases      manuscript   shenhav      
+
+
+tfceDir =
+
+    'tfce10000_wholeBrain'
+
+
+
+
+
+finished at:
+Sun Aug 31 09:03:46 PM EDT 2025

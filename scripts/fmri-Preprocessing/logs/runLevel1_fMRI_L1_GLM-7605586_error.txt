@@ -1,0 +1,6 @@
+module: unloading 'matlab/R2017b'
+module: loading 'matlab/R2019a'
+module: loading 'spm/spm12'
+{Error using TCB_runLevel1_contrast (line 595)
+Not a valid design foldername! Check that your variables are correctly labelled
+} 

@@ -1,0 +1,57 @@
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2047/ exists
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2047/func/ exists
+Moving Functional Run 1 for Subject 2047
+Moving Functional Run 2 for Subject 2047
+Moving Functional Run 3 for Subject 2047
+Moving Functional Run 4 for Subject 2047
+Moving Functional Run 5 for Subject 2047
+Moving Functional Run 6 for Subject 2047
+Moving Functional Run 7 for Subject 2047
+Moving Functional Run 8 for Subject 2047
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2047/anat/ exists
+Moving Anat Image for Subject 2047
+Moving Mask Image for Subject 2047
+Moving Anat MNI Image for Subject 2047
+Moving Mask MNI Image for Subject 2047
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2047/confounds/ exists
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2112/ exists
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2112/func/ exists
+Moving Functional Run 1 for Subject 2112
+Moving Functional Run 2 for Subject 2112
+Moving Functional Run 3 for Subject 2112
+Moving Functional Run 4 for Subject 2112
+Moving Functional Run 5 for Subject 2112
+Moving Functional Run 6 for Subject 2112
+Moving Functional Run 7 for Subject 2112
+Moving Functional Run 8 for Subject 2112
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2112/anat/ exists
+Moving Anat Image for Subject 2112
+Moving Mask Image for Subject 2112
+Moving Anat MNI Image for Subject 2112
+Moving Mask MNI Image for Subject 2112
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2112/confounds/ exists
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2127/ exists
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2127/func/ exists
+Moving Functional Run 1 for Subject 2127
+Moving Functional Run 2 for Subject 2127
+Moving Functional Run 3 for Subject 2127
+Moving Functional Run 4 for Subject 2127
+Moving Functional Run 5 for Subject 2127
+Moving Functional Run 6 for Subject 2127
+Moving Functional Run 7 for Subject 2127
+Moving Functional Run 8 for Subject 2127
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2127/anat/ exists
+Moving Anat Image for Subject 2127
+Moving Mask Image for Subject 2127
+Moving Anat MNI Image for Subject 2127
+Moving Mask MNI Image for Subject 2127
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2127/confounds/ exists
+Copying confound regressor files

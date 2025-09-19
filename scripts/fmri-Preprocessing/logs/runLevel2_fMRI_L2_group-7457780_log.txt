@@ -1,0 +1,12 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 7457780
+##  Job Name : fMRI_L2_group
+##  Nodelist : node1305
+##      CPUs : 5
+##  Mem/Node : 2048 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts/fmri-Preprocessing
+##   Job Started : Wed Jan 18 15:47:46 EST 2023
+###############################################################################
+Running L2 analyses on GLM 6: Pmod with Reward, Penalty, Interval Num, Interval Length, Mean Congruency, RT, Accuracy, RT*Rew, RT*Pen
+Foldername is: glm6_Pmod_RewPenTask_RTACC_rwls
+design_foldername not defined! please try again

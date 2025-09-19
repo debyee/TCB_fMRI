@@ -1,0 +1,12 @@
+module: unloading 'R/4.2.0'
+module: loading 'R/4.2.0'
+module: R: To use: module load gcc/10.2 pcre2/10.35 intel/2020.2 texlive/2018
+module: loading 'gcc/10.2'
+module: gcc: "Note: loading the gcc module overrides the gcc version on the system.  If you want to revert to the version of gcc provided by the OS, unload the gcc module."
+module: loading 'pcre2/10.35'
+module: unloading 'intel/2017.0'
+module: loading 'intel/2020.2'
+module: loading 'texlive/2018'
+Loading required package: pacman
+/var/spool/slurmd/job8027993/slurm_script: line 25: 43786 Killed                  Rscript TCB_pTFCE.R
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=8027993.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.

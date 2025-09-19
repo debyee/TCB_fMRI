@@ -1,0 +1,181 @@
+
+
+
+
+========== nrp level 2 TFCE ==========
+dir: '/oscar/data/ashenhav/mri-data/TCB/' | name: 'glm7_Pmod_RewPenTask_RTACC_interact_rwls'
+
+
+
+
+started at:
+Fri Aug 29 11:41:35 AM EDT 2025
+
+
+
+
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+              R2019a Update 9 (9.6.0.1472908) 64-bit (glnxa64)
+                             September 2, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+.            ._.DS_Store  .vscode      data         scripts      
+..           ._atlases    atlases      manuscript   shenhav      
+.DS_Store    .venv        bidsmaps     masks        spm-data     
+
+
+tfceDir =
+
+    'tfce10000_wholeBrain'
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+sbatch: error: Unable to open file /oscar/data/ashenhav/mri-data/TCB//analysis/fmri/scripts/TCB_runTFCE.sh
+
+ans =
+
+     1
+
+
+
+
+
+finished at:
+Fri Aug 29 11:45:38 AM EDT 2025

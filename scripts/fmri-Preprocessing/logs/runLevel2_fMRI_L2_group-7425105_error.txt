@@ -1,0 +1,4 @@
+module: unloading 'matlab/R2017b'
+module: loading 'matlab/R2019a'
+module: unloading 'spm/spm12'
+module: loading 'spm/spm12'

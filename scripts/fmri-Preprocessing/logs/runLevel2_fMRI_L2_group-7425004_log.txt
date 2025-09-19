@@ -1,0 +1,12 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 7425004
+##  Job Name : fMRI_L2_group
+##  Nodelist : node1311
+##      CPUs : 5
+##  Mem/Node : 4096 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts/fmri-Preprocessing
+##   Job Started : Fri Jan 13 16:04:05 EST 2023
+###############################################################################
+Running L2 analyses on GLM 1: 4/5 regressors, 4 Cues, TaskBug Regressor
+Foldername is: glm1_Event_Cue_rwls
+design_foldername not defined! please try again

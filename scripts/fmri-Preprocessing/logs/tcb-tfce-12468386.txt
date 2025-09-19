@@ -1,0 +1,204 @@
+
+
+
+
+========== tcb level 2 TFCE ==========
+dir: '/oscar/data/ashenhav/mri-data/TCB' | name: 'glm7_Pmod_RewPenTask_RTACC_interact_rwls'
+
+
+
+
+started at:
+Fri Aug 29 05:57:56 PM EDT 2025
+
+
+
+
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+              R2019a Update 9 (9.6.0.1472908) 64-bit (glnxa64)
+                             September 2, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+.            ._.DS_Store  .vscode      data         scripts      
+..           ._atlases    atlases      manuscript   shenhav      
+.DS_Store    .venv        bidsmaps     masks        spm-data     
+
+
+tfceDir =
+
+    'tfce10000_wholeBrain'
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468387
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468393
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468394
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468395
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468396
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468397
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468398
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468399
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468401
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468402
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468404
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468405
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468406
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468407
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468408
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468409
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468410
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468411
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468412
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468413
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468414
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468416
+
+ans =
+
+     0
+
+sbatch: slurm_job_submit: No partition specified, moved to batch.
+Submitted batch job 12468417
+
+ans =
+
+     0
+
+
+
+
+
+finished at:
+Fri Aug 29 06:01:37 PM EDT 2025

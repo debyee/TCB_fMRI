@@ -1,0 +1,22 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"spm/spm12"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "spm/spm12"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+{Undefined function or variable 'spm'.
+
+Error in TCB_runLevel1_fMRIModelSpec_Estimate (line 9)
+spm('defaults', 'FMRI');
+} 
+{Undefined function or variable 'spm'.
+
+Error in TCB_runLevel1_contrast (line 6)
+spm('defaults', 'FMRI');
+} 

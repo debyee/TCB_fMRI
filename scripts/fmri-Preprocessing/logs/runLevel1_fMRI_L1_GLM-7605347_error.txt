@@ -1,0 +1,138 @@
+module: unloading 'matlab/R2017b'
+module: loading 'matlab/R2019a'
+module: loading 'spm/spm12'
+
+--------------------------------------------------------------------------------
+       Segmentation violation detected at Wed Jan 25 15:26:59 2023 -0500
+--------------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding           : Disabled - No sandbox or build area path
+  Crash Mode               : continue (default)
+  Default Encoding         : UTF-8
+  Deployed                 : false
+  GNU C Library            : 2.17 stable
+  Graphics Driver          : Unknown software 
+  Graphics card 1          : 0x1a03 ( 0x1a03 ) 0x2000 Version 0.0.0.0 (0-0-0)
+  Java Version             : Java 1.8.0_181-b13 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  MATLAB Architecture      : glnxa64
+  MATLAB Entitlement ID    : 1303256
+  MATLAB Root              : /gpfs/rt/7.2/opt/matlab/R2019a
+  MATLAB Version           : 9.6.0.1072779 (R2019a)
+  OpenGL                   : software
+  Operating System         : "Red Hat Enterprise Linux Server release 7.9 (Maipo)"
+  Process ID               : 67056
+  Processor ID             : x86 Family 6 Model 85 Stepping 4, GenuineIntel
+  Session Key              : b71f8a62-20ba-45ea-a006-737405668b8d
+  Static TLS mitigation    : Disabled: Unable to open display
+  Window System            : No active display
+
+Fault Count: 1
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 000000000001b45f  RBX = 00000000000ded00
+  RCX = 00007f66a7f5ae18  RDX = 0000000000000002
+  RSP = 00007f685fff2e20  RBP = 000000000000002f
+  RSI = 0000000000000010  RDI = 000000000001b431
+
+   R8 = 0000000000000003   R9 = 00007f66a7f5fa90
+  R10 = 00007f66d1360ae0  R11 = 000000000001b410
+  R12 = 0000000000000170  R13 = 000000000000002e
+  R14 = ffffffffffffffd2  R15 = 00007f66a7e80b20
+
+  RIP = 00007f683b6ed02d  EFL = 0000000000010206
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00007f683b6ed02d  /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/mkl.so+12230701 mkl_lapack_dgetf2+00000285
+[  1] 0x00007f683b6ecdc9  /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/mkl.so+12230089 mkl_lapack_dgetrf_local+00001353
+[  2] 0x00007f683b6eca0b  /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/mkl.so+12229131 mkl_lapack_dgetrf_local+00000395
+[  3] 0x00007f683b06da6a  /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/mkl.so+05417578 mkl_lapack_dgetrf_int+00008298
+[  4] 0x00007f683af9993e  /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/mkl.so+04548926 mkl_lapack_dgetrf+00000718
+[  5] 0x00007f683aec4dfa  /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/mkl.so+03677690 DGETRF+00000154
+[  6] 0x00007f68aa7cf768 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmathlinalg.so+01574760
+[  7] 0x00007f68aa7cce46 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmathlinalg.so+01564230
+[  8] 0x00007f68afadca90 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_dispatcher.so+00645776
+[  9] 0x00007f68afac8e16 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_dispatcher.so+00564758
+[ 10] 0x00007f68afac9161 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_dispatcher.so+00565601 _ZN18Mfh_MATLAB_fn_impl8dispatchEiPSt10unique_ptrI11mxArray_tagN6matrix6detail17mxDestroy_deleterEEiPPS1_+00000033
+[ 11] 0x00007f68ad12827a /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+13877882
+[ 12] 0x00007f68ad12dc0f /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+13900815
+[ 13] 0x00007f68ad225f91 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+14917521
+[ 14] 0x00007f68ad192664 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+14313060
+[ 15] 0x00007f68ad1b905d /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+14471261
+[ 16] 0x00007f68ac94a68b /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+05629579
+[ 17] 0x00007f68ac94c724 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+05637924
+[ 18] 0x00007f68ac94966d /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+05625453
+[ 19] 0x00007f68ac93e211 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+05579281
+[ 20] 0x00007f68ac93e449 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+05579849
+[ 21] 0x00007f68ac948e76 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+05623414
+[ 22] 0x00007f68ac948f76 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+05623670
+[ 23] 0x00007f68aca80cd9 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+06900953
+[ 24] 0x00007f68aca84413 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+06915091
+[ 25] 0x00007f68acfe7d61 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+12565857
+[ 26] 0x00007f68acf9167c /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+12211836
+[ 27] 0x00007f68acf95baf /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+12229551
+[ 28] 0x00007f68acf98eb2 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+12242610
+[ 29] 0x00007f68ad03670f /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+12887823
+[ 30] 0x00007f68ad036b22 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_lxe.so+12888866
+[ 31] 0x00007f68af8b8751 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwm_interpreter.so+01288017 _Z51inEvalCmdWithLocalReturnInDesiredWSAndPublishEventsRKNSt7__cxx1112basic_stringIDsSt11char_traitsIDsESaIDsEEEPibbP15inWorkSpace_tag+00000065
+[ 32] 0x00007f68afddccaa /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00724138 _ZNK3iqm18InternalEvalPlugin24inEvalCmdWithLocalReturnERKNSt7__cxx1112basic_stringIDsSt11char_traitsIDsESaIDsEEEP15inWorkSpace_tag+00000074
+[ 33] 0x00007f68afdddf1e /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00728862 _ZN3iqm18InternalEvalPlugin7executeEP15inWorkSpace_tag+00000222
+[ 34] 0x00007f68afc82dd5 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmcr.so+00945621
+[ 35] 0x00007f68afdcef2d /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00667437
+[ 36] 0x00007f68afdafc02 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00539650
+[ 37] 0x00007f68afdaff98 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00540568
+[ 38] 0x00007f68c01d863c /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmlutil.so+07378492 _ZNK14cmddistributor16IIPRunNowMessage7deliverERKN10foundation7msg_svc8exchange7RoutingE+00000044
+[ 39] 0x00007f68c0d2ca0d /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwms.so+02624013 _ZN10foundation7msg_svc8exchange12MessageQueue7deliverERKN7mwboost10shared_ptrIKNS1_8EnvelopeEEE+00000205
+[ 40] 0x00007f68c0d2dd83 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwms.so+02628995
+[ 41] 0x00007f68c0d18d29 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwms.so+02542889
+[ 42] 0x00007f68c0d1a41f /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwms.so+02548767
+[ 43] 0x00007f68c0d15b43 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwms.so+02530115
+[ 44] 0x00007f68c01332b1 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmlutil.so+06701745
+[ 45] 0x00007f68c0133552 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmlutil.so+06702418
+[ 46] 0x00007f68c3884fc3 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmvm.so+03145667 _ZN7mwboost6detail8function26void_function_obj_invoker0INS_3_bi6bind_tINS3_11unspecifiedENS4_IS5_NS_8functionIFvvEEENS3_5list0EEENS3_5list1INS_17reference_wrapperINS_7promiseIvEEEEEEEEvE6invokeERNS1_15function_bufferE+00000035
+[ 47] 0x00007f68c3877287 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmvm.so+03089031 _ZN7mwboost13unique_futureIvE3getEv+00001111
+[ 48] 0x00007f68afc40dd5 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmcr.so+00675285
+[ 49] 0x00007f68c390596b /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmvm.so+03672427 _ZN14cmddistributor15PackagedTaskIIP10invokeFuncIN7mwboost8functionIFvvEEEEENS2_10shared_ptrINS2_13unique_futureIDTclfp_EEEEEERKT_+00000059
+[ 50] 0x00007f68c3905a58 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmvm.so+03672664 _ZNSt17_Function_handlerIFN7mwboost3anyEvEZN14cmddistributor15PackagedTaskIIP10createFuncINS0_8functionIFvvEEEEESt8functionIS2_ET_EUlvE_E9_M_invokeERKSt9_Any_data+00000024
+[ 51] 0x00007f68afde7dcc /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00769484 _ZN7mwboost6detail8function21function_obj_invoker0ISt8functionIFNS_3anyEvEES4_E6invokeERNS1_15function_bufferE+00000028
+[ 52] 0x00007f68afde7a85 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00768645 _ZN3iqm18PackagedTaskPlugin7executeEP15inWorkSpace_tag+00000437
+[ 53] 0x00007f68afc82b35 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmcr.so+00944949
+[ 54] 0x00007f68afdcef2d /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00667437
+[ 55] 0x00007f68afdb38e8 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00555240
+[ 56] 0x00007f68aed0feaa /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwbridge.so+00241322
+[ 57] 0x00007f68aed10c72 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwbridge.so+00244850
+[ 58] 0x00007f68aed19c03 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwbridge.so+00281603
+[ 59] 0x00007f68aed19d89 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwbridge.so+00281993
+[ 60] 0x00007f68aed1a288 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwbridge.so+00283272 _Z8mnParserv+00000344
+[ 61] 0x00007f68afc934f2 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmcr.so+01012978
+[ 62] 0x00007f68c390596b /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmvm.so+03672427 _ZN14cmddistributor15PackagedTaskIIP10invokeFuncIN7mwboost8functionIFvvEEEEENS2_10shared_ptrINS2_13unique_futureIDTclfp_EEEEEERKT_+00000059
+[ 63] 0x00007f68c3905a58 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmvm.so+03672664 _ZNSt17_Function_handlerIFN7mwboost3anyEvEZN14cmddistributor15PackagedTaskIIP10createFuncINS0_8functionIFvvEEEEESt8functionIS2_ET_EUlvE_E9_M_invokeERKSt9_Any_data+00000024
+[ 64] 0x00007f68afde7dcc /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00769484 _ZN7mwboost6detail8function21function_obj_invoker0ISt8functionIFNS_3anyEvEES4_E6invokeERNS1_15function_bufferE+00000028
+[ 65] 0x00007f68afde7a85 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00768645 _ZN3iqm18PackagedTaskPlugin7executeEP15inWorkSpace_tag+00000437
+[ 66] 0x00007f68afc82b35 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmcr.so+00944949
+[ 67] 0x00007f68afdcef2d /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00667437
+[ 68] 0x00007f68afdb1eba /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00548538
+[ 69] 0x00007f68afdb2b2f /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwiqm.so+00551727
+[ 70] 0x00007f68afc69e95 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmcr.so+00843413
+[ 71] 0x00007f68afc6a4b3 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmcr.so+00844979
+[ 72] 0x00007f68afc6ad24 /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwmcr.so+00847140
+[ 73] 0x00007f68c1b97bdd /gpfs/rt/7.2/opt/matlab/R2019a/bin/glnxa64/libmwboost_thread.so.1.65.1+00080861
+[ 74] 0x00007f68c2b39ea5                             /lib64/libpthread.so.0+00032421
+[ 75] 0x00007f68c22ca96d                                   /lib64/libc.so.6+01042797 clone+00000109
+[ 76] 0x0000000000000000                                   <unknown-module>+00000000
+
+** This crash report has been saved to disk as /users/dyee7/matlab_crash_dump.67056-1 **
+
+
+
+MATLAB is exiting because of fatal error
+/var/spool/slurmd/job7605347/slurm_script: line 272: 67056 Killed                  matlab-threaded -nodesktop -nodisplay -r "TCB_runLevel1_fMRIModelSpec_Estimate('${PAT_NUM}','${root_path}','${design_foldername}','${design_SOTS}');exit;"
+{Error using TCB_runLevel1_contrast (line 595)
+Not a valid design foldername! Check that your variables are correctly labelled
+} 

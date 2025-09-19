@@ -1,0 +1,1224 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 7500451
+##  Job Name : fMRI_L1_GLM
+##  Nodelist : node1134
+##      CPUs : 5
+##  Mem/Node : 3072 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts/fmri-Preprocessing
+##   Job Started : Mon Jan 23 21:25:05 EST 2023
+###############################################################################
+Running GLM 6: 16 regressors (cue, int, fb, error), 1 Taskbug Pmod with Reward, Penalty, IntervalNum, IntervalLength, MeanCongruency, RT center, Accuracy, RT*Rew, RT*Pen
+Foldername is: glm6_Pmod_RewPenTask_RTACC_rwls
+SOTS is: TCB_Pmod_RewPenTask_RTACC_sots_allTcat
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+[Warning: Unable to load Toolbox Path Cache
+/users/dyee7/.matlab/R2019a/toolbox_cache-9.6.0-2848510713-glnxa64.xml. The
+cache file is not in the correct format. It will be regenerated upon quitting
+MATLAB.] 
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+PROCESSING Regressors for Subject 2011
+COMPLETED Subject 2011
+PROCESSING Regressors for Subject 2012
+COMPLETED Subject 2012
+PROCESSING Regressors for Subject 2013
+COMPLETED Subject 2013
+PROCESSING Regressors for Subject 2014
+COMPLETED Subject 2014
+PROCESSING Regressors for Subject 2015
+COMPLETED Subject 2015
+PROCESSING Regressors for Subject 2017
+COMPLETED Subject 2017
+PROCESSING Regressors for Subject 2019
+COMPLETED Subject 2019
+PROCESSING Regressors for Subject 2020
+COMPLETED Subject 2020
+PROCESSING Regressors for Subject 2021
+COMPLETED Subject 2021
+PROCESSING Regressors for Subject 2022
+COMPLETED Subject 2022
+PROCESSING Regressors for Subject 2024
+COMPLETED Subject 2024
+PROCESSING Regressors for Subject 2026
+COMPLETED Subject 2026
+PROCESSING Regressors for Subject 2027
+COMPLETED Subject 2027
+PROCESSING Regressors for Subject 2028
+COMPLETED Subject 2028
+PROCESSING Regressors for Subject 2029
+COMPLETED Subject 2029
+PROCESSING Regressors for Subject 2030
+COMPLETED Subject 2030
+PROCESSING Regressors for Subject 2031
+COMPLETED Subject 2031
+PROCESSING Regressors for Subject 2032
+COMPLETED Subject 2032
+PROCESSING Regressors for Subject 2033
+COMPLETED Subject 2033
+PROCESSING Regressors for Subject 2034
+COMPLETED Subject 2034
+PROCESSING Regressors for Subject 2035
+COMPLETED Subject 2035
+PROCESSING Regressors for Subject 2036
+COMPLETED Subject 2036
+PROCESSING Regressors for Subject 2037
+COMPLETED Subject 2037
+PROCESSING Regressors for Subject 2038
+COMPLETED Subject 2038
+PROCESSING Regressors for Subject 2039
+COMPLETED Subject 2039
+PROCESSING Regressors for Subject 2040
+COMPLETED Subject 2040
+PROCESSING Regressors for Subject 2041
+COMPLETED Subject 2041
+PROCESSING Regressors for Subject 2042
+COMPLETED Subject 2042
+PROCESSING Regressors for Subject 2043
+COMPLETED Subject 2043
+PROCESSING Regressors for Subject 2044
+COMPLETED Subject 2044
+PROCESSING Regressors for Subject 2045
+COMPLETED Subject 2045
+PROCESSING Regressors for Subject 2046
+COMPLETED Subject 2046
+PROCESSING Regressors for Subject 2047
+COMPLETED Subject 2047
+PROCESSING Regressors for Subject 2048
+COMPLETED Subject 2048
+PROCESSING Regressors for Subject 2049
+COMPLETED Subject 2049
+PROCESSING Regressors for Subject 2050
+COMPLETED Subject 2050
+PROCESSING Regressors for Subject 2051
+COMPLETED Subject 2051
+PROCESSING Regressors for Subject 2053
+COMPLETED Subject 2053
+PROCESSING Regressors for Subject 2054
+COMPLETED Subject 2054
+PROCESSING Regressors for Subject 2055
+COMPLETED Subject 2055
+PROCESSING Regressors for Subject 2057
+COMPLETED Subject 2057
+PROCESSING Regressors for Subject 2058
+COMPLETED Subject 2058
+PROCESSING Regressors for Subject 2059
+COMPLETED Subject 2059
+PROCESSING Regressors for Subject 2060
+COMPLETED Subject 2060
+PROCESSING Regressors for Subject 2061
+COMPLETED Subject 2061
+PROCESSING Regressors for Subject 2062
+COMPLETED Subject 2062
+PROCESSING Regressors for Subject 2063
+COMPLETED Subject 2063
+PROCESSING Regressors for Subject 2064
+COMPLETED Subject 2064
+PROCESSING Regressors for Subject 2065
+COMPLETED Subject 2065
+PROCESSING Regressors for Subject 2066
+COMPLETED Subject 2066
+PROCESSING Regressors for Subject 2067
+COMPLETED Subject 2067
+PROCESSING Regressors for Subject 2068
+COMPLETED Subject 2068
+PROCESSING Regressors for Subject 2069
+COMPLETED Subject 2069
+PROCESSING Regressors for Subject 2070
+COMPLETED Subject 2070
+PROCESSING Regressors for Subject 2071
+COMPLETED Subject 2071
+PROCESSING Regressors for Subject 2072
+COMPLETED Subject 2072
+PROCESSING Regressors for Subject 2073
+COMPLETED Subject 2073
+PROCESSING Regressors for Subject 2074
+COMPLETED Subject 2074
+PROCESSING Regressors for Subject 2075
+COMPLETED Subject 2075
+PROCESSING Regressors for Subject 2076
+COMPLETED Subject 2076
+PROCESSING Regressors for Subject 2077
+COMPLETED Subject 2077
+PROCESSING Regressors for Subject 2078
+COMPLETED Subject 2078
+PROCESSING Regressors for Subject 2079
+COMPLETED Subject 2079
+PROCESSING Regressors for Subject 2081
+COMPLETED Subject 2081
+PROCESSING Regressors for Subject 2082
+COMPLETED Subject 2082
+PROCESSING Regressors for Subject 2083
+COMPLETED Subject 2083
+PROCESSING Regressors for Subject 2084
+COMPLETED Subject 2084
+PROCESSING Regressors for Subject 2085
+COMPLETED Subject 2085
+PROCESSING Regressors for Subject 2086
+COMPLETED Subject 2086
+PROCESSING Regressors for Subject 2088
+COMPLETED Subject 2088
+PROCESSING Regressors for Subject 2090
+COMPLETED Subject 2090
+PROCESSING Regressors for Subject 2091
+COMPLETED Subject 2091
+PROCESSING Regressors for Subject 2093
+COMPLETED Subject 2093
+PROCESSING Regressors for Subject 2094
+COMPLETED Subject 2094
+PROCESSING Regressors for Subject 2097
+COMPLETED Subject 2097
+PROCESSING Regressors for Subject 2098
+COMPLETED Subject 2098
+PROCESSING Regressors for Subject 2099
+COMPLETED Subject 2099
+PROCESSING Regressors for Subject 2103
+COMPLETED Subject 2103
+PROCESSING Regressors for Subject 2105
+COMPLETED Subject 2105
+PROCESSING Regressors for Subject 2106
+COMPLETED Subject 2106
+PROCESSING Regressors for Subject 2107
+COMPLETED Subject 2107
+PROCESSING Regressors for Subject 2108
+COMPLETED Subject 2108
+PROCESSING Regressors for Subject 2109
+COMPLETED Subject 2109
+PROCESSING Regressors for Subject 2111
+COMPLETED Subject 2111
+PROCESSING Regressors for Subject 2112
+COMPLETED Subject 2112
+PROCESSING Regressors for Subject 2113
+COMPLETED Subject 2113
+PROCESSING Regressors for Subject 2115
+COMPLETED Subject 2115
+PROCESSING Regressors for Subject 2116
+COMPLETED Subject 2116
+PROCESSING Regressors for Subject 2117
+COMPLETED Subject 2117
+PROCESSING Regressors for Subject 2118
+COMPLETED Subject 2118
+PROCESSING Regressors for Subject 2119
+COMPLETED Subject 2119
+PROCESSING Regressors for Subject 2120
+COMPLETED Subject 2120
+PROCESSING Regressors for Subject 2121
+COMPLETED Subject 2121
+PROCESSING Regressors for Subject 2122
+COMPLETED Subject 2122
+PROCESSING Regressors for Subject 2123
+COMPLETED Subject 2123
+PROCESSING Regressors for Subject 2124
+COMPLETED Subject 2124
+PROCESSING Regressors for Subject 2125
+COMPLETED Subject 2125
+PROCESSING Regressors for Subject 2126
+COMPLETED Subject 2126
+PROCESSING Regressors for Subject 2127
+COMPLETED Subject 2127
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2011
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2011
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2012
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2012
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2013
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2013
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2014
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2014
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2015
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2015
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2017
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2017
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2018
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2018
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2019
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2019
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2020
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2020
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2021
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2021
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2022
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2022
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2024
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2024
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2026
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2026
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2027
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2027
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2028
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2028
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2029
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2029
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2030
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2030
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2031
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2031
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2032
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2032
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2033
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2033
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2034
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2034
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2035
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2035
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2036
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2036
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2037
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2037
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2038
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2038
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2039
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2039
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2040
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2040
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2041
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2041
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2042
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2042
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2043
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2043
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2044
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2044
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2045
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2045
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2046
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2046
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2047
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2047
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2048
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2048
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2049
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2049
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2050
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2050
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2051
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2051
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2053
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2053
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2054
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2054
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2055
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2055
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2057
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2057
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2058
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2058
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2059
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2059
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2060
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2060
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2061
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2061
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2062
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2062
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2063
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2063
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2064
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2064
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2065
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2065
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2066
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2066
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2067
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2067
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2068
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2068
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2069
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2069
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2070
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2070
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2071
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2071
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2072
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2072
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2073
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2073
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2074
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2074
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2075
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2075
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2076
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2076
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2077
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2077
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2078
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2078
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2079
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2079
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2081
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2081
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2082
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2082
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2083
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2083
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2084
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2084
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2085
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2085
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2086
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2086
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2088
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2088
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2090
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2090
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2091
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2091
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2093
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2093
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2094
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2094
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2097
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2097
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2098
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2098
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2099
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2099
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2103
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2103
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2105
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2105
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2106
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2106
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2107
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2107
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2108
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2108
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2109
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2109
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2111
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2111
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2112
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2112
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2113
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2113
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2115
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2115
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2116
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2116
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2117
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2117
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2118
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2118
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2119
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2119
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2120
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2120
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2121
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2121
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2122
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2122
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2123
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2123
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2124
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2124
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2125
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2125
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2126
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2126
+[Warning: Directory already exists.] 
+[> In TCB_makeRegressor (line 73)] 
+Success! You have saved the Intercept Regressor Matrix for SPM for sub-2127
+Success! You have saved the Motion Regressor Matrix for SPM for sub-2127
+Running job array number: 256
+Processing participant: 2072
+
+Running Subject 2072
+Root Path is /gpfs/data/ashenhav/mri-data/TCB/spm-data/
+Design Contrast is glm6_Pmod_RewPenTask_RTACC_rwls
+Stimulus Onset File is TCB_Pmod_RewPenTask_RTACC_sots_allTcat
+
+Checking for glm6_Pmod_RewPenTask_RTACC_rwls
+GLM Foldername glm6_Pmod_RewPenTask_RTACC_rwls exists.
+Checking for /gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2072/glm6_Pmod_RewPenTask_RTACC_rwls/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2072/glm6_Pmod_RewPenTask_RTACC_rwls/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+dir_batchsave =
+
+    '/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2072/glm6_Pmod_RewPenTask_RTACC_rwls/batch_job_sub-2072_glm6_Pmod_RewPenTask_RTACC_rwls.mat'
+
+
+
+------------------------------------------------------------------------
+23-Jan-2023 21:26:40 - Running job #1
+------------------------------------------------------------------------
+23-Jan-2023 21:26:40 - Running 'Expand image frames'
+23-Jan-2023 21:26:40 - Done    'Expand image frames'
+23-Jan-2023 21:26:41 - Running 'fMRI model specification'
+
+SPM12: spm_fMRI_design (v7210)                     21:26:42 - 23/01/2023
+========================================================================
+Saving fMRI design                      :               ...SPM.mat saved
+
+SPM12: spm_rwls_fmri_spm_ui (v$Rev: 4.0 $)         21:26:42 - 23/01/2023
+========================================================================
+Mapping files                           :                        ...done
+Calculating globals                     :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          21:28:05 - 23/01/2023
+23-Jan-2023 21:28:05 - Done    'fMRI model specification'
+23-Jan-2023 21:28:05 - Done
+
+
+SPM12: spm_rwls_spm (v$Rev: 4.0$)                  21:28:05 - 23/01/2023
+========================================================================
+
+SPM12: spm_rwls_est_non_sphericity (v$Rev: 4.0 $)  21:28:08 - 23/01/2023
+========================================================================
+Chunk   1/34                            :                  ...processing                       ...doneChunk   2/34                            :                  ...processing                       ...doneChunk   3/34                            :                  ...processing                       ...doneChunk   4/34                            :                  ...processing                       ...doneChunk   5/34                            :                  ...processing                       ...doneChunk   6/34                            :                  ...processing                       ...doneChunk   7/34                            :                  ...processing                       ...doneChunk   8/34                            :                  ...processing                       ...doneChunk   9/34                            :                  ...processing                       ...doneChunk  10/34                            :                  ...processing                       ...doneChunk  11/34                            :                  ...processing                       ...doneChunk  12/34                            :                  ...processing                       ...doneChunk  13/34                            :                  ...processing                       ...doneChunk  14/34                            :                  ...processing                       ...doneChunk  15/34                            :                  ...processing                       ...doneChunk  16/34                            :                  ...processing                       ...doneChunk  17/34                            :                  ...processing                       ...doneChunk  18/34                            :                  ...processing                       ...doneChunk  19/34                            :                  ...processing                       ...doneChunk  20/34                            :                  ...processing                       ...doneChunk  21/34                            :                  ...processing                       ...doneChunk  22/34                            :                  ...processing                       ...doneChunk  23/34                            :                  ...processing                       ...doneChunk  24/34                            :                  ...processing                       ...doneChunk  25/34                            :                  ...processing                       ...doneChunk  26/34                            :                  ...processing                       ...doneChunk  27/34                            :                  ...processing                       ...doneChunk  28/34                            :                  ...processing                       ...doneChunk  29/34                            :                  ...processing                       ...doneChunk  30/34                            :                  ...processingChunk  31/34                            :                  ...processingChunk  32/34                            :                  ...processingChunk  33/34                            :                  ...processingChunk  34/34                            :                  ...processing
+Temporal non-sphericity (242935 voxels) :             ...ReML estimation
+  ReML Block 1                
+  ReML Iteration              : 1                            ...3.773755e+04
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.559337e-54.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 2                            ...9.288921e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  6.299578e-54.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 3                            ...2.624939e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.118882e-53.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 4                            ...1.712314e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.649138e-52.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 5                            ...1.430512e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  8.392844e-52.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 6                            ...1.266783e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.032290e-51.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 7                            ...1.157860e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.828631e-50.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 8                            ...1.082935e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  7.844349e-50.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 9                            ...1.022885e+01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.190320e-49.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 10                            ...9.695979e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.232858e-48.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 11                            ...9.223865e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.536312e-48.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 12                            ...8.775848e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.592470e-47.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 13                            ...8.317284e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.343722e-47.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 14                            ...7.838705e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.717152e-46.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 15                            ...7.353035e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.293185e-46.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 16                            ...6.884465e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.567780e-45.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 17                            ...6.452058e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.468859e-45.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 18                            ...6.066583e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.227732e-44.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 19                            ...5.725301e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.255577e-44.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 20                            ...5.413260e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  8.343814e-44.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 21                            ...5.120087e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.069579e-43.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 22                            ...4.846601e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.974203e-43.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 23                            ...4.596579e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.159869e-42.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 24                            ...4.371352e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.626853e-42.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 25                            ...4.170366e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.784680e-42.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 26                            ...3.990516e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.239925e-41.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 27                            ...3.826065e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.589522e-41.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 28                            ...3.671194e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.274366e-41.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 29                            ...3.521881e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.048691e-40.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 30                            ...3.375933e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.037208e-40.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 31                            ...3.232466e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.869919e-40.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 32                            ...3.091627e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  7.194486e-40.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 33                            ...2.954445e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.309990e-39.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 34                            ...2.822495e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.337927e-39.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 35                            ...2.697276e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.092617e-39.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 36                            ...2.579554e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  7.031981e-39.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 37                            ...2.469098e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.186720e-38.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 38                            ...2.364971e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.968290e-38.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 39                            ...2.266089e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.210449e-38.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 40                            ...2.171678e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.152680e-38.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 41                            ...2.081432e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  8.142105e-38.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 42                            ...1.995430e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.267395e-37.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 43                            ...1.913935e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.944403e-37.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 44                            ...1.837172e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.941557e-37.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 45                            ...1.765186e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.390310e-37.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 46                            ...1.697795e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  6.467582e-37.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 47                            ...1.634629e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  9.408319e-37.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 48                            ...1.575221e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.352050e-36.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 49                            ...1.519098e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.920278e-36.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 50                            ...1.465831e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.696497e-36.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 51                            ...1.415069e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.745136e-36.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 52                            ...1.366533e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.146689e-36.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 53                            ...1.320009e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  7.000618e-36.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 54                            ...1.275330e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  9.428499e-36.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 55                            ...1.232367e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.257739e-35.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 56                            ...1.191015e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.662340e-35.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 57                            ...1.151186e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.177530e-35.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 58                            ...1.112806e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.827826e-35.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 59                            ...1.075808e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.641753e-35.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 60                            ...1.040130e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  4.652193e-35.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 61                            ...1.005718e+00
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  5.896719e-35.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 62                            ...9.725207e-01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  7.417895e-35.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 63                            ...9.404883e-01
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  9.263530e-35.] 
+[> In spm_rwls_reml (line 135)
+  In spm_rwls_est_non_sphericity (line 288)
+  In spm_rwls_spm (line 429)
+  In TCB_runLevel1_fMRIModelSpec_Estimate (line 85)] 
+  ReML Iteration              : 64                            ...9.095755e-01
+
+SPM12: spm_rwls_spm (v$Rev: 4.0$)                  21:30:41 - 23/01/2023
+========================================================================
+Chunk   1/34                            :                  ...processing                       ...doneChunk   2/34                            :                  ...processing                       ...doneChunk   3/34                            :                  ...processing                       ...doneChunk   4/34                            :                  ...processing                       ...doneChunk   5/34                            :                  ...processing                       ...doneChunk   6/34                            :                  ...processing                       ...doneChunk   7/34                            :                  ...processing                       ...doneChunk   8/34                            :                  ...processing                       ...doneChunk   9/34                            :                  ...processing                       ...doneChunk  10/34                            :                  ...processing                       ...doneChunk  11/34                            :                  ...processing                       ...doneChunk  12/34                            :                  ...processing                       ...doneChunk  13/34                            :                  ...processing                       ...doneChunk  14/34                            :                  ...processing                       ...doneChunk  15/34                            :                  ...processing                       ...doneChunk  16/34                            :                  ...processing                       ...doneChunk  17/34                            :                  ...processing                       ...doneChunk  18/34                            :                  ...processing                       ...doneChunk  19/34                            :                  ...processing                       ...doneChunk  20/34                            :                  ...processing                       ...doneChunk  21/34                            :                  ...processing                       ...doneChunk  22/34                            :                  ...processing                       ...doneChunk  23/34                            :                  ...processing                       ...doneChunk  24/34                            :                  ...processing                       ...doneChunk  25/34                            :                  ...processing                       ...doneChunk  26/34                            :                  ...processing                       ...doneChunk  27/34                            :                  ...processing                       ...doneChunk  28/34                            :                  ...processing                       ...doneChunk  29/34                            :                  ...processing                       ...doneChunk  30/34                            :                  ...processing                       ...doneChunk  31/34                            :                  ...processing                       ...doneChunk  32/34                            :                  ...processing                       ...doneChunk  33/34                            :                  ...processing                       ...doneChunk  34/34                            :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          21:33:23 - 23/01/2023
+Subject 2072 estimates calculated.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Number of nuisance regressors is: 16
+Creating contrasts for design glm6_Pmod_RewPenTask_RTACC_rwls
+
+
+------------------------------------------------------------------------
+23-Jan-2023 21:33:39 - Running job #1
+------------------------------------------------------------------------
+23-Jan-2023 21:33:39 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             21:33:39 - 23/01/2023
+========================================================================
+Contrasts folder                        : ..6_Pmod_RewPenTask_RTACC_rwls
+Deleting contrasts                      :                        ...done
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	contrast image  2               :                   ...computing       ...written con_0002.nii
+	spm{T} image  2                 :                   ...computing      ...written spmT_0002.nii
+	contrast image  3               :                   ...computing       ...written con_0003.nii
+	spm{T} image  3                 :                   ...computing      ...written spmT_0003.nii
+	contrast image  4               :                   ...computing       ...written con_0004.nii
+	spm{T} image  4                 :                   ...computing      ...written spmT_0004.nii
+	contrast image  5               :                   ...computing       ...written con_0005.nii
+	spm{T} image  5                 :                   ...computing      ...written spmT_0005.nii
+	contrast image  6               :                   ...computing       ...written con_0006.nii
+	spm{T} image  6                 :                   ...computing      ...written spmT_0006.nii
+[Warning: Rank is null in spm_SpUtil trMV ] 
+[> In spm_SpUtil (line 589)
+  In spm_contrasts (line 87)
+  In spm_run_con (line 277)
+  In cfg_run_cm (line 29)
+  In cfg_util>local_runcj (line 1717)
+  In cfg_util (line 972)
+  In spm_jobman>fill_run_job (line 469)
+  In spm_jobman (line 247)
+  In TCB_runLevel1_contrast (line 601)] 
+	contrast image  7               :                   ...computing       ...written con_0007.nii
+	spm{T} image  7                 :                   ...computing      ...written spmT_0007.nii
+	contrast image  8               :                   ...computing       ...written con_0008.nii
+	spm{T} image  8                 :                   ...computing      ...written spmT_0008.nii
+	contrast image  9               :                   ...computing       ...written con_0009.nii
+	spm{T} image  9                 :                   ...computing      ...written spmT_0009.nii
+	contrast image 10               :                   ...computing       ...written con_0010.nii
+	spm{T} image 10                 :                   ...computing      ...written spmT_0010.nii
+	contrast image 11               :                   ...computing       ...written con_0011.nii
+	spm{T} image 11                 :                   ...computing      ...written spmT_0011.nii
+	contrast image 12               :                   ...computing       ...written con_0012.nii
+	spm{T} image 12                 :                   ...computing      ...written spmT_0012.nii
+	contrast image 13               :                   ...computing       ...written con_0013.nii
+	spm{T} image 13                 :                   ...computing      ...written spmT_0013.nii
+	contrast image 14               :                   ...computing       ...written con_0014.nii
+	spm{T} image 14                 :                   ...computing      ...written spmT_0014.nii
+	contrast image 15               :                   ...computing       ...written con_0015.nii
+	spm{T} image 15                 :                   ...computing      ...written spmT_0015.nii
+	contrast image 16               :                   ...computing       ...written con_0016.nii
+	spm{T} image 16                 :                   ...computing      ...written spmT_0016.nii
+	contrast image 17               :                   ...computing       ...written con_0017.nii
+	spm{T} image 17                 :                   ...computing      ...written spmT_0017.nii
+	contrast image 18               :                   ...computing       ...written con_0018.nii
+	spm{T} image 18                 :                   ...computing      ...written spmT_0018.nii
+	contrast image 19               :                   ...computing       ...written con_0019.nii
+	spm{T} image 19                 :                   ...computing      ...written spmT_0019.nii
+	contrast image 20               :                   ...computing       ...written con_0020.nii
+	spm{T} image 20                 :                   ...computing      ...written spmT_0020.nii
+	contrast image 21               :                   ...computing       ...written con_0021.nii
+	spm{T} image 21                 :                   ...computing      ...written spmT_0021.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          21:33:42 - 23/01/2023
+23-Jan-2023 21:33:43 - Done    'Contrast Manager'
+23-Jan-2023 21:33:43 - Done
+
+Subject 2072 contrast maps created.

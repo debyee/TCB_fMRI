@@ -1,0 +1,1938 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 7475464
+##  Job Name : fMRI_L2_group
+##  Nodelist : node1134
+##      CPUs : 5
+##  Mem/Node : 2048 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts/fmri-Preprocessing
+##   Job Started : Fri Jan 20 15:52:32 EST 2023
+###############################################################################
+Running L2 analyses on GLM 4: Baseline Pmod with Reward, Penalty
+Foldername is: glm4_Pmod_RewPen_rwls
+GLM4: 13 contrasts, pmod with Reward and Penalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats exists. No changes required.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C13_Error
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C13_Error exists. No changes required.
+Copying contrast: Subject 2011 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2012 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2013 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2014 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2015 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2017 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2019 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2020 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2021 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2022 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2024 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2026 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2027 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2028 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2029 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2030 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2031 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2032 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2033 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2034 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2035 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2036 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2037 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2038 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2039 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2040 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2041 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2042 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2043 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2044 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2045 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2046 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2047 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2048 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2049 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2050 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2051 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2053 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2054 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2055 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2057 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2058 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2059 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2060 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2061 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2062 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2063 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2064 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2065 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2066 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2067 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2068 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2069 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2070 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2071 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2072 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2073 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2074 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2075 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2076 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2077 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2078 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2079 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2081 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2082 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2083 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2084 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2085 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2086 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2088 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2090 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2091 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2093 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2094 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2097 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2098 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2099 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2103 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2105 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2106 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2107 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2108 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2109 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2111 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2112 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2113 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2115 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2116 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2117 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2118 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2119 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2120 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2121 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2122 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2123 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2124 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2125 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2126 Contrast 13 to Folder C13_Error
+Copying contrast: Subject 2127 Contrast 13 to Folder C13_Error
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C12_Fb
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C12_Fb exists. No changes required.
+Copying contrast: Subject 2011 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2012 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2013 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2014 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2015 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2017 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2019 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2020 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2021 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2022 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2024 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2026 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2027 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2028 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2029 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2030 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2031 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2032 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2033 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2034 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2035 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2036 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2037 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2038 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2039 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2040 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2041 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2042 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2043 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2044 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2045 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2046 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2047 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2048 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2049 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2050 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2051 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2053 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2054 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2055 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2057 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2058 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2059 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2060 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2061 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2062 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2063 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2064 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2065 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2066 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2067 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2068 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2069 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2070 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2071 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2072 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2073 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2074 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2075 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2076 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2077 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2078 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2079 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2081 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2082 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2083 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2084 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2085 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2086 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2088 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2090 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2091 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2093 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2094 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2097 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2098 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2099 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2103 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2105 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2106 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2107 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2108 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2109 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2111 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2112 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2113 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2115 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2116 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2117 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2118 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2119 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2120 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2121 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2122 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2123 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2124 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2125 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2126 Contrast 12 to Folder C12_Fb
+Copying contrast: Subject 2127 Contrast 12 to Folder C12_Fb
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C11_IntxPen-CuexPen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C11_IntxPen-CuexPen exists. No changes required.
+Copying contrast: Subject 2011 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2012 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2013 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2014 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2015 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2017 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2019 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2020 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2021 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2022 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2024 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2026 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2027 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2028 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2029 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2030 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2031 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2032 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2033 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2034 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2035 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2036 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2037 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2038 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2039 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2040 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2041 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2042 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2043 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2044 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2045 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2046 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2047 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2048 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2049 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2050 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2051 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2053 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2054 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2055 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2057 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2058 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2059 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2060 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2061 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2062 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2063 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2064 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2065 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2066 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2067 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2068 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2069 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2070 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2071 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2072 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2073 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2074 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2075 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2076 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2077 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2078 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2079 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2081 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2082 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2083 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2084 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2085 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2086 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2088 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2090 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2091 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2093 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2094 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2097 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2098 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2099 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2103 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2105 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2106 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2107 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2108 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2109 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2111 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2112 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2113 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2115 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2116 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2117 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2118 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2119 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2120 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2121 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2122 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2123 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2124 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2125 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2126 Contrast 11 to Folder C11_IntxPen-CuexPen
+Copying contrast: Subject 2127 Contrast 11 to Folder C11_IntxPen-CuexPen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C10_IntxRew-CuexRew
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C10_IntxRew-CuexRew exists. No changes required.
+Copying contrast: Subject 2011 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2012 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2013 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2014 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2015 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2017 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2019 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2020 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2021 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2022 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2024 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2026 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2027 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2028 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2029 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2030 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2031 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2032 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2033 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2034 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2035 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2036 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2037 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2038 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2039 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2040 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2041 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2042 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2043 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2044 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2045 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2046 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2047 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2048 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2049 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2050 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2051 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2053 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2054 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2055 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2057 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2058 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2059 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2060 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2061 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2062 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2063 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2064 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2065 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2066 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2067 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2068 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2069 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2070 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2071 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2072 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2073 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2074 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2075 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2076 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2077 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2078 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2079 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2081 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2082 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2083 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2084 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2085 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2086 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2088 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2090 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2091 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2093 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2094 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2097 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2098 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2099 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2103 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2105 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2106 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2107 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2108 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2109 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2111 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2112 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2113 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2115 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2116 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2117 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2118 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2119 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2120 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2121 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2122 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2123 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2124 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2125 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2126 Contrast 10 to Folder C10_IntxRew-CuexRew
+Copying contrast: Subject 2127 Contrast 10 to Folder C10_IntxRew-CuexRew
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C1_Cues
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C1_Cues exists. No changes required.
+Copying contrast: Subject 2011 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2012 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2013 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2014 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2015 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2017 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2019 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2020 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2021 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2022 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2024 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2026 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2027 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2028 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2029 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2030 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2031 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2032 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2033 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2034 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2035 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2036 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2037 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2038 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2039 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2040 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2041 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2042 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2043 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2044 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2045 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2046 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2047 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2048 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2049 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2050 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2051 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2053 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2054 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2055 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2057 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2058 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2059 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2060 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2061 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2062 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2063 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2064 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2065 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2066 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2067 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2068 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2069 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2070 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2071 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2072 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2073 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2074 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2075 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2076 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2077 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2078 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2079 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2081 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2082 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2083 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2084 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2085 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2086 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2088 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2090 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2091 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2093 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2094 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2097 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2098 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2099 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2103 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2105 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2106 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2107 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2108 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2109 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2111 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2112 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2113 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2115 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2116 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2117 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2118 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2119 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2120 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2121 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2122 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2123 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2124 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2125 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2126 Contrast 1 to Folder C1_Cues
+Copying contrast: Subject 2127 Contrast 1 to Folder C1_Cues
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C2_CuesxRew
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C2_CuesxRew exists. No changes required.
+Copying contrast: Subject 2011 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2012 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2013 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2014 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2015 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2017 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2019 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2020 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2021 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2022 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2024 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2026 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2027 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2028 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2029 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2030 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2031 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2032 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2033 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2034 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2035 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2036 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2037 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2038 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2039 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2040 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2041 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2042 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2043 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2044 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2045 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2046 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2047 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2048 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2049 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2050 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2051 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2053 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2054 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2055 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2057 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2058 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2059 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2060 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2061 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2062 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2063 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2064 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2065 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2066 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2067 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2068 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2069 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2070 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2071 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2072 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2073 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2074 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2075 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2076 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2077 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2078 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2079 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2081 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2082 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2083 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2084 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2085 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2086 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2088 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2090 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2091 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2093 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2094 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2097 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2098 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2099 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2103 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2105 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2106 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2107 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2108 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2109 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2111 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2112 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2113 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2115 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2116 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2117 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2118 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2119 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2120 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2121 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2122 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2123 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2124 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2125 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2126 Contrast 2 to Folder C2_CuesxRew
+Copying contrast: Subject 2127 Contrast 2 to Folder C2_CuesxRew
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C3_CuesxPen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C3_CuesxPen exists. No changes required.
+Copying contrast: Subject 2011 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2012 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2013 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2014 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2015 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2017 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2019 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2020 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2021 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2022 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2024 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2026 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2027 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2028 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2029 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2030 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2031 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2032 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2033 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2034 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2035 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2036 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2037 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2038 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2039 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2040 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2041 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2042 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2043 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2044 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2045 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2046 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2047 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2048 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2049 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2050 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2051 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2053 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2054 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2055 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2057 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2058 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2059 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2060 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2061 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2062 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2063 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2064 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2065 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2066 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2067 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2068 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2069 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2070 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2071 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2072 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2073 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2074 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2075 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2076 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2077 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2078 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2079 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2081 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2082 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2083 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2084 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2085 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2086 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2088 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2090 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2091 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2093 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2094 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2097 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2098 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2099 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2103 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2105 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2106 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2107 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2108 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2109 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2111 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2112 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2113 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2115 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2116 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2117 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2118 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2119 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2120 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2121 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2122 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2123 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2124 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2125 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2126 Contrast 3 to Folder C3_CuesxPen
+Copying contrast: Subject 2127 Contrast 3 to Folder C3_CuesxPen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C4_CuesxRew-Pen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C4_CuesxRew-Pen exists. No changes required.
+Copying contrast: Subject 2011 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2012 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2013 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2014 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2015 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2017 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2019 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2020 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2021 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2022 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2024 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2026 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2027 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2028 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2029 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2030 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2031 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2032 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2033 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2034 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2035 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2036 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2037 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2038 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2039 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2040 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2041 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2042 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2043 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2044 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2045 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2046 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2047 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2048 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2049 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2050 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2051 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2053 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2054 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2055 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2057 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2058 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2059 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2060 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2061 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2062 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2063 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2064 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2065 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2066 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2067 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2068 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2069 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2070 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2071 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2072 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2073 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2074 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2075 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2076 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2077 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2078 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2079 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2081 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2082 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2083 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2084 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2085 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2086 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2088 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2090 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2091 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2093 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2094 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2097 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2098 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2099 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2103 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2105 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2106 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2107 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2108 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2109 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2111 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2112 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2113 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2115 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2116 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2117 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2118 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2119 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2120 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2121 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2122 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2123 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2124 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2125 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2126 Contrast 4 to Folder C4_CuesxRew-Pen
+Copying contrast: Subject 2127 Contrast 4 to Folder C4_CuesxRew-Pen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C5_Int
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C5_Int exists. No changes required.
+Copying contrast: Subject 2011 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2012 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2013 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2014 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2015 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2017 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2019 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2020 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2021 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2022 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2024 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2026 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2027 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2028 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2029 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2030 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2031 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2032 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2033 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2034 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2035 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2036 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2037 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2038 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2039 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2040 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2041 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2042 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2043 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2044 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2045 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2046 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2047 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2048 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2049 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2050 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2051 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2053 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2054 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2055 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2057 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2058 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2059 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2060 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2061 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2062 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2063 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2064 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2065 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2066 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2067 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2068 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2069 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2070 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2071 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2072 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2073 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2074 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2075 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2076 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2077 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2078 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2079 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2081 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2082 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2083 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2084 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2085 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2086 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2088 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2090 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2091 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2093 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2094 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2097 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2098 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2099 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2103 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2105 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2106 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2107 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2108 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2109 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2111 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2112 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2113 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2115 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2116 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2117 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2118 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2119 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2120 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2121 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2122 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2123 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2124 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2125 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2126 Contrast 5 to Folder C5_Int
+Copying contrast: Subject 2127 Contrast 5 to Folder C5_Int
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C6_IntxRew
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C6_IntxRew exists. No changes required.
+Copying contrast: Subject 2011 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2012 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2013 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2014 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2015 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2017 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2019 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2020 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2021 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2022 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2024 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2026 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2027 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2028 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2029 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2030 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2031 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2032 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2033 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2034 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2035 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2036 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2037 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2038 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2039 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2040 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2041 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2042 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2043 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2044 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2045 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2046 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2047 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2048 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2049 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2050 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2051 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2053 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2054 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2055 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2057 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2058 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2059 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2060 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2061 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2062 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2063 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2064 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2065 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2066 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2067 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2068 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2069 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2070 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2071 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2072 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2073 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2074 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2075 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2076 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2077 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2078 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2079 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2081 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2082 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2083 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2084 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2085 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2086 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2088 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2090 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2091 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2093 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2094 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2097 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2098 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2099 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2103 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2105 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2106 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2107 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2108 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2109 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2111 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2112 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2113 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2115 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2116 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2117 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2118 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2119 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2120 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2121 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2122 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2123 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2124 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2125 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2126 Contrast 6 to Folder C6_IntxRew
+Copying contrast: Subject 2127 Contrast 6 to Folder C6_IntxRew
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C7_IntxPen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C7_IntxPen exists. No changes required.
+Copying contrast: Subject 2011 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2012 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2013 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2014 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2015 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2017 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2019 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2020 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2021 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2022 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2024 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2026 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2027 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2028 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2029 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2030 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2031 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2032 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2033 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2034 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2035 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2036 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2037 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2038 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2039 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2040 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2041 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2042 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2043 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2044 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2045 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2046 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2047 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2048 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2049 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2050 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2051 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2053 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2054 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2055 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2057 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2058 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2059 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2060 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2061 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2062 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2063 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2064 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2065 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2066 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2067 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2068 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2069 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2070 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2071 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2072 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2073 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2074 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2075 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2076 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2077 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2078 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2079 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2081 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2082 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2083 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2084 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2085 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2086 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2088 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2090 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2091 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2093 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2094 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2097 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2098 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2099 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2103 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2105 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2106 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2107 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2108 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2109 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2111 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2112 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2113 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2115 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2116 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2117 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2118 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2119 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2120 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2121 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2122 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2123 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2124 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2125 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2126 Contrast 7 to Folder C7_IntxPen
+Copying contrast: Subject 2127 Contrast 7 to Folder C7_IntxPen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C8_IntxRew-Pen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C8_IntxRew-Pen exists. No changes required.
+Copying contrast: Subject 2011 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2012 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2013 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2014 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2015 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2017 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2019 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2020 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2021 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2022 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2024 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2026 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2027 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2028 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2029 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2030 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2031 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2032 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2033 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2034 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2035 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2036 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2037 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2038 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2039 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2040 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2041 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2042 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2043 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2044 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2045 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2046 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2047 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2048 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2049 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2050 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2051 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2053 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2054 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2055 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2057 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2058 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2059 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2060 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2061 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2062 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2063 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2064 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2065 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2066 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2067 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2068 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2069 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2070 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2071 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2072 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2073 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2074 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2075 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2076 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2077 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2078 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2079 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2081 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2082 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2083 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2084 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2085 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2086 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2088 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2090 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2091 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2093 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2094 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2097 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2098 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2099 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2103 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2105 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2106 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2107 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2108 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2109 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2111 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2112 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2113 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2115 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2116 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2117 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2118 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2119 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2120 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2121 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2122 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2123 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2124 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2125 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2126 Contrast 8 to Folder C8_IntxRew-Pen
+Copying contrast: Subject 2127 Contrast 8 to Folder C8_IntxRew-Pen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C9_Int-Cue
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C9_Int-Cue exists. No changes required.
+Copying contrast: Subject 2011 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2012 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2013 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2014 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2015 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2017 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2019 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2020 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2021 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2022 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2024 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2026 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2027 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2028 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2029 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2030 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2031 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2032 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2033 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2034 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2035 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2036 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2037 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2038 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2039 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2040 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2041 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2042 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2043 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2044 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2045 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2046 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2047 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2048 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2049 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2050 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2051 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2053 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2054 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2055 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2057 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2058 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2059 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2060 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2061 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2062 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2063 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2064 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2065 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2066 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2067 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2068 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2069 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2070 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2071 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2072 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2073 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2074 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2075 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2076 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2077 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2078 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2079 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2081 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2082 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2083 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2084 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2085 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2086 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2088 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2090 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2091 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2093 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2094 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2097 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2098 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2099 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2103 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2105 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2106 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2107 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2108 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2109 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2111 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2112 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2113 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2115 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2116 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2117 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2118 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2119 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2120 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2121 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2122 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2123 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2124 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2125 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2126 Contrast 9 to Folder C9_Int-Cue
+Copying contrast: Subject 2127 Contrast 9 to Folder C9_Int-Cue
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C13_Error
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C13_Error/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C13_Error/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:53:09 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:53:09 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:53:10 - 20/01/2023
+20-Jan-2023 15:53:10 - Done    'Factorial design specification'
+20-Jan-2023 15:53:10 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:53:10 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:53:17 - 20/01/2023
+Done
+20-Jan-2023 15:53:17 - Done    'Model estimation'
+20-Jan-2023 15:53:17 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:53:17 - 20/01/2023
+========================================================================
+Contrasts folder                        :                    ./C13_Error
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:53:17 - 20/01/2023
+20-Jan-2023 15:53:17 - Done    'Contrast Manager'
+20-Jan-2023 15:53:17 - Done
+
+Contrast 13 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C12_Fb
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C12_Fb/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C12_Fb/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:53:33 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:53:34 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:53:35 - 20/01/2023
+20-Jan-2023 15:53:35 - Done    'Factorial design specification'
+20-Jan-2023 15:53:35 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:53:35 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:53:41 - 20/01/2023
+Done
+20-Jan-2023 15:53:41 - Done    'Model estimation'
+20-Jan-2023 15:53:41 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:53:41 - 20/01/2023
+========================================================================
+Contrasts folder                        : ./glm4_Pmod_RewPen_rwls/C12_Fb
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:53:41 - 20/01/2023
+20-Jan-2023 15:53:41 - Done    'Contrast Manager'
+20-Jan-2023 15:53:41 - Done
+
+Contrast 12 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C11_IntxPen-CuexPen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C11_IntxPen-CuexPen/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C11_IntxPen-CuexPen/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:53:57 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:53:58 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:53:59 - 20/01/2023
+20-Jan-2023 15:53:59 - Done    'Factorial design specification'
+20-Jan-2023 15:53:59 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:53:59 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:54:05 - 20/01/2023
+Done
+20-Jan-2023 15:54:05 - Done    'Model estimation'
+20-Jan-2023 15:54:05 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:54:05 - 20/01/2023
+========================================================================
+Contrasts folder                        :          ./C11_IntxPen-CuexPen
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:54:05 - 20/01/2023
+20-Jan-2023 15:54:05 - Done    'Contrast Manager'
+20-Jan-2023 15:54:05 - Done
+
+Contrast 11 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C10_IntxRew-CuexRew
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C10_IntxRew-CuexRew/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C10_IntxRew-CuexRew/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:54:22 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:54:22 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:54:23 - 20/01/2023
+20-Jan-2023 15:54:23 - Done    'Factorial design specification'
+20-Jan-2023 15:54:23 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:54:23 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:54:29 - 20/01/2023
+Done
+20-Jan-2023 15:54:29 - Done    'Model estimation'
+20-Jan-2023 15:54:29 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:54:29 - 20/01/2023
+========================================================================
+Contrasts folder                        :          ./C10_IntxRew-CuexRew
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:54:30 - 20/01/2023
+20-Jan-2023 15:54:30 - Done    'Contrast Manager'
+20-Jan-2023 15:54:30 - Done
+
+Contrast 10 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C1_Cues
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C1_Cues/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C1_Cues/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:54:46 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:54:46 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:54:47 - 20/01/2023
+20-Jan-2023 15:54:47 - Done    'Factorial design specification'
+20-Jan-2023 15:54:47 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:54:47 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:54:53 - 20/01/2023
+Done
+20-Jan-2023 15:54:53 - Done    'Model estimation'
+20-Jan-2023 15:54:53 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:54:53 - 20/01/2023
+========================================================================
+Contrasts folder                        :                      ./C1_Cues
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:54:53 - 20/01/2023
+20-Jan-2023 15:54:53 - Done    'Contrast Manager'
+20-Jan-2023 15:54:53 - Done
+
+Contrast 1 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C2_CuesxRew
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C2_CuesxRew/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C2_CuesxRew/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:55:10 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:55:10 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:55:11 - 20/01/2023
+20-Jan-2023 15:55:11 - Done    'Factorial design specification'
+20-Jan-2023 15:55:11 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:55:11 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:55:17 - 20/01/2023
+Done
+20-Jan-2023 15:55:17 - Done    'Model estimation'
+20-Jan-2023 15:55:17 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:55:17 - 20/01/2023
+========================================================================
+Contrasts folder                        :                  ./C2_CuesxRew
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:55:18 - 20/01/2023
+20-Jan-2023 15:55:18 - Done    'Contrast Manager'
+20-Jan-2023 15:55:18 - Done
+
+Contrast 2 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C3_CuesxPen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C3_CuesxPen/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C3_CuesxPen/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:55:34 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:55:34 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:55:35 - 20/01/2023
+20-Jan-2023 15:55:35 - Done    'Factorial design specification'
+20-Jan-2023 15:55:35 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:55:35 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:55:41 - 20/01/2023
+Done
+20-Jan-2023 15:55:41 - Done    'Model estimation'
+20-Jan-2023 15:55:41 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:55:41 - 20/01/2023
+========================================================================
+Contrasts folder                        :                  ./C3_CuesxPen
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:55:41 - 20/01/2023
+20-Jan-2023 15:55:41 - Done    'Contrast Manager'
+20-Jan-2023 15:55:41 - Done
+
+Contrast 3 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C4_CuesxRew-Pen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C4_CuesxRew-Pen/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C4_CuesxRew-Pen/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:55:57 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:55:57 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:55:58 - 20/01/2023
+20-Jan-2023 15:55:58 - Done    'Factorial design specification'
+20-Jan-2023 15:55:59 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:55:59 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:56:05 - 20/01/2023
+Done
+20-Jan-2023 15:56:05 - Done    'Model estimation'
+20-Jan-2023 15:56:05 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:56:05 - 20/01/2023
+========================================================================
+Contrasts folder                        :              ./C4_CuesxRew-Pen
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:56:05 - 20/01/2023
+20-Jan-2023 15:56:05 - Done    'Contrast Manager'
+20-Jan-2023 15:56:05 - Done
+
+Contrast 4 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C5_Int
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C5_Int/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C5_Int/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:56:21 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:56:21 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:56:22 - 20/01/2023
+20-Jan-2023 15:56:22 - Done    'Factorial design specification'
+20-Jan-2023 15:56:22 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:56:22 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:56:28 - 20/01/2023
+Done
+20-Jan-2023 15:56:28 - Done    'Model estimation'
+20-Jan-2023 15:56:28 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:56:28 - 20/01/2023
+========================================================================
+Contrasts folder                        : ./glm4_Pmod_RewPen_rwls/C5_Int
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:56:29 - 20/01/2023
+20-Jan-2023 15:56:29 - Done    'Contrast Manager'
+20-Jan-2023 15:56:29 - Done
+
+Contrast 5 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C6_IntxRew
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C6_IntxRew/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C6_IntxRew/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:56:44 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:56:45 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:56:46 - 20/01/2023
+20-Jan-2023 15:56:46 - Done    'Factorial design specification'
+20-Jan-2023 15:56:46 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:56:46 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:56:52 - 20/01/2023
+Done
+20-Jan-2023 15:56:52 - Done    'Model estimation'
+20-Jan-2023 15:56:52 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:56:52 - 20/01/2023
+========================================================================
+Contrasts folder                        :                   ./C6_IntxRew
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:56:52 - 20/01/2023
+20-Jan-2023 15:56:52 - Done    'Contrast Manager'
+20-Jan-2023 15:56:52 - Done
+
+Contrast 6 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C7_IntxPen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C7_IntxPen/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C7_IntxPen/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:57:08 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:57:08 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:57:09 - 20/01/2023
+20-Jan-2023 15:57:09 - Done    'Factorial design specification'
+20-Jan-2023 15:57:09 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:57:09 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:57:15 - 20/01/2023
+Done
+20-Jan-2023 15:57:15 - Done    'Model estimation'
+20-Jan-2023 15:57:15 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:57:15 - 20/01/2023
+========================================================================
+Contrasts folder                        :                   ./C7_IntxPen
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:57:16 - 20/01/2023
+20-Jan-2023 15:57:16 - Done    'Contrast Manager'
+20-Jan-2023 15:57:16 - Done
+
+Contrast 7 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C8_IntxRew-Pen
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C8_IntxRew-Pen/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C8_IntxRew-Pen/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:57:30 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:57:30 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:57:31 - 20/01/2023
+20-Jan-2023 15:57:31 - Done    'Factorial design specification'
+20-Jan-2023 15:57:31 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:57:32 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:57:38 - 20/01/2023
+Done
+20-Jan-2023 15:57:38 - Done    'Model estimation'
+20-Jan-2023 15:57:38 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:57:38 - 20/01/2023
+========================================================================
+Contrasts folder                        :               ./C8_IntxRew-Pen
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:57:38 - 20/01/2023
+20-Jan-2023 15:57:38 - Done    'Contrast Manager'
+20-Jan-2023 15:57:38 - Done
+
+Contrast 8 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C9_Int-Cue
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C9_Int-Cue/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm4_Pmod_RewPen_rwls/C9_Int-Cue/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:57:54 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:57:54 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:57:55 - 20/01/2023
+20-Jan-2023 15:57:55 - Done    'Factorial design specification'
+20-Jan-2023 15:57:55 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:57:55 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:58:01 - 20/01/2023
+Done
+20-Jan-2023 15:58:01 - Done    'Model estimation'
+20-Jan-2023 15:58:01 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:58:01 - 20/01/2023
+========================================================================
+Contrasts folder                        :                   ./C9_Int-Cue
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:58:02 - 20/01/2023
+20-Jan-2023 15:58:02 - Done    'Contrast Manager'
+20-Jan-2023 15:58:02 - Done
+
+Contrast 9 analyzed.

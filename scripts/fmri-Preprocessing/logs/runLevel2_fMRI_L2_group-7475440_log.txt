@@ -1,0 +1,1198 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 7475440
+##  Job Name : fMRI_L2_group
+##  Nodelist : node1111
+##      CPUs : 5
+##  Mem/Node : 2048 MB
+## Directory : /gpfs/data/ashenhav/mri-data/TCB/scripts/fmri-Preprocessing
+##   Job Started : Fri Jan 20 15:47:54 EST 2023
+###############################################################################
+Running L2 analyses on GLM 3: 12/13 regressors, 4 Cues, 4 Int, 4 Fb, TaskBug Regressor
+Foldername is: glm3_Event_CueIntFb_rwls
+GLM3: Event-epoch with 12 regressors.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats exists. No changes required.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C1_Cue_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C1_Cue_TaskvsBaseline exists. No changes required.
+Copying contrast: Subject 2011 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2012 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2013 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2014 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2015 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2017 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2019 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2020 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2021 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2022 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2024 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2026 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2027 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2028 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2029 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2030 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2031 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2032 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2033 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2034 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2035 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2036 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2037 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2038 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2039 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2040 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2041 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2042 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2043 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2044 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2045 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2046 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2047 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2048 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2049 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2050 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2051 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2053 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2054 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2055 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2057 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2058 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2059 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2060 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2061 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2062 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2063 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2064 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2065 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2066 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2067 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2068 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2069 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2070 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2071 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2072 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2073 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2074 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2075 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2076 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2077 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2078 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2079 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2081 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2082 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2083 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2084 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2085 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2086 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2088 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2090 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2091 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2093 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2094 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2097 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2098 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2099 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2103 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2105 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2106 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2107 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2108 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2109 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2111 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2112 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2113 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2115 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2116 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2117 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2118 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2119 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2120 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2121 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2122 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2123 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2124 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2125 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2126 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+Copying contrast: Subject 2127 Contrast 1 to Folder C1_Cue_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C2_Int_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C2_Int_TaskvsBaseline exists. No changes required.
+Copying contrast: Subject 2011 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2012 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2013 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2014 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2015 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2017 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2019 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2020 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2021 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2022 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2024 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2026 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2027 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2028 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2029 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2030 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2031 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2032 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2033 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2034 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2035 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2036 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2037 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2038 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2039 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2040 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2041 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2042 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2043 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2044 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2045 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2046 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2047 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2048 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2049 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2050 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2051 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2053 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2054 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2055 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2057 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2058 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2059 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2060 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2061 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2062 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2063 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2064 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2065 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2066 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2067 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2068 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2069 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2070 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2071 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2072 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2073 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2074 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2075 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2076 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2077 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2078 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2079 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2081 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2082 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2083 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2084 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2085 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2086 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2088 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2090 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2091 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2093 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2094 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2097 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2098 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2099 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2103 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2105 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2106 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2107 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2108 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2109 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2111 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2112 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2113 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2115 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2116 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2117 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2118 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2119 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2120 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2121 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2122 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2123 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2124 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2125 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2126 Contrast 2 to Folder C2_Int_TaskvsBaseline
+Copying contrast: Subject 2127 Contrast 2 to Folder C2_Int_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C3_Cue_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C3_Cue_HighvsLowReward exists. No changes required.
+Copying contrast: Subject 2011 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2012 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2013 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2014 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2015 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2017 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2019 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2020 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2021 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2022 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2024 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2026 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2027 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2028 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2029 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2030 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2031 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2032 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2033 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2034 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2035 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2036 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2037 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2038 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2039 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2040 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2041 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2042 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2043 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2044 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2045 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2046 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2047 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2048 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2049 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2050 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2051 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2053 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2054 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2055 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2057 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2058 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2059 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2060 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2061 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2062 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2063 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2064 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2065 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2066 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2067 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2068 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2069 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2070 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2071 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2072 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2073 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2074 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2075 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2076 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2077 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2078 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2079 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2081 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2082 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2083 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2084 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2085 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2086 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2088 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2090 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2091 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2093 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2094 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2097 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2098 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2099 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2103 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2105 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2106 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2107 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2108 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2109 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2111 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2112 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2113 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2115 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2116 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2117 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2118 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2119 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2120 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2121 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2122 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2123 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2124 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2125 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2126 Contrast 3 to Folder C3_Cue_HighvsLowReward
+Copying contrast: Subject 2127 Contrast 3 to Folder C3_Cue_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C4_Cue_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C4_Cue_HighvsLowPenalty exists. No changes required.
+Copying contrast: Subject 2011 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2012 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2013 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2014 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2015 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2017 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2019 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2020 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2021 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2022 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2024 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2026 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2027 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2028 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2029 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2030 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2031 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2032 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2033 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2034 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2035 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2036 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2037 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2038 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2039 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2040 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2041 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2042 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2043 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2044 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2045 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2046 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2047 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2048 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2049 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2050 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2051 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2053 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2054 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2055 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2057 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2058 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2059 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2060 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2061 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2062 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2063 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2064 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2065 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2066 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2067 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2068 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2069 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2070 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2071 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2072 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2073 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2074 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2075 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2076 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2077 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2078 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2079 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2081 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2082 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2083 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2084 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2085 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2086 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2088 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2090 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2091 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2093 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2094 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2097 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2098 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2099 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2103 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2105 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2106 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2107 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2108 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2109 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2111 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2112 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2113 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2115 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2116 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2117 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2118 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2119 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2120 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2121 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2122 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2123 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2124 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2125 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2126 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+Copying contrast: Subject 2127 Contrast 4 to Folder C4_Cue_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C5_Int_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C5_Int_HighvsLowReward exists. No changes required.
+Copying contrast: Subject 2011 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2012 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2013 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2014 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2015 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2017 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2019 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2020 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2021 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2022 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2024 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2026 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2027 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2028 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2029 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2030 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2031 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2032 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2033 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2034 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2035 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2036 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2037 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2038 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2039 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2040 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2041 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2042 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2043 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2044 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2045 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2046 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2047 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2048 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2049 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2050 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2051 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2053 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2054 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2055 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2057 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2058 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2059 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2060 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2061 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2062 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2063 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2064 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2065 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2066 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2067 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2068 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2069 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2070 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2071 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2072 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2073 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2074 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2075 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2076 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2077 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2078 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2079 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2081 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2082 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2083 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2084 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2085 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2086 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2088 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2090 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2091 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2093 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2094 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2097 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2098 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2099 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2103 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2105 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2106 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2107 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2108 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2109 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2111 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2112 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2113 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2115 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2116 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2117 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2118 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2119 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2120 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2121 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2122 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2123 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2124 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2125 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2126 Contrast 5 to Folder C5_Int_HighvsLowReward
+Copying contrast: Subject 2127 Contrast 5 to Folder C5_Int_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C6_Int_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C6_Int_HighvsLowPenalty exists. No changes required.
+Copying contrast: Subject 2011 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2012 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2013 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2014 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2015 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2017 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2019 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2020 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2021 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2022 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2024 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2026 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2027 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2028 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2029 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2030 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2031 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2032 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2033 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2034 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2035 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2036 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2037 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2038 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2039 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2040 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2041 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2042 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2043 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2044 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2045 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2046 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2047 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2048 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2049 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2050 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2051 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2053 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2054 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2055 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2057 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2058 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2059 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2060 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2061 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2062 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2063 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2064 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2065 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2066 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2067 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2068 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2069 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2070 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2071 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2072 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2073 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2074 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2075 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2076 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2077 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2078 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2079 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2081 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2082 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2083 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2084 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2085 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2086 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2088 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2090 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2091 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2093 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2094 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2097 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2098 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2099 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2103 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2105 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2106 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2107 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2108 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2109 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2111 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2112 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2113 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2115 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2116 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2117 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2118 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2119 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2120 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2121 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2122 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2123 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2124 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2125 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2126 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+Copying contrast: Subject 2127 Contrast 6 to Folder C6_Int_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C7_Fb_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C7_Fb_HighvsLowReward exists. No changes required.
+Copying contrast: Subject 2011 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2012 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2013 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2014 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2015 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2017 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2019 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2020 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2021 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2022 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2024 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2026 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2027 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2028 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2029 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2030 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2031 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2032 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2033 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2034 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2035 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2036 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2037 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2038 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2039 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2040 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2041 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2042 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2043 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2044 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2045 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2046 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2047 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2048 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2049 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2050 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2051 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2053 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2054 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2055 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2057 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2058 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2059 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2060 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2061 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2062 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2063 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2064 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2065 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2066 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2067 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2068 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2069 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2070 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2071 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2072 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2073 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2074 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2075 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2076 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2077 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2078 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2079 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2081 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2082 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2083 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2084 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2085 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2086 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2088 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2090 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2091 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2093 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2094 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2097 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2098 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2099 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2103 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2105 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2106 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2107 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2108 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2109 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2111 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2112 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2113 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2115 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2116 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2117 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2118 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2119 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2120 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2121 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2122 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2123 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2124 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2125 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2126 Contrast 7 to Folder C7_Fb_HighvsLowReward
+Copying contrast: Subject 2127 Contrast 7 to Folder C7_Fb_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C8_Fb_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C8_Fb_HighvsLowPenalty exists. No changes required.
+Copying contrast: Subject 2011 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2012 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2013 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2014 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2015 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2017 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2019 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2020 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2021 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2022 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2024 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2026 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2027 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2028 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2029 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2030 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2031 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2032 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2033 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2034 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2035 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2036 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2037 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2038 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2039 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2040 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2041 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2042 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2043 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2044 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2045 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2046 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2047 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2048 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2049 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2050 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2051 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2053 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2054 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2055 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2057 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2058 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2059 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2060 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2061 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2062 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2063 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2064 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2065 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2066 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2067 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2068 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2069 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2070 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2071 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2072 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2073 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2074 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2075 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2076 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2077 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2078 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2079 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2081 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2082 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2083 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2084 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2085 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2086 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2088 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2090 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2091 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2093 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2094 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2097 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2098 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2099 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2103 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2105 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2106 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2107 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2108 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2109 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2111 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2112 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2113 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2115 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2116 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2117 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2118 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2119 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2120 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2121 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2122 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2123 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2124 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2125 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2126 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+Copying contrast: Subject 2127 Contrast 8 to Folder C8_Fb_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C1_Cue_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C1_Cue_TaskvsBaseline/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C1_Cue_TaskvsBaseline/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:48:23 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:48:23 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:48:24 - 20/01/2023
+20-Jan-2023 15:48:24 - Done    'Factorial design specification'
+20-Jan-2023 15:48:24 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:48:24 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:48:31 - 20/01/2023
+Done
+20-Jan-2023 15:48:31 - Done    'Model estimation'
+20-Jan-2023 15:48:31 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:48:31 - 20/01/2023
+========================================================================
+Contrasts folder                        :        ./C1_Cue_TaskvsBaseline
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:48:31 - 20/01/2023
+20-Jan-2023 15:48:31 - Done    'Contrast Manager'
+20-Jan-2023 15:48:31 - Done
+
+Contrast 1 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C2_Int_TaskvsBaseline
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C2_Int_TaskvsBaseline/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C2_Int_TaskvsBaseline/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:48:47 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:48:47 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:48:48 - 20/01/2023
+20-Jan-2023 15:48:49 - Done    'Factorial design specification'
+20-Jan-2023 15:48:49 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:48:49 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:48:55 - 20/01/2023
+Done
+20-Jan-2023 15:48:55 - Done    'Model estimation'
+20-Jan-2023 15:48:55 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:48:55 - 20/01/2023
+========================================================================
+Contrasts folder                        :        ./C2_Int_TaskvsBaseline
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:48:55 - 20/01/2023
+20-Jan-2023 15:48:55 - Done    'Contrast Manager'
+20-Jan-2023 15:48:55 - Done
+
+Contrast 2 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C3_Cue_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C3_Cue_HighvsLowReward/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C3_Cue_HighvsLowReward/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:49:12 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:49:12 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:49:13 - 20/01/2023
+20-Jan-2023 15:49:13 - Done    'Factorial design specification'
+20-Jan-2023 15:49:13 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:49:13 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:49:19 - 20/01/2023
+Done
+20-Jan-2023 15:49:19 - Done    'Model estimation'
+20-Jan-2023 15:49:19 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:49:19 - 20/01/2023
+========================================================================
+Contrasts folder                        :       ./C3_Cue_HighvsLowReward
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:49:19 - 20/01/2023
+20-Jan-2023 15:49:19 - Done    'Contrast Manager'
+20-Jan-2023 15:49:19 - Done
+
+Contrast 3 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C4_Cue_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C4_Cue_HighvsLowPenalty/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C4_Cue_HighvsLowPenalty/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:49:35 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:49:35 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:49:36 - 20/01/2023
+20-Jan-2023 15:49:36 - Done    'Factorial design specification'
+20-Jan-2023 15:49:37 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:49:37 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:49:43 - 20/01/2023
+Done
+20-Jan-2023 15:49:43 - Done    'Model estimation'
+20-Jan-2023 15:49:43 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:49:43 - 20/01/2023
+========================================================================
+Contrasts folder                        :      ./C4_Cue_HighvsLowPenalty
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:49:43 - 20/01/2023
+20-Jan-2023 15:49:43 - Done    'Contrast Manager'
+20-Jan-2023 15:49:43 - Done
+
+Contrast 4 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C5_Int_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C5_Int_HighvsLowReward/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C5_Int_HighvsLowReward/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:49:59 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:49:59 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:50:00 - 20/01/2023
+20-Jan-2023 15:50:00 - Done    'Factorial design specification'
+20-Jan-2023 15:50:00 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:50:00 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:50:07 - 20/01/2023
+Done
+20-Jan-2023 15:50:07 - Done    'Model estimation'
+20-Jan-2023 15:50:07 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:50:07 - 20/01/2023
+========================================================================
+Contrasts folder                        :       ./C5_Int_HighvsLowReward
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:50:07 - 20/01/2023
+20-Jan-2023 15:50:07 - Done    'Contrast Manager'
+20-Jan-2023 15:50:07 - Done
+
+Contrast 5 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C6_Int_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C6_Int_HighvsLowPenalty/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C6_Int_HighvsLowPenalty/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:50:24 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:50:24 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:50:25 - 20/01/2023
+20-Jan-2023 15:50:25 - Done    'Factorial design specification'
+20-Jan-2023 15:50:25 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:50:25 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:50:31 - 20/01/2023
+Done
+20-Jan-2023 15:50:31 - Done    'Model estimation'
+20-Jan-2023 15:50:31 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:50:31 - 20/01/2023
+========================================================================
+Contrasts folder                        :      ./C6_Int_HighvsLowPenalty
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:50:32 - 20/01/2023
+20-Jan-2023 15:50:32 - Done    'Contrast Manager'
+20-Jan-2023 15:50:32 - Done
+
+Contrast 6 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C7_Fb_HighvsLowReward
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C7_Fb_HighvsLowReward/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C7_Fb_HighvsLowReward/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:50:48 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:50:48 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:50:49 - 20/01/2023
+20-Jan-2023 15:50:49 - Done    'Factorial design specification'
+20-Jan-2023 15:50:49 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:50:49 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:50:55 - 20/01/2023
+Done
+20-Jan-2023 15:50:55 - Done    'Model estimation'
+20-Jan-2023 15:50:55 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:50:55 - 20/01/2023
+========================================================================
+Contrasts folder                        :        ./C7_Fb_HighvsLowReward
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:50:56 - 20/01/2023
+20-Jan-2023 15:50:56 - Done    'Contrast Manager'
+20-Jan-2023 15:50:56 - Done
+
+Contrast 7 analyzed.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C8_Fb_HighvsLowPenalty
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C8_Fb_HighvsLowPenalty/SPM.mat
+SPM mat file /gpfs/data/ashenhav/mri-data/TCB/spm-data/groupstats/glm3_Event_CueIntFb_rwls/C8_Fb_HighvsLowPenalty/SPM.mat exists. Will delete and overwrite.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+------------------------------------------------------------------------
+20-Jan-2023 15:51:12 - Running job #1
+------------------------------------------------------------------------
+20-Jan-2023 15:51:12 - Running 'Factorial design specification'
+Mapping files                           :                        ...done
+Design configuration                    :                        ...done
+Saving SPM configuration                :               ...SPM.mat saved
+Completed                               :          15:51:13 - 20/01/2023
+20-Jan-2023 15:51:13 - Done    'Factorial design specification'
+20-Jan-2023 15:51:13 - Running 'Model estimation'
+
+SPM12: spm_spm (v7120)                             15:51:13 - 20/01/2023
+========================================================================
+Chunk   1/2                             :                  ...processing                       ...doneChunk   2/2                             :                  ...processing                       ...done
+Spatial non-sphericity (over scans)     :      ...estimating derivatives ...writing resels/voxel image                       ...done
+Saving SPM.mat                          :                     ...writing                       ...done
+Completed                               :          15:51:19 - 20/01/2023
+Done
+20-Jan-2023 15:51:19 - Done    'Model estimation'
+20-Jan-2023 15:51:19 - Running 'Contrast Manager'
+
+SPM12: spm_contrasts.m                             15:51:19 - 20/01/2023
+========================================================================
+Contrasts folder                        :       ./C8_Fb_HighvsLowPenalty
+	contrast image  1               :                   ...computing       ...written con_0001.nii
+	spm{T} image  1                 :                   ...computing      ...written spmT_0001.nii
+	Saving SPM.mat                  :                     ...writing              ...SPM.mat saved
+Completed                               :          15:51:20 - 20/01/2023
+20-Jan-2023 15:51:20 - Done    'Contrast Manager'
+20-Jan-2023 15:51:20 - Done
+
+Contrast 8 analyzed.

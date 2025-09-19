@@ -1,0 +1,31 @@
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2127/ exists
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2127/func/ exists
+Moving Functional Run 1 for Subject 2127
+Moving Functional Run 2 for Subject 2127
+Moving Functional Run 3 for Subject 2127
+Moving Functional Run 4 for Subject 2127
+Moving Functional Run 5 for Subject 2127
+Moving Functional Run 6 for Subject 2127
+Moving Functional Run 7 for Subject 2127
+Moving Functional Run 8 for Subject 2127
+Unzipping functional runs
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2127/anat/ exists
+Moving Anat Image for Subject 2127
+Moving Mask Image for Subject 2127
+Moving Anat MNI Image for Subject 2127
+Moving Mask MNI Image for Subject 2127
+Unzipping anatomical and mask images
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-2127/confounds/ exists
+Copying confound regressor files
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-/ does not exist. Will create a subject directory.
+/gpfs/data/ashenhav/mri-data/TCB/spm-data/sub-/func/ does not exist. Will create a func directory.
+Moving Functional Run 1 for Subject 
+Moving Functional Run 2 for Subject 
+Moving Functional Run 3 for Subject 
+Moving Functional Run 4 for Subject 
+Moving Functional Run 5 for Subject 
+Moving Functional Run 6 for Subject 
+Moving Functional Run 7 for Subject 
+Moving Functional Run 8 for Subject 
+Unzipping functional runs
+slurmstepd: error: *** JOB 6663209 ON node1120 CANCELLED AT 2022-11-14T14:51:48 ***
