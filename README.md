@@ -4,7 +4,8 @@ This is a repository for the fMRI study entitled" Reward and penalty promote dis
 
 In the root directory, below are the following folders:
 
-**task**: This contains the matlab code for experimental task. to run the task, you will need to launch the 'runTSS' folder. Data are output to the *TCB_RewardPenalty* folder.
+**task**: 
+This contains the matlab code for experimental task. to run the task, you will need to launch the 'runTSS' folder. Data are output to the *TCB_RewardPenalty* folder.
 
 Note that the Stroop stimuli are built in a manner that requires a stimulus.m file to be present. 
 
