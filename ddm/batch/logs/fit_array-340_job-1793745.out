@@ -1,0 +1,21 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1793745
+##  Job Name : model_fit1_TCB
+##  Nodelist : node1856
+##      CPUs : 1
+##   Mem/CPU : 10240 MB
+## Directory : /oscar/data/ashenhav/mri-data/TCB/manuscript/analysis/ddm/batch
+##   Job Started : Wed Apr 24 12:59:00 PM EDT 2024
+###############################################################################
+The current model is model27
+[22;0t]0;IPython: ddm/batch/users/dyee7/.local/lib/python3.7/site-packages/IPython/parallel.py:13: ShimWarning: The `IPython.parallel` package has been deprecated since IPython 4.0. You should import from ipyparallel instead.
+  "You should import from ipyparallel instead.", ShimWarning)
+['v~C(RewardLevel,Sum) + C(PenaltyLevel,Sum) + scaled_dACC_sal_cue + scaled_dACC_sal_cue:C(RewardLevel,Sum) + scaled_dACC_sal_cue:PenaltyLvel + scaled_dACC_ctrl_cue + scaled_dACC_ctrl_cue:C(RewardLevel,Sum) + scaled_dACC_ctrl_cue:C(PenaltyLevel,Sum) + C(Congruency,Sum)', 'a~C(RewardLevel,Sum) + C(PenaltyLevel,Sum) + scaled_dACC_sal_cue + scaled_dACC_sal_cue:C(RewardLevel,Sum) + scaled_dACC_sal_cue:PenaltyLvel + scaled_dACC_ctrl_cue + scaled_dACC_ctrl_cue:C(RewardLevel,Sum) + scaled_dACC_ctrl_cue:C(PenaltyLevel,Sum) + scaledRunningTime', 'z~C(Congruency,Sum)']
+Traceback (most recent call last):
+  File "../HDDM_scripts/model_fitting_extended.py", line 88, in <module>
+    models = pool.map(run_model, range(5))
+  File "/users/dyee7/.conda/envs/py3HDDM/lib/python3.7/multiprocessing/pool.py", line 268, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/users/dyee7/.conda/envs/py3HDDM/lib/python3.7/multiprocessing/pool.py", line 657, in get
+    raise self._value
+multiprocessing.pool.MaybeEncodingError: Error sending result: '<multiprocessing.pool.ExceptionWithTraceback object at 0x7efc485f3e50>'. Reason: 'NotImplementedError()'

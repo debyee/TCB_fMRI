@@ -1,0 +1,51 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 12517392
+##  Job Name : model_fit1
+##  Nodelist : node1703
+##      CPUs : 1
+##   Mem/CPU : 20480 MB
+## Directory : /oscar/data/ashenhav/mri-data/TCB/manuscript/analysis/ddm/batch
+##   Job Started : Wed Dec 20 19:16:22 EST 2023
+###############################################################################
+The current model is model5_RewPen_SRT_Striatum_Cue
+/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/site-packages/IPython/parallel.py:13: ShimWarning: The `IPython.parallel` package has been deprecated since IPython 4.0. You should import from ipyparallel instead.
+  "You should import from ipyparallel instead.", ShimWarning)
+[22;0t]0;IPython: ddm/batch['v~C(RewardLevel,Sum)+C(PenaltyLevel,Sum)+scaled_Bilateral_Striatum_cue+C(Congruency,Sum)', 'a~C(RewardLevel,Sum)+C(PenaltyLevel,Sum)+scaledRunningTime', 'z~C(Congruency,Sum)']
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue']
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue']
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue']
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue']
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue']
+Adding these covariates:
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaledRunningTime']
+Adding these covariates:
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaledRunningTime']
+Adding these covariates:
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaledRunningTime']
+Adding these covariates:
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaledRunningTime']
+Adding these covariates:
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaledRunningTime']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+Traceback (most recent call last):
+  File "../HDDM_scripts/model_fitting_extended.py", line 88, in <module>
+    models = pool.map(run_model, range(5))
+  File "/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/multiprocessing/pool.py", line 266, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/multiprocessing/pool.py", line 644, in get
+    raise self._value
+multiprocessing.pool.MaybeEncodingError: Error sending result: '<multiprocessing.pool.ExceptionWithTraceback object at 0x7faa9b288080>'. Reason: 'NotImplementedError()'

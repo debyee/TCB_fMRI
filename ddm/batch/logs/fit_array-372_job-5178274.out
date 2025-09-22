@@ -1,0 +1,14 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 5178274
+##  Job Name : model_fit1_TCB
+##  Nodelist : node1719
+##      CPUs : 1
+##   Mem/CPU : 10240 MB
+## Directory : /oscar/data/ashenhav/mri-data/TCB/manuscript/analysis/ddm/batch
+##   Job Started : Thu Oct 17 09:45:27 PM EDT 2024
+###############################################################################
+The current model is model49
+Traceback (most recent call last):
+  File "/oscar/data/ashenhav/mri-data/TCB/manuscript/analysis/ddm/batch/../HDDM_scripts/model_fitting_extended.py", line 15, in <module>
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'

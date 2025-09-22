@@ -1,0 +1,14 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 10969961
+##  Job Name : model_ppc
+##  Nodelist : node1715
+##      CPUs : 1
+##   Mem/CPU : 4096 MB
+## Directory : /oscar/data/ashenhav/mri-data/TCB/manuscript/analysis/ddm/batch
+##   Job Started : Tue Aug 29 11:21:18 EDT 2023
+###############################################################################
+ModelName: model3_RewPen_SRT
+Traceback (most recent call last):
+  File "../HDDM_scripts/model_posterior_predictive_check_extended.py", line 14, in <module>
+    import hddm
+ImportError: No module named hddm

@@ -1,0 +1,18 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 10964643
+##  Job Name : model_ppc
+##  Nodelist : node1327
+##      CPUs : 1
+##   Mem/CPU : 5120 MB
+## Directory : /oscar/data/ashenhav/mri-data/TCB/manuscript/analysis/ddm/batch
+##   Job Started : Mon Aug 28 13:30:55 EDT 2023
+###############################################################################
+ModelName: model4_RewPenInt_SRT
+/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/site-packages/IPython/parallel.py:13: ShimWarning: The `IPython.parallel` package has been deprecated since IPython 4.0. You should import from ipyparallel instead.
+  "You should import from ipyparallel instead.", ShimWarning)
+[22;0t]0;IPython: ddm/batchTraceback (most recent call last):
+  File "../HDDM_scripts/model_posterior_predictive_check_extended.py", line 52, in <module>
+    sub_model = hddm.load(sub_model_name)
+  File "/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/site-packages/kabuki/utils.py", line 23, in load
+    model = pickle.load(open(fname, 'rb'))
+FileNotFoundError: [Errno 2] No such file or directory: '../output/errors_automatic/rewardpenalty/model4_RewPenInt_SRT/model4_RewPenInt_SRT_rewardpenalty_0'

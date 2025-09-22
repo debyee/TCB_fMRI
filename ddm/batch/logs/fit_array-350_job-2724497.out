@@ -1,0 +1,54 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 2724497
+##  Job Name : model_fit2_TCB
+##  Nodelist : node1603
+##      CPUs : 1
+##   Mem/CPU : 5120 MB
+## Directory : /oscar/data/ashenhav/mri-data/TCB/manuscript/analysis/ddm/batch
+##   Job Started : Thu Jun  6 04:19:29 PM EDT 2024
+###############################################################################
+The current model is model37
+[22;0t]0;IPython: ddm/batch/users/dyee7/.local/lib/python3.7/site-packages/IPython/parallel.py:13: ShimWarning: The `IPython.parallel` package has been deprecated since IPython 4.0. You should import from ipyparallel instead.
+  "You should import from ipyparallel instead.", ShimWarning)
+['v~C(RewardLevel,Sum)+C(PenaltyLevel,Sum)+scaled_Bilateral_Striatum_cue+scaled_Bilateral_Striatum_cue:C(RewardLevel,Sum)+scaled_Bilateral_Striatum_cue:C(PenaltyLevel,Sum)+C(Congruency,Sum)', 'a~C(RewardLevel,Sum)+C(PenaltyLevel,Sum)+scaled_Bilateral_Striatum_cue+scaled_Bilateral_Striatum_cue:C(RewardLevel,Sum)+scaled_Bilateral_Striatum_cue:C(PenaltyLevel,Sum)+scaledRunningTime', 'z~C(Congruency,Sum)']
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue', 'v_scaled_Bilateral_Striatum_cue:C(RewardLevel, Sum)[S.High Reward]', 'v_scaled_Bilateral_Striatum_cue:C(PenaltyLevel, Sum)[S.High Penalty]']
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue', 'v_scaled_Bilateral_Striatum_cue:C(RewardLevel, Sum)[S.High Reward]', 'v_scaled_Bilateral_Striatum_cue:C(PenaltyLevel, Sum)[S.High Penalty]']
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue', 'v_scaled_Bilateral_Striatum_cue:C(RewardLevel, Sum)[S.High Reward]', 'v_scaled_Bilateral_Striatum_cue:C(PenaltyLevel, Sum)[S.High Penalty]']
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue', 'v_scaled_Bilateral_Striatum_cue:C(RewardLevel, Sum)[S.High Reward]', 'v_scaled_Bilateral_Striatum_cue:C(PenaltyLevel, Sum)[S.High Penalty]']
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue', 'v_scaled_Bilateral_Striatum_cue:C(RewardLevel, Sum)[S.High Reward]', 'v_scaled_Bilateral_Striatum_cue:C(PenaltyLevel, Sum)[S.High Penalty]']
+Adding these covariates:
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaled_Bilateral_Striatum_cue', 'a_scaled_Bilateral_Striatum_cue:C(RewardLevel, Sum)[S.High Reward]', 'a_scaled_Bilateral_Striatum_cue:C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaledRunningTime']
+Adding these covariates:
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaled_Bilateral_Striatum_cue', 'a_scaled_Bilateral_Striatum_cue:C(RewardLevel, Sum)[S.High Reward]', 'a_scaled_Bilateral_Striatum_cue:C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaledRunningTime']
+Adding these covariates:
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaled_Bilateral_Striatum_cue', 'a_scaled_Bilateral_Striatum_cue:C(RewardLevel, Sum)[S.High Reward]', 'a_scaled_Bilateral_Striatum_cue:C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaledRunningTime']
+Adding these covariates:Adding these covariates:
+
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaled_Bilateral_Striatum_cue', 'a_scaled_Bilateral_Striatum_cue:C(RewardLevel, Sum)[S.High Reward]', 'a_scaled_Bilateral_Striatum_cue:C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaledRunningTime']['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaled_Bilateral_Striatum_cue', 'a_scaled_Bilateral_Striatum_cue:C(RewardLevel, Sum)[S.High Reward]', 'a_scaled_Bilateral_Striatum_cue:C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaledRunningTime']
+
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+/users/dyee7/.local/lib/python3.7/site-packages/scipy/optimize/optimize.py:2215: RuntimeWarning: invalid value encountered in double_scalars
+  tmp2 = (x - v) * (fx - fw)
+/users/dyee7/.local/lib/python3.7/site-packages/scipy/optimize/optimize.py:2215: RuntimeWarning: invalid value encountered in double_scalars
+  tmp2 = (x - v) * (fx - fw)
+/users/dyee7/.local/lib/python3.7/site-packages/scipy/optimize/optimize.py:2215: RuntimeWarning: invalid value encountered in double_scalars
+  tmp2 = (x - v) * (fx - fw)
+/users/dyee7/.local/lib/python3.7/site-packages/scipy/optimize/optimize.py:2215: RuntimeWarning: invalid value encountered in double_scalars
+  tmp2 = (x - v) * (fx - fw)
+/users/dyee7/.local/lib/python3.7/site-packages/scipy/optimize/optimize.py:2215: RuntimeWarning: invalid value encountered in double_scalars
+  tmp2 = (x - v) * (fx - fw)
+slurmstepd: error: *** JOB 2724497 ON node1603 CANCELLED AT 2024-06-06T16:21:36 ***

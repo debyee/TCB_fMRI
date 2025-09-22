@@ -1,0 +1,54 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 12521061
+##  Job Name : model_fit1
+##  Nodelist : node1702
+##      CPUs : 1
+##   Mem/CPU : 20480 MB
+## Directory : /oscar/data/ashenhav/mri-data/TCB/manuscript/analysis/ddm/batch
+##   Job Started : Wed Dec 20 19:44:55 EST 2023
+###############################################################################
+The current model is model5_RewPen_SRT_Striatum_Cue
+/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/site-packages/IPython/parallel.py:13: ShimWarning: The `IPython.parallel` package has been deprecated since IPython 4.0. You should import from ipyparallel instead.
+  "You should import from ipyparallel instead.", ShimWarning)
+[22;0t]0;IPython: ddm/batch['v~C(RewardLevel,Sum)+C(PenaltyLevel,Sum)+scaled_Bilateral_Striatum_cue+C(Congruency,Sum)', 'a~C(RewardLevel,Sum)+C(PenaltyLevel,Sum)+scaled_Bilateral_Striatum_cue+scaledRunningTime', 'z~C(Congruency,Sum)']
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue']
+Adding these covariates:
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue']
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue']
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue']
+Adding these covariates:
+['v_Intercept', 'v_C(RewardLevel, Sum)[S.High Reward]', 'v_C(PenaltyLevel, Sum)[S.High Penalty]', 'v_C(Congruency, Sum)[S.Congruent]', 'v_scaled_Bilateral_Striatum_cue']
+Adding these covariates:
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaled_Bilateral_Striatum_cue', 'a_scaledRunningTime']
+Adding these covariates:
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaled_Bilateral_Striatum_cue', 'a_scaledRunningTime']
+Adding these covariates:
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaled_Bilateral_Striatum_cue', 'a_scaledRunningTime']
+Adding these covariates:
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaled_Bilateral_Striatum_cue', 'a_scaledRunningTime']
+Adding these covariates:
+['a_Intercept', 'a_C(RewardLevel, Sum)[S.High Reward]', 'a_C(PenaltyLevel, Sum)[S.High Penalty]', 'a_scaled_Bilateral_Striatum_cue', 'a_scaledRunningTime']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+Adding these covariates:
+['z_Intercept', 'z_C(Congruency, Sum)[S.Congruent]']
+/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/site-packages/scipy/optimize/optimize.py:2116: RuntimeWarning: invalid value encountered in double_scalars
+  tmp2 = (x - v) * (fx - fw)
+/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/site-packages/scipy/optimize/optimize.py:2116: RuntimeWarning: invalid value encountered in double_scalars
+  tmp2 = (x - v) * (fx - fw)
+/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/site-packages/scipy/optimize/optimize.py:2116: RuntimeWarning: invalid value encountered in double_scalars
+  tmp2 = (x - v) * (fx - fw)
+/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/site-packages/scipy/optimize/optimize.py:2116: RuntimeWarning: invalid value encountered in double_scalars
+  tmp2 = (x - v) * (fx - fw)
+/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/site-packages/scipy/optimize/optimize.py:2116: RuntimeWarning: invalid value encountered in double_scalars
+  tmp2 = (x - v) * (fx - fw)
+slurmstepd: error: *** JOB 12521061 ON node1702 CANCELLED AT 2023-12-20T19:52:47 ***

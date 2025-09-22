@@ -1,0 +1,24 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+The current model is model22
+Traceback (most recent call last):
+  File "/oscar/data/ashenhav/mri-data/TCB/manuscript/analysis/ddm/batch/../HDDM_scripts/model_fitting_extended.py", line 15, in <module>
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'

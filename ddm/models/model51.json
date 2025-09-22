@@ -1,0 +1,109 @@
+{
+	"model":"model51",
+	"study":"TCB_hddm_data",
+	"data":"data_fMRI-TCB_RewardPenalty_ddm_betas",
+	"valence":"rewardpenalty",
+	"totalsample":10000,
+	"burnedsample":7000,
+	"ppcsample":500,
+	"predictors":{
+		"PenaltyLevel":{
+			"type":"category",
+			"levels":["High Penalty","Low Penalty"],
+			"contrast":"Sum"
+		},
+		"RewardLevel":{
+			"type":"category",
+			"levels":["High Reward","Low Reward"],
+			"contrast":"Sum"
+		},
+		"Congruency":{
+			"type":"category",
+			"levels":["Congruent","Incongruent"],
+			"contrast":"Sum"
+		},
+		"scaledRunningTime": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_Striatum_cue": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_Striatum_interval": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_Striatum_feedback": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_AI_cue": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_AI_interval": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_AI_feedback": {
+			"type": "numerical"
+		},
+		"scaled_dACC_ctrl_cue": {
+			"type": "numerical"
+		},
+		"scaled_dACC_ctrl_interval": {
+			"type": "numerical"
+		},
+		"scaled_dACC_ctrl_feedback": {
+			"type": "numerical"
+		},
+		"scaled_dACC_sal_cue": {
+			"type": "numerical"
+		},
+		"scaled_dACC_sal_interval": {
+			"type": "numerical"
+		},
+		"scaled_dACC_sal_feedback": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_PFCl_ctrl_cue": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_PFCl_ctrl_interval": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_PFCl_ctrl_feedback": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_PFCl_sal_cue": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_PFCl_sal_interval": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_PFCl_sal_feedback": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_IFG_cue": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_IFG_interval": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_IFG_feedback": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_Putamen_cue": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_Putamen_interval": {
+			"type": "numerical"
+		},
+		"scaled_Bilateral_Putamen_feedback": {
+			"type": "numerical"
+		}
+
+	},
+	"formula":["v~RewardLevel + PenaltyLevel + scaled_Bilateral_PFCl_sal_interval + scaled_Bilateral_PFCl_sal_interval:RewardLevel + scaled_Bilateral_PFCl_sal_interval:PenaltyLevel + Congruency",
+			"a~RewardLevel + PenaltyLevel + scaled_Bilateral_PFCl_sal_interval + scaled_Bilateral_PFCl_sal_interval:RewardLevel + scaled_Bilateral_PFCl_sal_interval:PenaltyLevel + scaledRunningTime",
+			"z~Congruency"
+	],
+	"bias":true,
+	"includes":["p_outlier","sv","st"],
+	"errors":"errors_automatic"
+}

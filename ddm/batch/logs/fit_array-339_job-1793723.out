@@ -1,0 +1,52 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 1793723
+##  Job Name : model_fit1_TCB
+##  Nodelist : node1855
+##      CPUs : 1
+##   Mem/CPU : 10240 MB
+## Directory : /oscar/data/ashenhav/mri-data/TCB/manuscript/analysis/ddm/batch
+##   Job Started : Wed Apr 24 12:57:00 PM EDT 2024
+###############################################################################
+The current model is model26
+Traceback (most recent call last):
+  File "/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/py-numpy-1.24.3-2kg3a3spalv6eyxob7jl7x25nvopwfmt/lib64/python3.9/site-packages/numpy/core/__init__.py", line 23, in <module>
+    from . import multiarray
+  File "/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/py-numpy-1.24.3-2kg3a3spalv6eyxob7jl7x25nvopwfmt/lib64/python3.9/site-packages/numpy/core/multiarray.py", line 10, in <module>
+    from . import overrides
+  File "/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/py-numpy-1.24.3-2kg3a3spalv6eyxob7jl7x25nvopwfmt/lib64/python3.9/site-packages/numpy/core/overrides.py", line 6, in <module>
+    from numpy.core._multiarray_umath import (
+ModuleNotFoundError: No module named 'numpy.core._multiarray_umath'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../HDDM_scripts/model_fitting_extended.py", line 15, in <module>
+    import matplotlib
+  File "/users/dyee7/.conda/envs/py3HDDM/lib/python3.7/site-packages/matplotlib/__init__.py", line 104, in <module>
+    import numpy
+  File "/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/py-numpy-1.24.3-2kg3a3spalv6eyxob7jl7x25nvopwfmt/lib64/python3.9/site-packages/numpy/__init__.py", line 141, in <module>
+    from . import core
+  File "/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/py-numpy-1.24.3-2kg3a3spalv6eyxob7jl7x25nvopwfmt/lib64/python3.9/site-packages/numpy/core/__init__.py", line 49, in <module>
+    raise ImportError(msg)
+ImportError: 
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.7 from "/users/dyee7/.conda/envs/py3HDDM/bin/python"
+  * The NumPy version is: "1.24.3"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.
+
+Original error was: No module named 'numpy.core._multiarray_umath'
+

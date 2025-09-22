@@ -1,0 +1,36 @@
+{
+	"model":"model1_RewPen",
+	"study":"TCB_hddm_data",
+	"data":"data_fMRI-TCB_RewardPenalty_ddm",
+	"valence":"rewardpenalty",
+	"totalsample":8000,
+	"burnedsample":5000,
+	"ppcsample":500,
+	"predictors":{
+		"PenaltyLevel":{
+			"type":"category",
+			"levels":["High Penalty","Low Penalty"],
+			"contrast":"Sum"
+		},
+		"RewardLevel":{
+			"type":"category",
+			"levels":["High Reward","Low Reward"],
+			"contrast":"Sum"
+		},
+		"Congruency":{
+			"type":"category",
+			"levels":["Congruent","Incongruent"],
+			"contrast":"Sum"
+		},
+		"scaledRunningTime": {
+			"type": "numerical"
+		}
+	},
+	"formula":["v~RewardLevel+PenaltyLevel+Congruency",
+			"a~RewardLevel+PenaltyLevel",
+			"z~Congruency"
+	],
+	"bias":true,
+	"includes":["p_outlier","sv","st"],
+	"errors":"errors_automatic"
+}

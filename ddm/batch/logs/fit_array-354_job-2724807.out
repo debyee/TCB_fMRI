@@ -1,0 +1,13 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 2724807
+##  Job Name : model_fit2_TCB
+##  Nodelist : node1716
+##      CPUs : 1
+##   Mem/CPU : 5120 MB
+## Directory : /oscar/data/ashenhav/mri-data/TCB/manuscript/analysis/ddm/batch
+##   Job Started : Thu Jun  6 04:21:33 PM EDT 2024
+###############################################################################
+The current model is model41
+[22;0t]0;IPython: ddm/batch/users/dyee7/.local/lib/python3.7/site-packages/IPython/parallel.py:13: ShimWarning: The `IPython.parallel` package has been deprecated since IPython 4.0. You should import from ipyparallel instead.
+  "You should import from ipyparallel instead.", ShimWarning)
+slurmstepd: error: *** JOB 2724807 ON node1716 CANCELLED AT 2024-06-06T16:21:36 ***

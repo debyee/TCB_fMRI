@@ -1,0 +1,24 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 12527166
+##  Job Name : model_fit1
+##  Nodelist : node1755
+##      CPUs : 1
+##   Mem/CPU : 20480 MB
+## Directory : /oscar/data/ashenhav/mri-data/TCB/manuscript/analysis/ddm/batch
+##   Job Started : Wed Dec 20 20:26:37 EST 2023
+###############################################################################
+/var/spool/slurmd/job12527166/slurm_script: line 18: labels:  : must use subscript when assigning associative array
+/var/spool/slurmd/job12527166/slurm_script: line 18: labels:  : must use subscript when assigning associative array
+/var/spool/slurmd/job12527166/slurm_script: line 18: labels:  : must use subscript when assigning associative array
+The current model is model10_RewPen_SRT_dACC_sal_Interval
+/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/site-packages/IPython/parallel.py:13: ShimWarning: The `IPython.parallel` package has been deprecated since IPython 4.0. You should import from ipyparallel instead.
+  "You should import from ipyparallel instead.", ShimWarning)
+[22;0t]0;IPython: ddm/batch['v~C(RewardLevel,Sum)+C(PenaltyLevel,Sum)+scaled_dACC_sal_interval+scaled_dACC_sal_interval:C(RewardLevel,Sum)+scaled_dACC_sal_interval:C(PenaltyLevel,Sum)+C(Congruency,Sum)', 'a~C(RewardLevel,Sum)+C(PenaltyLevel,Sum)+scaled_dACC_sal_interval+scaled_dACC_sal_interval:C(RewardLevel,Sum)+scaled_dACC_sal_interval:C(PenaltyLevel,Sum)+scaledRunningTime', 'z~C(Congruency,Sum)']
+Traceback (most recent call last):
+  File "../HDDM_scripts/model_fitting_extended.py", line 88, in <module>
+    models = pool.map(run_model, range(5))
+  File "/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/multiprocessing/pool.py", line 266, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/users/dyee7/.conda/envs/hddm_env_python3/lib/python3.6/multiprocessing/pool.py", line 644, in get
+    raise self._value
+multiprocessing.pool.MaybeEncodingError: Error sending result: '<multiprocessing.pool.ExceptionWithTraceback object at 0x7f4ad40a1e10>'. Reason: 'NotImplementedError()'
