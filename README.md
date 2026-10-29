@@ -1,6 +1,6 @@
 # TCB_fMRI
 
-This is a repository for the fMRI study entitled" Reward and penalty promote distinct neurocomputational effort profiles for adaptive cognitive control" (in prep).
+This is a repository for the fMRI study entitled" Reward and penalty promote distinct neurocomputational effort profiles for adaptive cognitive control" (invited revission).
 
 In the root directory, below are the following folders:
 
